@@ -25,8 +25,8 @@ def donut_chart_carbon(labels, values):
     x=0.5, y=0.5,
     xanchor= 'center',
     yanchor='middle',
-    text= '<b>CO2e OF<br>INGREDIENTS (kg)</b>',
-    font=dict(family="Arial", size=12),
+    text= '<b>CO2e OF<br> Ingredients (kg)</b>',
+    font=dict(family="Arial", size=14),
     showarrow=False,
     ))
 
@@ -37,7 +37,9 @@ def donut_chart_carbon(labels, values):
     )
 
     fig.update_layout(
-        annotations=annotations
+        annotations=annotations,
+        margin=dict(l=20, r=20, t=20, b=20),
+        #paper_bgcolor="#D8E8D9",
         )
     return fig
 
@@ -52,6 +54,7 @@ def gauge_chart_carbon(value_per_100g, value_per_recipe, nServings):
     Returns:
         fig : plotly object. 
     """
+    daily_food_CO2_budget = 2.72 # based on LiveLCA threshold 
     fig = go.Figure(go.Indicator(
         domain = {'x': [0, 1], 'y': [0, 1]},
         value = value_per_100g,
@@ -65,21 +68,24 @@ def gauge_chart_carbon(value_per_100g, value_per_recipe, nServings):
                     {'range': [0.4, 1.4], 'color': "lightsalmon"},
                     {'range': [1.4, 3], 'color': "crimson"},
                     ],
-                'bar': {'color': "lightgray"},
-                'threshold' : {'line': {'color': "red", 'width': 4}, 'thickness': 0.75, 'value': 2.9}}))
+                'bar': {'color': "#CCCCCC"},
+                'threshold' : {'line': {'color': "red", 'width': 4}, 'thickness': 0.75, 'value': 2.9}}
+                ))
 
     annotations=[]
     annotations.append(dict(xref='paper', yref='paper',
     x=0.5, y=0.0,
     xanchor= 'center',
     yanchor='bottom',
-    text= '<b>Kg CO2e / 100g </b>',
-    font=dict(family="Arial", size=12),
+    text= f"<b>kg CO2e / 100g <br> You can consume {daily_food_CO2_budget/value_per_100g*100:.0f}g of this dish <br> to exhaust your daily food CO2e budget.</b>",
+    font=dict(family="Arial", size=14),
     showarrow=False,
     ))
 
     fig.update_layout(
-        annotations=annotations
+        annotations=annotations,
+        margin=dict(l=20, r=20, t=20, b=20),
+        #paper_bgcolor="#D8E8D9",
         )
 
     return fig
@@ -111,8 +117,9 @@ def donut_chart_nutrition(nutrient_value, rdi_value, nutrient_label, unit, **kwa
     x=0.5, y=0.5,
     xanchor= 'center',
     yanchor='middle',
-    text= f'<b> {nutrient_value:.1f} {unit} <br> {nutrient_label} per 100g </b>',
-    font=dict(family="Arial", size=24),
+    #text= f'<b> {nutrient_value:.1f} {unit} <br> {nutrient_label} per 100g </b>', # value and label inside donut
+    text= f'<b> {nutrient_label} <br> per 100g </b>', # just label inside donut
+    font=dict(family="Arial", size=14),
     showarrow=False,
     ))
 
@@ -123,6 +130,10 @@ def donut_chart_nutrition(nutrient_value, rdi_value, nutrient_label, unit, **kwa
     )
 
     fig.update_layout(
-        annotations=annotations
+        annotations=annotations,
+        margin=dict(l=20, r=20, t=20, b=20),
+        #paper_bgcolor="#D8E8D9",
+        width=200, 
+        height=200,
         )
     return fig

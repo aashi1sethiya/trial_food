@@ -1,0 +1,21 @@
+/* Sidebar text color */
+.css-599pk6 h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #DAF2DA;
+}
+
+.css-se4c8t {
+    font-size: 14px;
+    color: rgb(29, 29, 31);
+    margin-bottom: 7px;
+    height: auto;
+    min-height: 1.5rem;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    color: #DAF2DA;
+}
+
