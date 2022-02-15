@@ -242,15 +242,15 @@ def main_page(df_selection):
             )
             col2.plotly_chart(fig_protein_per_100g, use_container_width=True)
 
-        # ---- HIDE STREAMLIT STYLE ----
-        hide_st_style = """
-                    <style>
-                    #MainMenu {visibility: hidden;}
-                    footer {visibility: hidden;}
-                    header {visibility: hidden;}
-                    </style>
-                    """
-        st.markdown(hide_st_style, unsafe_allow_html=True)
+    # ---- HIDE STREAMLIT STYLE ----
+    hide_st_style = """
+                <style>
+                #MainMenu {visibility: hidden;}
+                footer {visibility: hidden;}
+                header {visibility: hidden;}
+                </style>
+                """
+    st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
 def main():
