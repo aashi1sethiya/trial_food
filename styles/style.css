@@ -7,7 +7,6 @@
 
 .css-se4c8t {
     font-size: 14px;
-    color: rgb(29, 29, 31);
     margin-bottom: 7px;
     height: auto;
     min-height: 1.5rem;
@@ -16,6 +15,60 @@
     flex-direction: row;
     -webkit-box-align: center;
     align-items: center;
+    color: #B76B47;
+}
+
+.css-1djdyxw.ek41t0m0{
     color: #DAF2DA;
 }
 
+.css-1cya96l.e88czh81{
+    color: #DAF2DA;
+}
+
+.css-1inwz65.e88czh83{
+    color: #DAF2DA;
+}
+
+.css-k1hdlx.edgvbvh1{
+    color: #DAF2DA;
+}
+
+css-1rou4ob.e16nr0p30{
+    color: #DAF2DA;
+}
+
+/* Sidebar slider color */
+.css-1feujr6 {
+    background-color: #DAF2DA;
+}
+
+/* Sidebar position */
+.css-1lcbmhc.e1fqkh3o0{
+  margin-top: 5rem;
+}
+ 
+ /* Side Bar arrow */
+.css-128t4q1.e1fqkh3o3 {
+  margin-top: 6rem;
+}
+
+ /* Number input */
+.st-c8 {
+    background-color: #daf2da;
+}
+
+.css-g4svou {
+    margin: 0px;
+    border: none;
+    height: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 45px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    color: #daf2da;
+    transition: color 300ms ease 0s, backgroundColor 300ms ease 0s;
+    background-color: #716657;
+}

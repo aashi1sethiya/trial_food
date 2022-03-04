@@ -1,3 +1,4 @@
+import streamlit as st
 import plotly.express as px  # pip install plotly-express
 import plotly.graph_objects as go # other graph objects
 
@@ -67,7 +68,7 @@ def gauge_chart_carbon(value_per_100g, value_per_recipe, nServings):
                     {'range': [0, 0.4], 'color': "lightgreen"},
                     {'range': [0.4, 1.4], 'color': "lightsalmon"},
                     {'range': [1.4, 3], 'color': "crimson"},
-                    ],
+                    ], # Swedish meat GHG emissions traffic light system
                 'bar': {'color': "#CCCCCC"},
                 'threshold' : {'line': {'color': "red", 'width': 4}, 'thickness': 0.75, 'value': 2.9}}
                 ))
@@ -77,27 +78,73 @@ def gauge_chart_carbon(value_per_100g, value_per_recipe, nServings):
     x=0.5, y=0.0,
     xanchor= 'center',
     yanchor='bottom',
-    text= f"<b>kg CO2e / 100g <br> You can consume {daily_food_CO2_budget/value_per_100g*100:.0f}g of this dish <br> to exhaust your daily food CO2e budget.</b>",
+    text= f"<b>kg CO2e / 100g <br> You can consume {daily_food_CO2_budget/value_per_100g*100:.0f} g of this dish <br> to exhaust your daily food CO2e budget.</b>",
     font=dict(family="Arial", size=14),
     showarrow=False,
     ))
 
     fig.update_layout(
         annotations=annotations,
-        margin=dict(l=20, r=20, t=20, b=20),
+        margin=dict(l=20, r=20, t=25, b=20),
         #paper_bgcolor="#D8E8D9",
         )
 
     return fig
 
-def donut_chart_nutrition(nutrient_value, rdi_value, nutrient_label, unit, **kwargs):
+def gauge_chart_carbon_multidish(value_per_custom_amount):
+    """ Gauge chart for carbon label of dish per serving or custom amount. 
+
+    Args:
+        value_per_serving (float): Total CO2 emissions for whole recipe.
+
+    Returns:
+        fig : plotly object. 
+    """    
+    max_CO2 = st.session_state['max_CO2']
+    daily_food_CO2_budget = st.session_state['daily_food_CO2_budget']
+    fig = go.Figure(go.Indicator(
+        domain = {'x': [0, 1], 'y': [0, 1]},
+        value = value_per_custom_amount,
+        title = {'text': f"CO2e per serving:", 'font': {'size': 18}},
+        mode = "gauge+number", # gauge+number+delta
+        #delta = {'reference': 1},
+        name = 'kg CO2e / serving',
+        gauge = {'axis': {'range': [None, max_CO2]},
+                'steps' : [
+                    {'range': [0, daily_food_CO2_budget*0.5], 'color': "lightgreen"},
+                    {'range': [daily_food_CO2_budget*0.5, daily_food_CO2_budget*0.9], 'color': "lightsalmon"},
+                    {'range': [daily_food_CO2_budget*0.9, max_CO2], 'color': "crimson"},
+                    ], # Daily food CO2 budget traffic light system
+                'bar': {'color': "#CCCCCC"},
+                'threshold' : {'line': {'color': "red", 'width': 4}, 'thickness': 0.75, 'value': daily_food_CO2_budget}}
+                ))
+
+    annotations=[]
+    annotations.append(dict(xref='paper', yref='paper',
+    x=0.5, y=-0.1,
+    xanchor= 'center',
+    yanchor='bottom',
+    text= f"<b>kg CO2e / serving <br> You have {(daily_food_CO2_budget - value_per_custom_amount):.1f} kg of food CO2e budget left today.</b>",
+    font=dict(family="Arial", size=14),
+    showarrow=False,
+    ))
+
+    fig.update_layout(
+        annotations=annotations,
+        #margin=dict(l=25, r=25, t=25, b=25),
+        #paper_bgcolor="#D8E8D9",
+        )
+
+    return fig
+
+def donut_chart_nutrition(nutrient_value, rdi_value, nutrient_label, per='100g', **kwargs):
     """Donut chart for CO2 emissions of different ingredients.
 
     Args:
         nutrient_value (float): Nutrient value in dish per 100g. 
         rdi_value (float): RDI value for this nutrient.
         nutrient_label (str): Name of nutrient.
-        unit (str): unit of nutrient.
+        per (str, optional): Nutrient per some quantity. Defaults to 100g
         **kwargs: other arguments for the go.Pie function, like marker_colors.
 
     Returns:
@@ -118,7 +165,7 @@ def donut_chart_nutrition(nutrient_value, rdi_value, nutrient_label, unit, **kwa
     xanchor= 'center',
     yanchor='middle',
     #text= f'<b> {nutrient_value:.1f} {unit} <br> {nutrient_label} per 100g </b>', # value and label inside donut
-    text= f'<b> {nutrient_label} <br> per 100g </b>', # just label inside donut
+    text= f'<b> {nutrient_label} <br> per {per} </b>', # just label inside donut
     font=dict(family="Arial", size=14),
     showarrow=False,
     ))
