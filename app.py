@@ -9,7 +9,7 @@ import pandas as pd  # pip install pandas openpyxl
 import numpy as np  # math operations
 import json  # json file
 import streamlit as st  # pip install streamlit
-from apps import home
+from apps import home, login
 
 
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
@@ -20,5 +20,7 @@ st.set_page_config(page_title="Our Food Impact",
                    )
 
 # Load homepage
-home.main()
+home.navbar()
+login.main()
+#home.main()
 
