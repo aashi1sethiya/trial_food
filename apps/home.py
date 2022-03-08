@@ -4,6 +4,7 @@ import pandas as pd  # pip install pandas openpyxl
 import numpy as np  # math operations
 import json  # json file
 from datetime import datetime
+from time import sleep
 import streamlit as st  # pip install streamlit
 from streamlit_lottie import st_lottie  # pip install streamlit-lottie
 from util import plots, lottie  # utility functions for graphics
@@ -22,6 +23,110 @@ def load_json(path_to_file):
         data = json.load(json_file)
     return data
 
+class MealDesign:
+    """A meal design class to select different dishes and set amounts.
+    """
+    def __init__(self,username):
+        """Create a new instance of "authenticate".
+        Parameters
+        ----------
+        username: str
+            The name of the user designing the meal.
+        df : pd.DataFrame
+            Dishes dataframe.
+        """
+        self.username = username
+        self.df = get_data_from_json("data/menu_edr_dishes_only.json")
+
+    def select_dishes(self, form_name, location='main'):
+        """ Select your dishes.
+        Parameters
+        ----------
+        form_name: str
+            The rendered name of the login form.
+        location: str, optional
+            The location of the login form i.e. main or sidebar. Defaults to main.
+        Returns
+        -------
+        str
+            Name of authenticated user.
+        boolean
+            The status of authentication, None: no credentials entered, False: incorrect credentials, True: correct credentials.
+        """
+        self.location = location
+        self.form_name = form_name
+
+        if self.location not in ['main','sidebar']:
+            raise ValueError("Location must be one of 'main' or 'sidebar'")
+
+        if 'df_selection' not in st.session_state:
+            st.session_state['df_selection'] = []
+        if 'multi_dish_select' not in st.session_state:
+            st.session_state['multi_dish_select'] = True
+        if 'new_meal' not in st.session_state:
+            st.session_state['new_meal'] = None
+
+        if self.location == 'main':
+            meal_placeholder = st.empty()
+            meal_form = meal_placeholder.container()
+        elif self.location == 'sidebar':
+            with open('./styles/style.css') as f:
+                st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+            meal_placeholder = st.sidebar.empty()
+            meal_form = meal_placeholder.container()
+
+        meal_form.subheader(self.form_name)
+        menu_item_type = meal_form.multiselect(
+                "Select the dish types:",
+                options=self.df["MenuItemType"].unique(),
+                default=None,  # display no selections
+                key='menu_item_type_key'
+            )
+
+        menu_item_name = meal_form.multiselect(
+            "Select the dish names:",
+            options= self.df.query("MenuItemType == @menu_item_type")["MenuItemName"].unique(),
+            default = None,
+            key='menu_item_name_key'
+        ) 
+
+        # Choose custom amount (g) for each dish
+        custom_amount_in_grams = []
+        for item in menu_item_name:
+            amount_in_grams_per_serving = int(np.nansum(np.array(np.nansum(self.df.query("MenuItemName == @item")['AmountInGrams'])))/1000) # each recipe serves 1000 people
+            amount = meal_form.slider(f'{item} (grams)', 0, 250, amount_in_grams_per_serving) # Default amount is serving size
+            custom_amount_in_grams.append(amount)
+        
+        df_selection = self.df.query("MenuItemName == @menu_item_name").copy()
+        df_selection['CustomAmountInGrams'] = custom_amount_in_grams
+
+        if meal_form.button('Submit'):
+            st.session_state['df_selection'] = df_selection
+            st.session_state['custom_amount_in_grams'] = custom_amount_in_grams
+            st.session_state['meal_placeholder'] = meal_placeholder
+            st.session_state['save'] = False
+        
+        #print('before if empty: ', len(st.session_state['df_selection']),st.session_state['new_meal'], st.session_state['select_menu_item_type'])
+        
+        if len(st.session_state['df_selection']) > 0:
+            # Save button
+            if st.session_state['multi_dish_select']:
+                st.session_state['save'] = st.sidebar.button("Save")
+            if st.button('New meal'):
+                # Clear the multiselect options
+                del st.session_state.menu_item_type_key
+                del st.session_state.menu_item_name_key
+                st.session_state['new_meal'] = True
+                st.session_state['df_selection'] = []
+                st.session_state['multi_dish_select'] = True
+                #st.session_state['meal_placeholder'].empty()
+                st.experimental_rerun()
+
+        #print('after if empty: ', len(st.session_state['df_selection']),st.session_state['new_meal'], st.session_state['select_menu_item_type'])
+
+        return st.session_state['df_selection']
+
+        
 def sidebar(df):
     """Sidebar for data selection.
 
@@ -39,6 +144,7 @@ def sidebar(df):
         "Select the dish types:",
         options=df["MenuItemType"].unique(),
         default=None,  # display all Location names
+        key='select_menu_item_type'
     )
 
     st.session_state['multi_dish_select'] = st.sidebar.checkbox(
@@ -49,7 +155,8 @@ def sidebar(df):
         menu_item_name = st.sidebar.multiselect(
             "Select the dish names:",
             options= df.query("MenuItemType == @menu_item_type")["MenuItemName"].unique(),
-            default = None
+            default = None,
+            key='select_menu_item_dish'
         )
 
         # Choose custom amount (g) for each dish
@@ -82,14 +189,15 @@ def sidebar(df):
     if len(df_selection) > 0 and st.session_state['multi_dish_select']:
         st.session_state['ID'] = st.sidebar.text_input('Your employee ID number', '')
         # st.sidebar.markdown(f"<a style='color:#DAF2DA'> Your employee ID number is {st.session_state['ID']} </a>", unsafe_allow_html=True)
-        st.session_state['Save'] = st.sidebar.button(
+        st.session_state['save'] = st.sidebar.button(
             "Save"
             )
-        if st.session_state['Save']:
-            save()
+        if st.session_state['save']:
+            save_data()
             st.sidebar.markdown("<a style='color:#DAF2DA'> Results saved. </a>", unsafe_allow_html=True)
 
     return df_selection
+
 
 
 def navbar():
@@ -108,11 +216,9 @@ def navbar():
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-        <li class="nav-item active">
-            <a class="nav-link disabled" href="/" style='color:#DAF2DA; font-family:quando'> Build Your Meal <span class="sr-only">(current)</span> </a>
-        </li>
-        </ul>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/" style='color:#DAF2DA; font-family:quando'> Design Your Meal <span class="sr-only">(current)</span> </a>
+        </div>
     </div>
     </nav>
     """, unsafe_allow_html=True)
@@ -232,8 +338,8 @@ def get_nutrition_label_for_dishes_per_custom_amount(df_selection):
 
     return calories, carb, fat, protein
 
-def main_page(df_selection):
-    """Main page displaying information of selected dish
+def meal_analysis(df_selection):
+    """Displaying information of selected dish
 
     Args:
         df_dish (pd.DataFrame): Dish dataframe.
@@ -242,14 +348,11 @@ def main_page(df_selection):
         df_selection (pd.Dataframe): Dishes selection dataframe.
     """
 
-    title()
-
     # ---------------------------------------------------------------------------- #
     # Main page content
     # ---------------------------------------------------------------------------- #
     if len(df_selection) == 0:
         pass
-
     
     elif len(df_selection) == 1 and not st.session_state['multi_dish_select']:
         dish_name = df_selection["MenuItemName"].values[0]
@@ -445,20 +548,9 @@ def main_page(df_selection):
             col2.plotly_chart(fig_protein_per_serving, use_container_width=True)
 
 
-    # ---- HIDE STREAMLIT STYLE ----
-    hide_st_style = """
-                <style>
-                #MainMenu {visibility: hidden;}
-                footer {visibility: hidden;}
-                header {visibility: hidden;}
-                </style>
-                """
-    st.markdown(hide_st_style, unsafe_allow_html=True)
-
-
 def results2df():
     results = {'Datetime':pd.to_datetime(datetime.now().strftime("%Y-%m-%d %H:%M:%S")),
-                'ID': st.session_state['ID'],
+                'username': st.session_state['username'],
                 'Dishes':';'.join(st.session_state['df_selection']['MenuItemName'].values.astype(str)),
                 'Amount':';'.join(st.session_state['df_selection']['CustomAmountInGrams'].values.astype(str)),
                 'CO2e': st.session_state['kgCO2e_per_custom_amount'],
@@ -472,7 +564,7 @@ def results2df():
 
     return df
     
-def save():
+def save_data():
     """
     Save user results to csv file. 
     """
@@ -492,4 +584,4 @@ def main():
     navbar()
 
     # # ---- MAINPAGE ----
-    main_page(df_selection)
+    meal_analysis(df_selection)

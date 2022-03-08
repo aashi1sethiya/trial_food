@@ -93,7 +93,7 @@ class DBTools:
         return message
 
 
-class authenticate:
+class Authenticate:
     """A secure authentication class to validate user credentials in a Streamlit application.
     Uses cookies. 
     Adapted from: https://github.com/mkhorasani/Streamlit-Authenticator 
@@ -108,12 +108,7 @@ class authenticate:
             The key to be used for hashing the signature of the JWT cookie.
         cookie_expiry_days: int
             The number of days before the cookie expires on the client's browser.
-        Returns
-        -------
-        str
-            Name of authenticated user.
-        boolean
-            The status of authentication, None: no credentials entered, False: incorrect credentials, True: correct credentials.
+
         """
         self.cookie_name = cookie_name
         self.key = key
@@ -148,13 +143,13 @@ class authenticate:
         return (datetime.utcnow() + timedelta(days=self.cookie_expiry_days)).timestamp()
 
     def login(self,form_name,location='main'):
-        """Create a new instance of "authenticate".
+        """ Login form.
         Parameters
         ----------
         form_name: str
             The rendered name of the login form.
-        location: str
-            The location of the login form i.e. main or sidebar.
+        location: str, optional
+            The location of the login form i.e. main or sidebar. Defaults to main.
         Returns
         -------
         str
@@ -174,6 +169,8 @@ class authenticate:
             st.session_state['authentication_status'] = None
         if 'username' not in st.session_state:
             st.session_state['username'] = None
+        if 'logout' not in st.session_state:
+            st.session_state['logout'] = None
 
         if st.session_state['authentication_status'] != True:
             try:
@@ -214,7 +211,7 @@ class authenticate:
                     else:
                         st.session_state['authentication_status'] = False
                         st.session_state['username'] = ''
-
+        
         if st.session_state['authentication_status'] == True:
             # if self.location == 'main':
             #     if st.button('Logout'):
@@ -223,12 +220,13 @@ class authenticate:
             #         st.session_state['username'] = None
             #         st.session_state['authentication_status'] = None
             # elif self.location == 'sidebar':
+            st.sidebar.markdown(f"<a style='color:#DAF2DA'> Welcome *{st.session_state['username']}* </a>", unsafe_allow_html=True)
             if st.sidebar.button('Logout'):
                 st.session_state['logout'] = True
                 cookie_manager.delete(self.cookie_name)
                 st.session_state['username'] = None
                 st.session_state['authentication_status'] = None
-
+        
         return st.session_state['username'], st.session_state['authentication_status']
 
 def delete_user_form():
@@ -264,28 +262,37 @@ def signup_form():
             st.warning(f"The username '{new_user}' has been taken. Please try again.")
 
 def logged_in_page(username):
+    if username == 'admin':
+        delete_user_form()
+        reset_user_form()
+        user_result = DBTools.view_all_users()
+    else:
+        home.title()
+        task = st.sidebar.selectbox("Please choose an option",["Design Your Meal","Analytics","Profile"])
+        if task == "Design Your Meal":
+            meal_designer = home.MealDesign(username=username)
+            df_selection = meal_designer.select_dishes('Your Meal','sidebar')
+            if len(st.session_state['df_selection']) == 0:
+                st.warning('Please choose your dishes.')
+            else:
+                home.meal_analysis(df_selection=st.session_state['df_selection'])
+                if st.session_state['save']:
+                    home.save_data()
+                    st.sidebar.markdown("<a style='color:#DAF2DA'> Results saved. </a>", unsafe_allow_html=True)
+                else:
+                    st.sidebar.markdown("<a style='color:#DAF2DA'> New changes to save. </a>", unsafe_allow_html=True)
+        elif task == "Analytics":
+            st.subheader("Your Meal Analytics")
 
-    task = st.selectbox("Task",["Design Your Meal","Analytics","Profiles"])
-
-    if task == "Design Your Meal":
-        st.subheader("Design Your Meal")
-
-    elif task == "Analytics":
-        st.subheader("Your Meal Analytics")
-
-    elif task == "Profiles":
-        st.subheader("Your Profile")
-        if username == 'admin':
-            delete_user_form()
-            reset_user_form()
-            user_result = DBTools.view_all_users()
-        else:
+        elif task == "Profile":
+            st.subheader("Your Profile")
             user_result = DBTools.view_user(username)
-        df_user = pd.DataFrame(user_result,columns=["Username", 'Password'])
-        st.dataframe(df_user)
+            df_user = pd.DataFrame(user_result,columns=["Username", 'Password'])
+            st.dataframe(df_user)
 
 def main():
-    """Simple Login App"""
+    """Simple Login App"""    
+
     with open('./styles/style.css') as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
@@ -296,18 +303,16 @@ def main():
         home.title()
 
     elif choice == "Sign in":
-        authenticator = authenticate('some_cookie_name','some_signature_key',cookie_expiry_days=1)
+        authenticator = Authenticate('some_cookie_name','some_signature_key',cookie_expiry_days=1)
         username, authentication_status = authenticator.login('Login','main')
-        if st.session_state['authentication_status']:
-            st.write(f"Welcome *{st.session_state['username']}*")
+        if st.session_state['authentication_status']: # use session state variables for multipage app 
             logged_in_page(st.session_state['username'])
         elif st.session_state['authentication_status'] == False:
             st.error('Username/password is incorrect')
         elif st.session_state['authentication_status'] == None:
-            st.warning('Please enter your username and password')
-
+            st.warning('Please enter your username and password.')
     elif choice == "Create an account":
         signup_form()
-
+    
 if __name__ == '__main__':
     main()
