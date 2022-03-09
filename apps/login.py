@@ -12,7 +12,7 @@ import sqlite3 # Database management
 import hashlib # Security (other libraries include: passlib,hashlib,bcrypt,scrypt)
 import pandas as pd
 from util import lottie  # utility functions for graphics
-from apps import home 
+from apps import home, analytics
 
 class Security:
     """ Hash passwords so passwords are not revealed even if people can see the database. 
@@ -283,7 +283,8 @@ def logged_in_page(username):
                     st.sidebar.markdown("<a style='color:#DAF2DA'> New changes to save. </a>", unsafe_allow_html=True)
         elif task == "Analytics":
             st.subheader("Your Meal Analytics")
-
+            analytics.main()
+            
         elif task == "Profile":
             st.subheader("Your Profile")
             user_result = DBTools.view_user(username)

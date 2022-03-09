@@ -33,5 +33,3 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 # Load homepage
 home.navbar()
 login.main()
-#home.main()
-

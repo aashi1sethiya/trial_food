@@ -184,3 +184,42 @@ def donut_chart_nutrition(nutrient_value, rdi_value, nutrient_label, per='100g',
         height=200,
         )
     return fig
+
+def plot_user_CO2e(df):
+    """Plot user CO2e trend. 
+
+    Args:
+        df (pd.DataFrame): User's meal log dataframe.
+    """
+    fig = px.line(df, x="Datetime", y="CO2e", title='Your Food Carbon Footprint (kgCO2e)')
+    fig.update_layout(
+        xaxis=dict(
+            showline=True,
+            showgrid=False,
+            showticklabels=True,
+            linecolor='rgb(204, 204, 204)',
+            linewidth=2,
+            ticks='outside',
+            tickfont=dict(
+                family='Arial',
+                size=12,
+                color='rgb(82, 82, 82)',
+            ),
+        ),
+        yaxis=dict(
+            showgrid=True,
+            zeroline=False,
+            showline=False,
+            showticklabels=True,
+        ),
+        autosize=False,
+        margin=dict(
+            autoexpand=False,
+            l=100,
+            r=20,
+            t=110,
+        ),
+        showlegend=False,
+        plot_bgcolor='#DAF2DA'
+    )
+    return fig

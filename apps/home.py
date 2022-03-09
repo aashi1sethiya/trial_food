@@ -63,7 +63,7 @@ class MealDesign:
             st.session_state['df_selection'] = []
         if 'multi_dish_select' not in st.session_state:
             st.session_state['multi_dish_select'] = True
-        if 'new_meal' not in st.session_state:
+        if 'new_meal' not in st.session_state or st.session_state['new_meal'] == True:
             st.session_state['new_meal'] = None
 
         if self.location == 'main':
@@ -106,23 +106,23 @@ class MealDesign:
             st.session_state['meal_placeholder'] = meal_placeholder
             st.session_state['save'] = False
         
-        #print('before if empty: ', len(st.session_state['df_selection']),st.session_state['new_meal'], st.session_state['select_menu_item_type'])
         
         if len(st.session_state['df_selection']) > 0:
             # Save button
             if st.session_state['multi_dish_select']:
                 st.session_state['save'] = st.sidebar.button("Save")
             if st.button('New meal'):
-                # Clear the multiselect options
-                del st.session_state.menu_item_type_key
-                del st.session_state.menu_item_name_key
+                # Clear the multiselect options by deleting corresponding session state
+                del st.session_state['menu_item_type_key']
+                del st.session_state['menu_item_name_key']
+                # Then set them to be empty lists
+                st.session_state['menu_item_type_key'] = []
+                st.session_state['menu_item_name_key'] = []
                 st.session_state['new_meal'] = True
                 st.session_state['df_selection'] = []
                 st.session_state['multi_dish_select'] = True
-                #st.session_state['meal_placeholder'].empty()
+                st.session_state['meal_placeholder'].empty()
                 st.experimental_rerun()
-
-        #print('after if empty: ', len(st.session_state['df_selection']),st.session_state['new_meal'], st.session_state['select_menu_item_type'])
 
         return st.session_state['df_selection']
 
@@ -550,7 +550,7 @@ def meal_analysis(df_selection):
 
 def results2df():
     results = {'Datetime':pd.to_datetime(datetime.now().strftime("%Y-%m-%d %H:%M:%S")),
-                'username': st.session_state['username'],
+                'Username': st.session_state['username'],
                 'Dishes':';'.join(st.session_state['df_selection']['MenuItemName'].values.astype(str)),
                 'Amount':';'.join(st.session_state['df_selection']['CustomAmountInGrams'].values.astype(str)),
                 'CO2e': st.session_state['kgCO2e_per_custom_amount'],
