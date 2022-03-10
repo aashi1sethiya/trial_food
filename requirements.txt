@@ -1,7 +1,9 @@
-streamlit==1.4.0
-plotly==4.14.3
-pandas==1.2.3
 numpy==1.19.5
+pandas==1.2.3
+streamlit==1.4.0
 streamlit_lottie==0.0.3
-requests==2.26.0
+requests==2.27.1
+extra_streamlit_components==0.1.53
+plotly==4.14.3
+PyJWT==2.3.0
 openpyxl==3.0.6
