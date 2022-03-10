@@ -1,10 +1,15 @@
+""" 
+This is the Analytics page which shows your carbon footprint over time.
 
-from util import plots
-import streamlit as st  # pip install streamlit
+More analytics data will be added in the future.
+"""
 import pandas as pd
+import streamlit as st
+from util import plots
+
 
 def main():
-    df_log = pd.read_csv('./output/staff_food_log.csv')
+    df_log = pd.read_csv("./output/staff_food_log.csv")
     df_user = df_log.query("Username == @st.session_state.username")
     total_CO2 = df_user.CO2e.sum()
     col1, col2 = st.columns(2)

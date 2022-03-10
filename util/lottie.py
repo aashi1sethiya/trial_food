@@ -1,9 +1,15 @@
-import json
+""" 
+This module manages lottie animations in the app.
 
+Reference: 
+1) GitHub: https://github.com/andfanilo/streamlit-lottie
+2) Lottie Files: https://lottiefiles.com/
+
+"""
+
+import json
 import requests  # pip install requests
 
-# GitHub: https://github.com/andfanilo/streamlit-lottie
-# Lottie Files: https://lottiefiles.com/
 
 def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
