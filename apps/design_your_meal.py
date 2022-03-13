@@ -2,8 +2,10 @@
 This is the Design your meal page, where the user can select dishes
 and see the carbon footprint and nutrition values for their meal.
 """
+from importlib.resources import path
 import numpy as np  # math operations
 import pandas as pd
+import os
 from datetime import datetime
 import streamlit as st  # pip install streamlit
 from util import utils, plots  # utility functions for graphics
@@ -493,5 +495,9 @@ def save_data():
     Save user results to csv file.
     """
     df = results2df()
-    df.to_csv("./output/staff_food_log.csv", mode="a", header=False, index=False)
+    path_to_file = "./output/staff_food_log.csv"
+    if os.path.exists(path_to_file):
+        df.to_csv(path_to_file, mode="a", header=False, index=False, encoding='utf_8_sig')
+    else:
+        df.to_csv(path_to_file, mode="w", header=True, index=False, encoding='utf_8_sig')
     # st.dataframe(df)

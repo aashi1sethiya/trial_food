@@ -6,8 +6,6 @@ Food carbon and nutrition label Dashboard built in Python and the Streamlit libr
 ## Author
 - Matthew Cheng 
 
-## Todo
-- Personal accounts to remember personal carbon and nutrition budgets.
 
 ## Setup 
 To launch:
@@ -15,3 +13,17 @@ To launch:
 * Run `pip install -r requirements.txt`
 * Run `streamlit run app.py`
 * Browser will open with the webapp.
+
+To expose local port to public url (ngrok):
+* `pip install pyngrok`
+* Open a terminal to start ngrok tunnel to listen in on a local port (see `ngrok.sh`): `ngrok http 8501`
+* Run the web app on the same port number (see `streamlit.sh`): `streamlit run --server.port 8501 app.py >/dev/null
+* Now navigate to [ngrok](https://dashboard.ngrok.com/cloud-edge/status) and open one of the urls to see your web app.
+* To kill the session, press `Ctrl + C` in the terminal running ngrok and the tunnel session will be killed. 
+
+## Todo
+- Add more user meal analytics
+- Meal Analytics page: Add carbon footprint so far this month. 
+- Profile page: set custom macro and carbon budget. 
+- Sign up page: require logout before creating a new account. 
+- Hosting: Similar to sjcam local http server
