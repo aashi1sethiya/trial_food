@@ -9,7 +9,7 @@ This app starts the Food carbon and nutrition Dashboard w/ Streamlit.
 import streamlit as st  # pip install streamlit
 from apps import home, main
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
     st.set_page_config(
         page_title="Our Food Impact",
@@ -17,7 +17,6 @@ if __name__ == '__main__':
         layout="wide",
         initial_sidebar_state="collapsed",  # auto, expanded
     )
-
 
     # ---- HIDE STREAMLIT STYLE ----
     hide_st_style = """

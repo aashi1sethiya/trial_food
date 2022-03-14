@@ -9,101 +9,12 @@ Reference:
 """
 
 from datetime import datetime, timedelta
-import sqlite3  # Database management
 import pandas as pd
 import jwt  # for encode and decode
-import streamlit as st  # pip install streamlit
+import streamlit as st
 import extra_streamlit_components as stx
-import hashlib  # Security (other libraries include: passlib,hashlib,bcrypt,scrypt)
-from apps import design_your_meal, analytics
-
-
-class Security:
-    """Hash passwords so passwords are not revealed even if people can see the database."""
-
-    def make_hashes(password):
-        """Hash passwords with sha (secure hash algorithm) developed by NSA.
-
-        Args:
-            password (str): user password.
-
-        Returns:
-            (str): hash key corresponding to the user password.
-        """
-        return hashlib.sha256(str.encode(password)).hexdigest()
-
-    def check_hashes(password, hashed_text):
-        if Security.make_hashes(password) == hashed_text:
-            return hashed_text
-        return False
-
-
-# Database management
-conn = sqlite3.connect("./data/app_user_data.db", check_same_thread=False)
-c = conn.cursor()
-
-
-class DBTools:
-    """Database functions to create, add, login, and view users."""
-
-    def create_usertable():
-        c.execute("CREATE TABLE IF NOT EXISTS userstable(username TEXT,password TEXT)")
-
-    def add_userdata(username, password):
-        c.execute(
-            "INSERT INTO userstable(username,password) VALUES (?,?)",
-            (username, password),
-        )
-        conn.commit()
-
-    def authenticate_user(username, password):
-        """Return the data corresponding to username and password input."""
-        c.execute(
-            "SELECT * FROM userstable WHERE username=? AND password=?",
-            (username, password),
-        )
-        data = c.fetchall()
-        return data
-
-    def view_user(username):
-        c.execute("SELECT * FROM userstable WHERE username=?", (username,))
-        data = c.fetchall()
-        return data
-
-    def view_all_users():
-        c.execute("SELECT * FROM userstable")
-        data = c.fetchall()
-        return data
-
-    def delete_user(username):
-        if DBTools.view_user(username):
-            try:
-                c.execute("DELETE FROM userstable WHERE username=?", (username,))
-                conn.commit()
-                message = f"You deleted user '{username}'. Record updated successfully."
-            except sqlite3.Error as error:
-                message = f"Failed to update sqlite table. {error}"
-        else:
-            message = f"Username '{username}' not found."
-
-        return message
-
-    def reset_user_password(username):
-        if DBTools.view_user(username):
-            try:
-                default_password = "12345"
-                default_password_hash = Security.make_hashes("12345")
-                c.execute(
-                    "UPDATE userstable SET password=? WHERE username=?",
-                    (default_password_hash, username),
-                )
-                conn.commit()
-                message = f"User '{username}' password has been reset to {default_password}. Record updated successfully."
-            except sqlite3.Error as error:
-                message = f"Failed to update sqlite table. {error}"
-        else:
-            message = f"Username '{username}' not found."
-        return message
+from apps import design_your_meal, analytics, profile
+from util.utils import DBTools, Security
 
 
 class Authenticate:
@@ -277,25 +188,6 @@ def reset_user_form():
         st.write(result)
 
 
-def signup_form():
-    create_account_form = st.form("create_new_account")
-    create_account_form.subheader("Create New Account")
-    new_user = create_account_form.text_input("Username")
-    new_password = create_account_form.text_input("Password", type="password")
-
-    if create_account_form.form_submit_button("Signup"):
-        DBTools.create_usertable()
-        result = DBTools.view_user(new_user)
-        if not result:  # can't find user in database
-            DBTools.add_userdata(new_user, Security.make_hashes(new_password))
-            st.success(
-                f"You have successfully created an account with username '{new_user}'."
-            )
-            st.info("Go to Login Menu to login")
-        else:
-            st.warning(f"The username '{new_user}' has been taken. Please try again.")
-
-
 def sign_in_outcomes():
     authenticator = Authenticate(
         "some_cookie_name", "some_signature_key", cookie_expiry_days=1
@@ -307,6 +199,7 @@ def sign_in_outcomes():
         logged_in_page(st.session_state["username"])
     elif st.session_state["authentication_status"] == False:
         st.error("Username/password is incorrect")
+        st.session_state["username"] = None
     elif st.session_state["authentication_status"] == None:
         st.warning("Please enter your username and password.")
 
@@ -321,10 +214,18 @@ def logged_in_page(username):
         delete_user_form()
         reset_user_form()
         user_result = DBTools.view_all_users()
+        st.dataframe(user_result)
     else:
-        task = st.sidebar.selectbox(
-            "Please choose an option", ["Design Your Meal", "Analytics", "Profile"]
-        )
+        if not DBTools.view_usercontact(username) and not DBTools.view_userbudget(
+            username
+        ):
+            task = st.sidebar.selectbox("Please choose an option", ["Profile"])
+            st.warning("Please update your profile.")
+        else:
+            task = st.sidebar.selectbox(
+                "Please choose an option", ["Design Your Meal", "Analytics", "Profile"]
+            )
+
         if task == "Design Your Meal":
             meal_designer = design_your_meal.MealDesign(username=username)
             df_selection = meal_designer.select_dishes("Your Meal", "sidebar")
@@ -346,11 +247,7 @@ def logged_in_page(username):
                         unsafe_allow_html=True,
                     )
         elif task == "Analytics":
-            st.subheader("Your Meal Analytics")
             analytics.main()
 
         elif task == "Profile":
-            st.subheader("Your Profile")
-            user_result = DBTools.view_user(username)
-            df_user = pd.DataFrame(user_result, columns=["Username", "Password"])
-            st.dataframe(df_user)
+            profile.main()

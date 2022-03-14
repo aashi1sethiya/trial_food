@@ -199,7 +199,7 @@ def gauge_chart_carbon_multidish(value_per_custom_amount):
 def donut_chart_nutrition(
     nutrient_value, rdi_value, nutrient_label, per="100g", **kwargs
 ):
-    """Donut chart for CO2 emissions of different ingredients.
+    """Donut chart for nutrition of different ingredients.
 
     Args:
         nutrient_value (float): Nutrient value in dish per 100g.
@@ -265,7 +265,7 @@ def plot_user_CO2e(df):
         df (pd.DataFrame): User's meal log dataframe.
     """
     fig = px.line(
-        df, x="Datetime", y="CO2e", title="Your Food Carbon Footprint (kgCO2e)"
+        df, x="Datetime", y="CO2e", title="Your Food Carbon Footprint History (kgCO2e)"
     )
     fig.update_layout(
         xaxis=dict(
@@ -290,11 +290,119 @@ def plot_user_CO2e(df):
         autosize=False,
         margin=dict(
             autoexpand=False,
-            l=100,
+            l=40,
             r=20,
-            t=110,
+            t=100,
+            b=100,
         ),
         showlegend=False,
         plot_bgcolor="#DAF2DA",
+    )
+    return fig
+
+
+def plot_user_calories(df):
+    """Plot user calories trend.
+
+    Args:
+        df (pd.DataFrame): User's meal log dataframe.
+    """
+    fig = px.line(
+        df,
+        x="Datetime",
+        y="Calories",
+    )
+    fig.update_layout(
+        xaxis=dict(
+            showline=True,
+            showgrid=False,
+            showticklabels=True,
+            linecolor="rgb(204, 204, 204)",
+            linewidth=2,
+            ticks="outside",
+            tickfont=dict(
+                family="Arial",
+                size=12,
+                color="rgb(82, 82, 82)",
+            ),
+        ),
+        yaxis=dict(
+            showgrid=True,
+            zeroline=False,
+            showline=False,
+            showticklabels=True,
+        ),
+        autosize=False,
+        margin=dict(
+            autoexpand=False,
+            l=40,
+            r=20,
+            t=30,
+            b=150,
+        ),
+        showlegend=False,
+        plot_bgcolor="#DAF2DA",
+    )
+    return fig
+
+
+def plot_user_macro_split(df, **kwargs):
+    """Donut donut chart for macro split.
+
+    Args:
+        df (pd.DataFrame): User's meal log dataframe.
+        **kwargs: other arguments for the go.Pie function, like marker_colors.
+
+    Returns:
+        fig: plotly object.
+    """
+    values = [
+        df.Carbs.sum() * 4,
+        df.Protein.sum() * 4,
+        df.Fat.sum() * 9,
+    ]  # calories from each macro
+    labels = ["Carbs", "Protein", "Fat"]
+    calories_total = sum(values)
+    fig = go.Figure(
+        data=[
+            go.Pie(
+                labels=labels,
+                values=values,
+                direction="clockwise",
+                hole=0.75,
+                sort=False,
+                **kwargs,
+            )
+        ],
+    )
+
+    annotations = []
+    annotations.append(
+        dict(
+            xref="paper",
+            yref="paper",
+            x=0.5,
+            y=0.5,
+            xanchor="center",
+            yanchor="middle",
+            # text= f'<b> {nutrient_value:.1f} {unit} <br> {nutrient_label} per 100g </b>', # value and label inside donut
+            text=f"<b> {int(calories_total)} <br> kcal </b>",  # just label inside donut
+            font=dict(family="Arial", size=14),
+            showarrow=False,
+        )
+    )
+
+    fig.update_traces(
+        textposition="inside",
+        textinfo="label+percent",
+        showlegend=False,
+    )
+
+    fig.update_layout(
+        annotations=annotations,
+        margin=dict(l=20, r=20, t=35, b=0),
+        # paper_bgcolor="#D8E8D9",
+        width=300,
+        height=300,
     )
     return fig

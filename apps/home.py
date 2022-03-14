@@ -5,6 +5,7 @@ This is the homepage of the app.
 import streamlit as st  # pip install streamlit
 from streamlit_lottie import st_lottie  # pip install streamlit-lottie
 from util import lottie  # utility functions for graphics
+import config
 
 
 def navbar():
@@ -44,7 +45,7 @@ def title():
     col1, col2, col3 = st.columns((1, 3, 1))
     with col1:
         lottie_welcome = lottie.load_lottiefile(
-            "./lottiefiles/walking-avocado.json"
+            f"{config.PATH_TO_LOTTIE}walking-avocado.json"
         )  # replace link to local lottie file
         st_lottie(
             lottie_welcome,

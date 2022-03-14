@@ -9,6 +9,8 @@ import os
 from datetime import datetime
 import streamlit as st  # pip install streamlit
 from util import utils, plots  # utility functions for graphics
+from util.utils import DBTools  # database management
+import config
 
 
 class MealDesign:
@@ -58,7 +60,7 @@ class MealDesign:
             meal_placeholder = st.empty()
             meal_form = meal_placeholder.container()
         elif self.location == "sidebar":
-            with open("./styles/style.css") as f:
+            with open(config.PATH_TO_CSS) as f:
                 st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
             meal_placeholder = st.sidebar.empty()
             meal_form = meal_placeholder.container()
@@ -67,7 +69,7 @@ class MealDesign:
         menu_item_type = meal_form.multiselect(
             "Select the dish types:",
             options=self.df["MenuItemType"].unique(),
-            default=None,  # display no selections
+            default=None,
             key="menu_item_type_key",
         )
 
@@ -104,6 +106,8 @@ class MealDesign:
         if meal_form.button("Submit"):
             st.session_state["df_selection"] = df_selection
             st.session_state["custom_amount_in_grams"] = custom_amount_in_grams
+            st.session_state["menu_item_type"] = menu_item_type
+            st.session_state["menu_item_name"] = menu_item_name
             st.session_state["meal_placeholder"] = meal_placeholder
             st.session_state["save"] = False
 
@@ -299,7 +303,7 @@ def meal_analysis(df_selection):
         calories, carb, fat, protein = get_nutrition_label_for_dish_per_100g(
             df_selection
         )
-        df_rdi = pd.read_csv("./data/nutrition_rdi.csv")
+        df_rdi = pd.read_csv(config.PATH_TO_NUTRITION_RDI)
 
         col1, col2 = st.columns(2)
         with col1:
@@ -360,6 +364,13 @@ def meal_analysis(df_selection):
         st.markdown("##")
         st.markdown("##")
 
+        # User budget
+        user_budget = DBTools.view_userbudget(st.session_state.username)
+        df_budget = pd.DataFrame(
+            user_budget,
+            columns=["Username", "co2", "calories", "carbs", "protein", "fat"],
+        )
+
         # ---------------------------------------------------------------------------- #
         # ENVIRONMENT
         # ---------------------------------------------------------------------------- #
@@ -367,11 +378,10 @@ def meal_analysis(df_selection):
 
         st.markdown("Carbon Footprint per Serving (kg CO2e / serving):\n")
         col1, _ = st.columns(2)
-        livelca_CO2_budget = 2.72  # (kg) based on LiveLCA threshold
-        st.session_state["max_CO2"] = 5.0
-        st.session_state["daily_food_CO2_budget"] = col1.number_input(
-            "CO2e Budget (kg)", 0.0, st.session_state["max_CO2"], livelca_CO2_budget
-        )  # Default amount is rdi value
+
+        # user carbon budget
+        st.session_state["daily_food_CO2_budget"] = df_budget["co2"].values[0]
+        st.session_state["max_CO2"] = df_budget["co2"].values[0] * 1.5
 
         _, col2, _ = st.columns([1, 3, 1])
         kgCO2e_per_custom_amount = get_carbon_label_for_dishes_per_custom_amount(
@@ -403,16 +413,13 @@ def meal_analysis(df_selection):
         st.session_state["fat_per_custom_amount"] = fat
         st.session_state["protein_per_custom_amount"] = protein
 
-        df_rdi = pd.read_csv("./data/nutrition_rdi.csv")
+        # user nutrition budget
+        calories_budget = df_budget["calories"].values[0]
+        carbs_budget = df_budget["carbs"].values[0]
+        fat_budget = df_budget["fat"].values[0]
+        protein_budget = df_budget["protein"].values[0]
 
-        col1, _, col3, _ = st.columns(4)
-        calories_budget = col1.number_input(
-            "Calories Budget (kcal)", 0, 3000, int(df_rdi["Energ_Kcal"].values[0])
-        )  # Default amount is rdi value
-        carbs_budget = col3.number_input(
-            "Carbs Budget (g)", 0, 300, int(df_rdi["Carbohydrt_(g)"].values[0])
-        )  # Default amount is rdi value
-
+        # Display macro donut charts
         col1, col2 = st.columns(2)
         with col1:
             col1.metric("Energy", f"{calories:.1f} kcal", "")
@@ -435,14 +442,6 @@ def meal_analysis(df_selection):
                 marker_colors=["lightblue", "lightgray"],
             )
             col2.plotly_chart(fig_carb_per_serving, use_container_width=True)
-
-        col1, _, col3, _ = st.columns(4)
-        fat_budget = col1.number_input(
-            "Fat Budget (g)", 0, 100, int(df_rdi["Lipid_Tot_(g)"].values[0])
-        )  # Default amount is rdi value
-        protein_budget = col3.number_input(
-            "Protein Budget (g)", 0, 100, int(df_rdi["Protein_(g)"].values[0])
-        )  # Default amount is rdi value
 
         col1, col2 = st.columns(2)
         with col1:
@@ -470,7 +469,7 @@ def meal_analysis(df_selection):
 
 def results2df():
     results = {
-        "Datetime": pd.to_datetime(datetime.now().strftime("%Y-%m-%d %H:%M:%S")),
+        "Datetime": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "Username": st.session_state["username"],
         "Dishes": ";".join(
             st.session_state["df_selection"]["MenuItemName"].values.astype(str)
@@ -480,24 +479,31 @@ def results2df():
         ),
         "CO2e": st.session_state["kgCO2e_per_custom_amount"],
         "Calories": st.session_state["calories_per_custom_amount"],
-        "Carb": st.session_state["carb_per_custom_amount"],
+        "Carbs": st.session_state["carb_per_custom_amount"],
         "Fat": st.session_state["fat_per_custom_amount"],
         "Protein": st.session_state["protein_per_custom_amount"],
     }
+    # print(results.values())
+    # df = pd.DataFrame(results, index=[0])
 
-    df = pd.DataFrame(results, index=[0])
-
-    return df
+    return results
 
 
 def save_data():
     """
     Save user results to csv file.
     """
-    df = results2df()
-    path_to_file = "./output/staff_food_log.csv"
-    if os.path.exists(path_to_file):
-        df.to_csv(path_to_file, mode="a", header=False, index=False, encoding='utf_8_sig')
-    else:
-        df.to_csv(path_to_file, mode="w", header=True, index=False, encoding='utf_8_sig')
-    # st.dataframe(df)
+    results = results2df()
+
+    DBTools.create_usersmeallogs()
+    DBTools.add_usermealdata(
+        st.session_state.username,
+        results["Datetime"],
+        results["Dishes"],
+        results["Amount"],
+        results["CO2e"],
+        results["Calories"],
+        results["Carbs"],
+        results["Protein"],
+        results["Fat"],
+    )
