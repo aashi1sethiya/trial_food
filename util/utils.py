@@ -76,7 +76,7 @@ class DBTools:
         Table of meal logs for each user.
         """
         DBTools.c.execute(
-            "CREATE TABLE IF NOT EXISTS usersmeallogs(username TEXT,datetime TEXT,dishes TEXT,amount TEXT,co2 REAL,calories REAL,carbs REAL,protein REAL,fat REAL)"
+            "CREATE TABLE IF NOT EXISTS usersmeallogs(username TEXT,datetime TEXT,dishtypes TEXT,dishnames TEXT,amount TEXT,co2 REAL,calories REAL,carbs REAL,protein REAL,fat REAL)"
         )
 
     def add_userdata(username, password):
@@ -101,11 +101,11 @@ class DBTools:
         DBTools.conn.commit()
 
     def add_usermealdata(
-        username, datetime, dishes, amount, co2, calories, carbs, protein, fat
+        username, datetime, dishtypes, dishnames, amount, co2, calories, carbs, protein, fat
     ):
         DBTools.c.execute(
-            "INSERT INTO usersmeallogs(username,datetime,dishes,amount,co2,calories,carbs,protein,fat) VALUES (?,?,?,?,?,?,?,?,?)",
-            (username, datetime, dishes, amount, co2, calories, carbs, protein, fat),
+            "INSERT INTO usersmeallogs(username,datetime,dishtypes,dishnames,amount,co2,calories,carbs,protein,fat) VALUES (?,?,?,?,?,?,?,?,?,?)",
+            (username, datetime, dishtypes, dishnames, amount, co2, calories, carbs, protein, fat),
         )
         DBTools.conn.commit()
 

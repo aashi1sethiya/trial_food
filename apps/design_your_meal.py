@@ -471,7 +471,10 @@ def results2df():
     results = {
         "Datetime": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "Username": st.session_state["username"],
-        "Dishes": ";".join(
+        "DishTypes": ";".join(
+            st.session_state["df_selection"]["MenuItemType"].values.astype(str)
+        ),
+        "DishNames": ";".join(
             st.session_state["df_selection"]["MenuItemName"].values.astype(str)
         ),
         "Amount": ";".join(
@@ -499,7 +502,8 @@ def save_data():
     DBTools.add_usermealdata(
         st.session_state.username,
         results["Datetime"],
-        results["Dishes"],
+        results["DishTypes"],
+        results["DishNames"],
         results["Amount"],
         results["CO2e"],
         results["Calories"],
