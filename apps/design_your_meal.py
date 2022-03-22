@@ -60,8 +60,8 @@ class MealDesign:
             meal_placeholder = st.empty()
             meal_form = meal_placeholder.container()
         elif self.location == "sidebar":
-            with open(config.PATH_TO_CSS) as f:
-                st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+            # with open(config.PATH_TO_CSS) as f:
+            #     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
             meal_placeholder = st.sidebar.empty()
             meal_form = meal_placeholder.container()
 

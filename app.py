@@ -8,6 +8,7 @@ This app starts the Food carbon and nutrition Dashboard w/ Streamlit.
 
 import streamlit as st  # pip install streamlit
 from apps import home, main
+import config
 
 if __name__ == "__main__":
     # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
@@ -28,7 +29,11 @@ if __name__ == "__main__":
                 """
     st.markdown(hide_st_style, unsafe_allow_html=True)
 
+    # Apply css style
+    with open(config.PATH_TO_CSS) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
     # Load homepage
-    home.navbar()
+    #home.navbar()
     home.title()
     main.main()

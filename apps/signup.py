@@ -16,11 +16,7 @@ def signup_form():
             new_password = create_account_form.text_input("Password", type="password")
 
             if create_account_form.form_submit_button("Signup"):
-                DBTools.create_userstable()
-                DBTools.create_userscontacts()
-                DBTools.create_usersbudgets()
-                DBTools.create_usersmeallogs()
-
+                
                 if not DBTools.view_user(
                     new_user
                 ):  # empty result -> username available

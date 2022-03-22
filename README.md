@@ -16,6 +16,7 @@ To launch:
 
 To expose local port to public url (ngrok):
 * `pip install pyngrok`
+* `pip install cachetools`
 * Open a terminal to start ngrok tunnel to listen in on a local port (see `ngrok.sh`): `ngrok http 8501`
 * Run the web app on the same port number (see `streamlit.sh`): `streamlit run --server.port 8501 app.py >/dev/null`
 * Now navigate to [ngrok](https://dashboard.ngrok.com/cloud-edge/status) and open one of the urls to see your web app.

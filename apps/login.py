@@ -12,6 +12,7 @@ from datetime import datetime, timedelta
 import pandas as pd
 import jwt  # for encode and decode
 import streamlit as st
+from streamlit_option_menu import option_menu
 import extra_streamlit_components as stx
 from apps import design_your_meal, analytics, profile
 from util.utils import DBTools, Security

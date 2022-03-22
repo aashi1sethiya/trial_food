@@ -93,7 +93,7 @@ def delete_user_meal_log_form():
 def main():
     user_meal_log = DBTools.view_usermeallog(st.session_state.username)
     if user_meal_log: # found meal log for user
-        df_meal_log = pd.DataFrame(user_meal_log, columns=["Username", "Datetime", "Dishes", "Amount", "CO2e", "Calories", "Carbs", "Protein", "Fat"])
+        df_meal_log = pd.DataFrame(user_meal_log, columns=["Username", "Datetime", "DishTypes", "DishNames", "Amount", "CO2e", "Calories", "Carbs", "Protein", "Fat"])
         df_meal_log['Datetime'] = pd.to_datetime(df_meal_log['Datetime'])
 
         # Environment
