@@ -58,7 +58,8 @@ def donut_chart_carbon(labels, values):
     fig.update_layout(
         annotations=annotations,
         margin=dict(l=20, r=20, t=20, b=20),
-        # paper_bgcolor="#D8E8D9",
+        paper_bgcolor="rgba(0,0,0,0)",  # transparrent background
+        plot_bgcolor="rgba(0,0,0,0)",  # transparrent background
     )
     return fig
 
@@ -121,7 +122,8 @@ def gauge_chart_carbon(value_per_100g, value_per_recipe, nServings):
     fig.update_layout(
         annotations=annotations,
         margin=dict(l=20, r=20, t=25, b=20),
-        # paper_bgcolor="#D8E8D9",
+        paper_bgcolor="rgba(0,0,0,0)",  # transparrent background
+        plot_bgcolor="rgba(0,0,0,0)",  # transparrent background
     )
 
     return fig
@@ -189,8 +191,15 @@ def gauge_chart_carbon_multidish(value_per_custom_amount):
 
     fig.update_layout(
         annotations=annotations,
-        # margin=dict(l=25, r=25, t=25, b=25),
-        # paper_bgcolor="#D8E8D9",
+        margin=dict(
+            autoexpand=False,
+            l=40,
+            r=20,
+            t=50,
+            b=100,
+        ),
+        paper_bgcolor="rgba(0,0,0,0)",  # transparrent background
+        plot_bgcolor="rgba(0,0,0,0)",  # transparrent background
     )
 
     return fig
@@ -251,9 +260,10 @@ def donut_chart_nutrition(
     fig.update_layout(
         annotations=annotations,
         margin=dict(l=20, r=20, t=20, b=20),
-        # paper_bgcolor="#D8E8D9",
         width=200,
         height=200,
+        paper_bgcolor="rgba(0,0,0,0)",  # transparrent background
+        plot_bgcolor="rgba(0,0,0,0)",  # transparrent background
     )
     return fig
 
@@ -296,7 +306,8 @@ def plot_user_CO2e(df):
             b=100,
         ),
         showlegend=False,
-        plot_bgcolor="#DAF2DA",
+        paper_bgcolor="rgba(0,0,0,0)",  # transparrent background
+        plot_bgcolor="rgba(0,0,0,0)",  # transparrent background
     )
     return fig
 
@@ -341,7 +352,8 @@ def plot_user_calories(df):
             b=150,
         ),
         showlegend=False,
-        plot_bgcolor="#DAF2DA",
+        paper_bgcolor="rgba(0,0,0,0)",  # transparrent background
+        plot_bgcolor="rgba(0,0,0,0)",  # transparrent background
     )
     return fig
 
@@ -401,8 +413,9 @@ def plot_user_macro_split(df, **kwargs):
     fig.update_layout(
         annotations=annotations,
         margin=dict(l=20, r=20, t=35, b=0),
-        # paper_bgcolor="#D8E8D9",
         width=300,
         height=300,
+        paper_bgcolor="rgba(0,0,0,0)",  # transparrent background
+        plot_bgcolor="rgba(0,0,0,0)",  # transparrent background
     )
     return fig

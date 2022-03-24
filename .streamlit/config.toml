@@ -6,6 +6,8 @@ primaryColor = '#716657'
 
 # Background color for the main content area.
 backgroundColor = '#DAF2DA'
+# transparrent 'rgba(0,0,0,0)'
+# greenish blue '#DAF2DA'
 # light blue "#D8E8D9"
 # white "#FFFFFF"
 # white gray "#FFF9EE"

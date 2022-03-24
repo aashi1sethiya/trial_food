@@ -352,15 +352,21 @@ def meal_analysis(df_selection):
             col2.plotly_chart(fig_protein_per_100g, use_container_width=True)
 
     else:  # multi-dish
-        dish_names = df_selection["MenuItemName"].values
-        col1, col2 = st.columns([1, 15])
-        with col1:
-            col1.title(f":egg:")
-        with col2:
-            col2.markdown(
-                "<h1 style='text-align: left; color: black; font-size: 2em; font-family:quando'> Your Meal Impact on ... </h1>",
-                unsafe_allow_html=True,
+        # Display user chosen menu
+        st.markdown(
+            "<h1 style='text-align: left; color: black; font-size: 2em; font-family:quando'> Your Selections </h1>",
+            unsafe_allow_html=True,
+        )
+
+        for i in range(len(st.session_state["menu_item_name"])):
+            st.write(
+                f"{str(i+1)}. {st.session_state['menu_item_name'][i]} ({str(st.session_state['custom_amount_in_grams'][i])}g)"
             )
+
+        st.markdown(
+            "<h1 style='text-align: left; color: black; font-size: 2em; font-family:quando'> Your Meal Impact on ... </h1>",
+            unsafe_allow_html=True,
+        )
         st.markdown("##")
         st.markdown("##")
 
@@ -377,23 +383,24 @@ def meal_analysis(df_selection):
         st.subheader(f"... the Climate (GHG emissions) :factory: :deciduous_tree: ")
 
         st.markdown("Carbon Footprint per Serving (kg CO2e / serving):\n")
-        col1, _ = st.columns(2)
 
         # user carbon budget
         st.session_state["daily_food_CO2_budget"] = df_budget["co2"].values[0]
         st.session_state["max_CO2"] = df_budget["co2"].values[0] * 1.5
 
-        _, col2, _ = st.columns([1, 3, 1])
         kgCO2e_per_custom_amount = get_carbon_label_for_dishes_per_custom_amount(
             df_selection
         )
         fig_carbon_label_dish = plots.gauge_chart_carbon_multidish(
             kgCO2e_per_custom_amount
         )
+
+        # Display CO2 gauge chart
+        _, col2, _ = st.columns([1, 3, 1])
         with col2:
             col2.plotly_chart(
-                fig_carbon_label_dish, use_container_width=False
-            )  # bug if True, the gauge value moves after closing and opening sidebar
+                fig_carbon_label_dish, use_container_width=True
+            )  # bug if use_container_width=True, the gauge value moves after closing and opening sidebar
 
         # store value in session state
         st.session_state["kgCO2e_per_custom_amount"] = kgCO2e_per_custom_amount

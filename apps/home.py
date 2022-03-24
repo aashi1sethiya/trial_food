@@ -43,7 +43,7 @@ def title():
     # Title
     # ---------------------------------------------------------------------------- #
     col1, col2, col3 = st.columns((1, 3, 1))
-    with col1:
+    with col3:
         lottie_welcome = lottie.load_lottiefile(
             f"{config.PATH_TO_LOTTIE}walking-avocado.json"
         )  # replace link to local lottie file
@@ -61,7 +61,7 @@ def title():
         st.write("\n")
         st.write("\n")
         st.markdown(
-            "<h1 style='text-align: left; color: #544B35; font-size: 2.5em; font-family:quando'> Our Food | Our Climate | Our Health </h1>",
+            "<h1 style='text-align: center; color: #544B35; font-size: 2.5em; font-family:quando'> Our Food | Our Climate | Our Health </h1>",
             unsafe_allow_html=True,
         )
 
@@ -71,6 +71,6 @@ def title():
 def main():
     # ---- MAINPAGE ----
     st.markdown(
-        "<h1 style='text-align: left; color: #544B35; font-size: 2.5em; font-family:quando'> Welcome </h1>",
+        "<h1 style='text-align: center; color: #544B35; font-size: 2.5em; font-family:quando'> Welcome </h1>",
         unsafe_allow_html=True,
     )
