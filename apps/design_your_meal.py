@@ -60,8 +60,8 @@ class MealDesign:
             meal_placeholder = st.empty()
             meal_form = meal_placeholder.container()
         elif self.location == "sidebar":
-            # with open(config.PATH_TO_CSS) as f:
-            #     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+            with open(config.PATH_TO_CSS) as f:
+                st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
             meal_placeholder = st.sidebar.empty()
             meal_form = meal_placeholder.container()
 
@@ -358,10 +358,27 @@ def meal_analysis(df_selection):
             unsafe_allow_html=True,
         )
 
+        user_selections = ""
         for i in range(len(st.session_state["menu_item_name"])):
-            st.write(
-                f"{str(i+1)}. {st.session_state['menu_item_name'][i]} ({str(st.session_state['custom_amount_in_grams'][i])}g)"
+            user_selections += f"""<div class='notice notice-success'> 
+                                        <strong>{str(i+1)}. {st.session_state['menu_item_name'][i]}</strong> 
+                                        ({str(st.session_state['custom_amount_in_grams'][i])}g) 
+                                    </div>"""
+
+        html_str = f"""
+            <div class="container">
+                {user_selections}
+            </div>
+        """
+        with st.container():
+            with open("./apps/html/design_your_meal.css") as f:
+                st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+            st.markdown(
+                html_str,
+                unsafe_allow_html=True,
             )
+            
+        # Meal analysis
 
         st.markdown(
             "<h1 style='text-align: left; color: black; font-size: 2em; font-family:quando'> Your Meal Impact on ... </h1>",

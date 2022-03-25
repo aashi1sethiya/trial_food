@@ -42,8 +42,9 @@ def title():
     # ---------------------------------------------------------------------------- #
     # Title
     # ---------------------------------------------------------------------------- #
-    col1, col2, col3 = st.columns((1, 3, 1))
-    with col3:
+    with st.sidebar.container():
+        # _, col2, col3 = st.columns([1,2,1])
+        # with col2: # attempt to center (not so nice)
         lottie_welcome = lottie.load_lottiefile(
             f"{config.PATH_TO_LOTTIE}walking-avocado.json"
         )  # replace link to local lottie file
@@ -54,23 +55,24 @@ def title():
             loop=True,
             quality="low",
             height=150,
-            width=200,
+            width=150,
             key="avo1",
         )
-    with col2:
-        st.write("\n")
-        st.write("\n")
+    with st.container():
         st.markdown(
             "<h1 style='text-align: center; color: #544B35; font-size: 2.5em; font-family:quando'> Our Food | Our Climate | Our Health </h1>",
             unsafe_allow_html=True,
         )
-
-    st.markdown("---")
+        st.markdown("---")
 
 
 def main():
     # ---- MAINPAGE ----
-    st.markdown(
-        "<h1 style='text-align: center; color: #544B35; font-size: 2.5em; font-family:quando'> Welcome </h1>",
-        unsafe_allow_html=True,
-    )
+    with open("./apps/html/home.css") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    with st.container():
+        yol= './apps/html/home.html'
+        f = open(yol,'r') 
+        contents = f.read()
+        f.close()
+        st.markdown(contents, unsafe_allow_html=True)
