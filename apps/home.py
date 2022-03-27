@@ -5,6 +5,7 @@ This is the homepage of the app.
 import streamlit as st  # pip install streamlit
 from streamlit_lottie import st_lottie  # pip install streamlit-lottie
 from util import lottie  # utility functions for graphics
+from util.utils import read_html
 import config
 
 
@@ -68,11 +69,8 @@ def title():
 
 def main():
     # ---- MAINPAGE ----
-    with open("./apps/html/home.css") as f:
+    with open(f"{config.PATH_TO_HTML_CSS}home.css") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
     with st.container():
-        yol= './apps/html/home.html'
-        f = open(yol,'r') 
-        contents = f.read()
-        f.close()
+        contents = read_html(f'{config.PATH_TO_HTML}home.html')
         st.markdown(contents, unsafe_allow_html=True)

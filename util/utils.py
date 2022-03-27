@@ -21,7 +21,12 @@ def load_json(path_to_file):
         data = json.load(json_file)
     return data
 
-
+def read_html(path_to_html):
+    f = open(path_to_html,'r') 
+    contents = f.read()
+    f.close()
+    return contents
+    
 class Security:
     """Hash passwords so passwords are not revealed even if people can see the database."""
 

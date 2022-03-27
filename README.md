@@ -22,5 +22,9 @@ To expose local port to public url (ngrok):
 * Now navigate to [ngrok](https://dashboard.ngrok.com/cloud-edge/status) and open one of the urls to see your web app.
 * To kill the session, press `Ctrl + C` in the terminal running ngrok and the tunnel session will be killed. 
 
+To deploy on Google Cloud Run:
+* Build the app: `gcloud builds submit --tag gcr.io/ProjectID/AppName --project=ProjectID --timeout=3600s` (N.B. the 1 hour timeout parameter, so the build doesn't prematurely timeout)
+* Deploy the app: `gcloud run deploy --image gcr.io/ProjectID/AppName --project=ProjectID --platform managed --allow-unauthenticated`
+
+
 ## Todo
-- Hosting: Similar to sjcam local http server

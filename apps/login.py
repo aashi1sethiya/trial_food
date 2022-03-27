@@ -15,7 +15,8 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import extra_streamlit_components as stx
 from apps import design_your_meal, analytics, profile
-from util.utils import DBTools, Security
+from util.utils import DBTools, Security, read_html
+import config
 
 
 class Authenticate:
@@ -119,36 +120,42 @@ class Authenticate:
                 st.session_state["authentication_status"] = None
 
             if st.session_state["authentication_status"] != True:
-                if self.location == "main":
-                    login_form = st.form("Login")
-                elif self.location == "sidebar":
-                    login_form = st.sidebar.form("Login")
+                with st.container():
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        contents = read_html(f'{config.PATH_TO_HTML}login.html')
+                        st.markdown(contents, unsafe_allow_html=True)
+                    with col2:
+                        if self.location == "main":
+                            login_form = st.form("Login")
+                        elif self.location == "sidebar":
+                            login_form = st.sidebar.form("Login")
 
-                login_form.subheader(self.form_name)
-                self.username = login_form.text_input("Username")
-                self.password = login_form.text_input("Password", type="password")
+                        login_form.subheader(self.form_name)
+                        self.username = login_form.text_input("Username")
+                        self.password = login_form.text_input("Password", type="password")
 
-                if login_form.form_submit_button("Login"):
-                    result = DBTools.authenticate_user(
-                        self.username,
-                        Security.check_hashes(
-                            self.password, Security.make_hashes(self.password)
-                        ),
-                    )
-                    if result:  # correct username and password
-                        st.session_state["authentication_status"] = True
-                        st.session_state["username"] = self.username
-                        self.exp_date = self.exp_date()
-                        self.token = self.token_encode()
-                        cookie_manager.set(
-                            self.cookie_name,
-                            self.token,
-                            expires_at=datetime.now()
-                            + timedelta(days=self.cookie_expiry_days),
-                        )
-                    else:
-                        st.session_state["authentication_status"] = False
-                        st.session_state["username"] = ""
+                        if login_form.form_submit_button("Login"):
+                            result = DBTools.authenticate_user(
+                                self.username,
+                                Security.check_hashes(
+                                    self.password, Security.make_hashes(self.password)
+                                ),
+                            )
+                            if result:  # correct username and password
+                                st.session_state["authentication_status"] = True
+                                st.session_state["username"] = self.username
+                                self.exp_date = self.exp_date()
+                                self.token = self.token_encode()
+                                cookie_manager.set(
+                                    self.cookie_name,
+                                    self.token,
+                                    expires_at=datetime.now()
+                                    + timedelta(days=self.cookie_expiry_days),
+                                )
+                            else:
+                                st.session_state["authentication_status"] = False
+                                st.session_state["username"] = ""
 
         if st.session_state["authentication_status"] == True:
             # if self.location == 'main':
@@ -189,7 +196,8 @@ def reset_user_form():
         st.write(result)
 
 
-def sign_in_outcomes():
+def sign_in_outcomes():   
+    
     authenticator = Authenticate(
         "some_cookie_name", "some_signature_key", cookie_expiry_days=1
     )
