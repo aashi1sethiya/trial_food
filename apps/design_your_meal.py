@@ -371,7 +371,7 @@ def meal_analysis(df_selection):
             </div>
         """
         with st.container():
-            with open("./apps/html/design_your_meal.css") as f:
+            with open(f"{config.PATH_TO_HTML_CSS}design_your_meal.css") as f:
                 st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
             st.markdown(
                 html_str,
