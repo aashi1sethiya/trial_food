@@ -4,8 +4,8 @@ FROM python:3
 # Allow statements and log messages to immediately appear in the native logs
 ENV PYTHONUNBUFFERED 1
 
-# Expose port 8080 to serve the app
-EXPOSE 8080
+# Expose port 8501 to serve the app
+EXPOSE 8501
 
 # Copy local code to the container image
 WORKDIR /usr/src/app
@@ -21,4 +21,4 @@ RUN pip install --upgrade pip \
 # to ve equal to the cores available.
 # Timeout is set to 0 to disable the timeouts of the workers to allow Cloud Run
 # to handle instance scaling.
-CMD streamlit run --server.port 8080 --server.enableCORS false app.py
+CMD ["streamlit", "run", "app.py"]

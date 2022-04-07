@@ -1,11 +1,12 @@
 ## PATHS
-PATH_TO_NUTRITION_RDI = "./data/nutrition_rdi.csv"
-PATH_TO_APP_USER_DATA = "./data/app_user_data.db"
-PATH_TO_CSS = "./styles/style.css"
-PATH_TO_LOTTIE = "./lottiefiles/"
-PATH_TO_IMAGES = "./images/"
-PATH_TO_HTML = "./apps/html/"
-PATH_TO_HTML_CSS = "./apps/css/"
+# change /usr/src/app/ to ./ if working locally
+PATH_TO_NUTRITION_RDI = "/usr/src/app/data/nutrition_rdi.csv"
+PATH_TO_APP_USER_DATA = "/usr/src/app/data/app_user_data.db"
+PATH_TO_CSS = "/usr/src/app/styles/style.css"
+PATH_TO_LOTTIE = "/usr/src/app/lottiefiles/"
+PATH_TO_IMAGES = "/usr/src/app/images/"
+PATH_TO_HTML = "/usr/src/app/apps/html/"
+PATH_TO_HTML_CSS = "/usr/src/app/apps/css/"
 
 
 ## Menu
