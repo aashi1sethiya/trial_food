@@ -27,6 +27,7 @@ class MealDesign:
         """
         self.username = username
         self.df = utils.get_data_from_json("data/menu_edr_dishes_only.json")
+        self.df['MenuItemName'] = self.df['MenuItemName'].apply(lambda x: x.lower()) # Convert menu item names to lower case
 
     def select_dishes(self, form_name, location="main"):
         """Select your dishes.
@@ -66,21 +67,48 @@ class MealDesign:
             meal_form = meal_placeholder.container()
 
         meal_form.subheader(self.form_name)
-        menu_item_type = meal_form.multiselect(
-            "Select the dish types:",
-            options=self.df["MenuItemType"].unique(),
+
+        # Breakfast 
+        menu_item_breakfast = meal_form.multiselect(
+            "Breakfast:",
+            options=self.df[self.df.MenuItemName.isin(config.MENU_BREAKFAST)],
             default=None,
-            key="menu_item_type_key",
+            key="menu_item_breakfast_key",
         )
 
-        menu_item_name = meal_form.multiselect(
-            "Select the dish names:",
-            options=self.df.query("MenuItemType == @menu_item_type")[
-                "MenuItemName"
-            ].unique(),
+        # Salad bar 
+        menu_item_salad_bar = meal_form.multiselect(
+            "Salad:",
+            options=self.df[self.df.MenuItemName.isin(config.MENU_SALAD_BAR)],
             default=None,
-            key="menu_item_name_key",
+            key="menu_item_salad_key",
         )
+
+        # Asian  
+        menu_item_asian = meal_form.multiselect(
+            "Asian:",
+            options=self.df[self.df.MenuItemName.isin(config.MENU_ASIAN)],
+            default=None,
+            key="menu_item_asian_key",
+        )
+
+        # International
+        menu_item_international = meal_form.multiselect(
+            "International:",
+            options=self.df[self.df.MenuItemName.isin(config.MENU_INTERNATIONAL)],
+            default=None,
+            key="menu_item_international_key",
+        )
+
+        # International
+        menu_item_dessert = meal_form.multiselect(
+            "Dessert:",
+            options=self.df[self.df.MenuItemName.isin(config.MENU_DESSERT)],
+            default=None,
+            key="menu_item_dessert_key",
+        )
+
+        menu_item_name = menu_item_breakfast + menu_item_salad_bar + menu_item_asian + menu_item_international + menu_item_dessert
 
         # Choose custom amount (g) for each dish
         custom_amount_in_grams = []
@@ -106,7 +134,6 @@ class MealDesign:
         if meal_form.button("Submit"):
             st.session_state["df_selection"] = df_selection
             st.session_state["custom_amount_in_grams"] = custom_amount_in_grams
-            st.session_state["menu_item_type"] = menu_item_type
             st.session_state["menu_item_name"] = menu_item_name
             st.session_state["meal_placeholder"] = meal_placeholder
             st.session_state["save"] = False
@@ -117,11 +144,19 @@ class MealDesign:
                 st.session_state["save"] = st.sidebar.button("Save")
             if st.button("New meal"):
                 # Clear the multiselect options by deleting corresponding session state
-                del st.session_state["menu_item_type_key"]
-                del st.session_state["menu_item_name_key"]
+                del st.session_state["menu_item_breakfast_key"]
+                del st.session_state["menu_item_salad_key"]
+                del st.session_state["menu_item_asian_key"]
+                del st.session_state["menu_item_international_key"]
+                del st.session_state["menu_item_dessert_key"]
+
                 # Then set them to be empty lists
-                st.session_state["menu_item_type_key"] = []
-                st.session_state["menu_item_name_key"] = []
+                st.session_state["menu_item_breakfast_key"] = []
+                st.session_state["menu_item_salad_key"] = []
+                st.session_state["menu_item_asian_key"] = []
+                st.session_state["menu_item_international_key"] = []
+                st.session_state["menu_item_dessert_key"] = []
+                st.session_state["menu_item_name"] = []
                 st.session_state["new_meal"] = True
                 st.session_state["df_selection"] = []
                 st.session_state["multi_dish_select"] = True

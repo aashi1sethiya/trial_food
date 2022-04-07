@@ -9,12 +9,11 @@ import hashlib  # Security (other libraries include: passlib,hashlib,bcrypt,scry
 import config  # paths to files
 
 # ---- READ JSON data ----
-@st.cache
+@st.cache(allow_output_mutation=True)
 def get_data_from_json(path_to_json):
     data = load_json(path_to_json)
     df = pd.json_normalize(data)
     return df
-
 
 def load_json(path_to_file):
     with open(path_to_file, "r", encoding="utf-8") as json_file:
@@ -22,7 +21,7 @@ def load_json(path_to_file):
     return data
 
 def read_html(path_to_html):
-    f = open(path_to_html,'r') 
+    f = open(path_to_html,'r')
     contents = f.read()
     f.close()
     return contents
