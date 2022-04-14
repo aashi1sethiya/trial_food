@@ -323,40 +323,67 @@ def plot_user_calories(df):
         x="Datetime",
         y="Calories",
     )
-    fig.update_layout(
-        xaxis=dict(
-            showline=True,
-            showgrid=False,
-            showticklabels=True,
-            linecolor="rgb(204, 204, 204)",
-            linewidth=2,
-            ticks="outside",
-            tickfont=dict(
-                family="Arial",
-                size=12,
-                color="rgb(82, 82, 82)",
-            ),
-        ),
-        yaxis=dict(
-            showgrid=True,
-            zeroline=False,
-            showline=False,
-            showticklabels=True,
-        ),
-        autosize=False,
-        margin=dict(
-            autoexpand=False,
-            l=40,
-            r=20,
-            t=30,
-            b=150,
-        ),
-        showlegend=False,
-        paper_bgcolor="rgba(0,0,0,0)",  # transparrent background
-        plot_bgcolor="rgba(0,0,0,0)",  # transparrent background
-    )
+    format_plot_layout_nutrition_analytics(fig)
     return fig
 
+
+def plot_user_macros(df):
+    """Plot user carbs, fat, protein trend.
+
+    Args:
+        df (pd.DataFrame): User's meal log dataframe.
+    """
+    fig = px.line(
+        df,
+        x="Datetime",
+        y=["Carbs","Fat","Protein"],
+    )
+    format_plot_layout_nutrition_analytics(fig, showlegend=True)
+    return fig
+
+def plot_user_carbs(df):
+    """Plot user carbs trend.
+
+    Args:
+        df (pd.DataFrame): User's meal log dataframe.
+    """
+    fig = px.line(
+        df,
+        x="Datetime",
+        y="Carbs",
+    )
+    format_plot_layout_nutrition_analytics(fig)
+    return fig
+
+
+def plot_user_fat(df):
+    """Plot user fat trend.
+
+    Args:
+        df (pd.DataFrame): User's meal log dataframe.
+    """
+    fig = px.line(
+        df,
+        x="Datetime",
+        y="Fat",
+    )
+    format_plot_layout_nutrition_analytics(fig)
+    return fig
+
+
+def plot_user_protein(df):
+    """Plot user protein trend.
+
+    Args:
+        df (pd.DataFrame): User's meal log dataframe.
+    """
+    fig = px.line(
+        df,
+        x="Datetime",
+        y="Protein",
+    )
+    format_plot_layout_nutrition_analytics(fig)
+    return fig
 
 def plot_user_macro_split(df, **kwargs):
     """Donut donut chart for macro split.
@@ -419,3 +446,42 @@ def plot_user_macro_split(df, **kwargs):
         plot_bgcolor="rgba(0,0,0,0)",  # transparrent background
     )
     return fig
+
+def format_plot_layout_nutrition_analytics(fig, showlegend=False):
+    return fig.update_layout(
+        xaxis=dict(
+            showline=True,
+            showgrid=False,
+            showticklabels=True,
+            linecolor="rgb(204, 204, 204)",
+            linewidth=2,
+            ticks="outside",
+            tickfont=dict(
+                family="Arial",
+                size=12,
+                color="rgb(82, 82, 82)",
+            ),
+        ),
+        yaxis=dict(
+            showgrid=True,
+            zeroline=False,
+            showline=False,
+            showticklabels=True,
+        ),
+        autosize=False,
+        margin=dict(
+            autoexpand=False,
+            l=40,
+            r=20,
+            t=30,
+            b=150,
+        ),
+        showlegend=showlegend,
+        legend=dict(yanchor="top",
+                    y=0.99,
+                    xanchor="left",
+                    x=0.01,
+                    title=""),
+        paper_bgcolor="rgba(0,0,0,0)",  # transparrent background
+        plot_bgcolor="rgba(0,0,0,0)",  # transparrent background
+    )

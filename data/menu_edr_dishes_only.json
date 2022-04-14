@@ -1,5 +1,5457 @@
 [
     {
+        "MenuItemName": "烚蛋",
+        "MenuItemType": "Eggs-and-Beans-蛋及豆類",
+        "RawIngredientsEng": [
+            "egg"
+        ],
+        "RawIngredientsEngSimple": [
+            "egg"
+        ],
+        "RawIngredientsType": [
+            "EGG"
+        ],
+        "RawIngredientsChinese": [
+            "蛋"
+        ],
+        "Amount": [
+            50
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            50.0
+        ],
+        "AmountServings": "1 盆/1 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.1165
+            ],
+            "Processing": [
+                0.0034325000000000002
+            ],
+            "Distribution": [
+                0.0195875
+            ],
+            "Consumption": [
+                0.07240739399999999
+            ],
+            "Management": [
+                0.018943460277777782
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.23087085427777776
+        ],
+        "CarbonLabelMenuItem": 0.23087085427777776,
+        "CarbonLabelMenuItemPerServing": 0.23087085427777776,
+        "CarbonLabelMenuItemPer100g": 0.4617417085555555,
+        "CarbonLabelMenuItemPerKg": 4.617417085555555,
+        "CarbonLabelMenuItemTrafficLight": "orange",
+        "Nutrition": {
+            "Calories": [
+                69.0
+            ],
+            "Carbohydrate": [
+                0.415
+            ],
+            "Fat": [
+                5.035
+            ],
+            "Protein": [
+                5.485
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 69.0,
+            "Carbohydrate": 0.415,
+            "Fat": 5.035,
+            "Protein": 5.485
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 69.0,
+            "Carbohydrate": 0.415,
+            "Fat": 5.035,
+            "Protein": 5.485
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 3.45,
+            "Carbohydrate": 0.15090909090909088,
+            "Fat": 6.455128205128205,
+            "Protein": 10.97
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 138.0,
+            "Carbohydrate": 0.83,
+            "Fat": 10.07,
+            "Protein": 10.97
+        }
+    },
+    {
+        "MenuItemName": "鹹豬骨粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "pork ribs",
+            "shunmark cooking oil",
+            "water",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "pork ribs",
+            "oil",
+            "water",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "PORK",
+            "OIL",
+            "WATER",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "排骨粒",
+            "順嘜食油",
+            "水",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            10000,
+            200,
+            40000,
+            120,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            10000.0,
+            200.0,
+            40000.0,
+            120.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                65.73963966666665,
+                0.27599999999999997,
+                0.0,
+                0.03934799999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                4.868499999999999,
+                0.09573,
+                0.0984,
+                0.057437999999999996,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                3.6174999999999997,
+                0.006700000000000001,
+                0.009839999999999998,
+                0.026252727272727275,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                20.179463639999998,
+                0.0,
+                3.2800000000000002,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                3.788692055555556,
+                0.0,
+                0.0,
+                0.04546430466666667,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            98.19379536222219,
+            0.37842999999999993,
+            3.38824,
+            0.16850303193939392,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 108.13509128663884,
+        "CarbonLabelMenuItemPerServing": 0.10813509128663884,
+        "CarbonLabelMenuItemPer100g": 0.2062269310320184,
+        "CarbonLabelMenuItemPerKg": 2.062269310320184,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                39700.0,
+                1768.0,
+                0.0,
+                84.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                0.0,
+                0.0,
+                0.0,
+                15.36,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                3030.0,
+                200.0,
+                0.0,
+                1.2,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                2906.0,
+                0.0,
+                0.0,
+                3.36,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 49016.8,
+            "Carbohydrate": 1647.1999999999998,
+            "Fat": 3244.805,
+            "Protein": 3053.755
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 49.0168,
+            "Carbohydrate": 1.6471999999999998,
+            "Fat": 3.244805,
+            "Protein": 3.053755
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 2.4508400000000004,
+            "Carbohydrate": 0.5989818181818182,
+            "Fat": 4.16000641025641,
+            "Protein": 6.10751
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 93.4810718031849,
+            "Carbohydrate": 3.1414131782206542,
+            "Fat": 6.18824258605893,
+            "Protein": 5.823886716887575
+        }
+    },
+    {
+        "MenuItemName": "南瓜肉碎粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "pumpkin",
+            "minced meat",
+            "water",
+            "salt",
+            "shunmark cooking oil",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "pumpkin",
+            "pork",
+            "water",
+            "salt",
+            "oil",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "VEGETABLE",
+            "PORK",
+            "WATER",
+            "SEASONING",
+            "OIL",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "南瓜",
+            "肉碎",
+            "水",
+            "盐",
+            "順嘜食油",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            10000,
+            10000,
+            40000,
+            150,
+            200,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml",
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            10000.0,
+            10000.0,
+            40000.0,
+            150.0,
+            200.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                3.247024999999997,
+                65.73963966666665,
+                0.0,
+                0.04918499999999997,
+                0.27599999999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                0.6865,
+                4.868499999999999,
+                0.0984,
+                0.07179749999999999,
+                0.09573,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                0.335,
+                3.6174999999999997,
+                0.009839999999999998,
+                0.03281590909090909,
+                0.006700000000000001,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                0.03034,
+                20.179463639999998,
+                3.2800000000000002,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                3.788692055555556,
+                3.788692055555556,
+                0.0,
+                0.05683038083333333,
+                0.0,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            8.087557055555553,
+            98.19379536222219,
+            3.38824,
+            0.2106287899242424,
+            0.37842999999999993,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 116.26477410017925,
+        "CarbonLabelMenuItemPerServing": 0.11626477410017926,
+        "CarbonLabelMenuItemPer100g": 0.18612787016758064,
+        "CarbonLabelMenuItemPerKg": 1.8612787016758066,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                2600.0,
+                26300.0,
+                0.0,
+                105.0,
+                1768.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                650.0,
+                0.0,
+                0.0,
+                19.2,
+                0.0,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                10.0,
+                2120.0,
+                0.0,
+                1.5,
+                200.0,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                100.0,
+                1690.0,
+                0.0,
+                4.2,
+                0.0,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 38237.8,
+            "Carbohydrate": 2301.04,
+            "Fat": 2345.105,
+            "Protein": 1938.595
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 38.2378,
+            "Carbohydrate": 2.30104,
+            "Fat": 2.345105,
+            "Protein": 1.938595
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 1.91189,
+            "Carbohydrate": 0.8367418181818181,
+            "Fat": 3.0065448717948717,
+            "Protein": 3.8771899999999997
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 61.21476026574882,
+            "Carbohydrate": 3.683726887056752,
+            "Fat": 3.754270391419195,
+            "Protein": 3.10348995437445
+        }
+    },
+    {
+        "MenuItemName": "榨菜雞絲粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "chicken shreds",
+            "mustard",
+            "water",
+            "salt",
+            "shunmark cooking oil",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "chicken shreds",
+            "pickled vegetable",
+            "water",
+            "salt",
+            "oil",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "POULTRY",
+            "VEGETABLE",
+            "WATER",
+            "SEASONING",
+            "OIL",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "雞絲",
+            "榨菜",
+            "水",
+            "盐",
+            "順嘜食油",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            5000,
+            4000,
+            40000,
+            150,
+            200,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml",
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            5000.0,
+            4000.0,
+            40000.0,
+            150.0,
+            200.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                25.70990468181818,
+                1.298809999999999,
+                0.0,
+                0.04918499999999997,
+                0.27599999999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                2.4342499999999996,
+                0.2746,
+                0.0984,
+                0.07179749999999999,
+                0.09573,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                1.8087499999999999,
+                0.134,
+                0.009839999999999998,
+                0.03281590909090909,
+                0.006700000000000001,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                10.089731819999999,
+                0.012136,
+                3.2800000000000002,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                1.894346027777778,
+                1.5154768222222224,
+                0.0,
+                0.05683038083333333,
+                0.0,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            41.93698252959596,
+            3.2350228222222213,
+            3.38824,
+            0.2106287899242424,
+            0.37842999999999993,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 55.1554270342197,
+        "CarbonLabelMenuItemPerServing": 0.055155427034219696,
+        "CarbonLabelMenuItemPer100g": 0.10717075106231361,
+        "CarbonLabelMenuItemPerKg": 1.0717075106231362,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                6428.5,
+                714.4,
+                0.0,
+                105.0,
+                1768.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                71.5,
+                142.8,
+                0.0,
+                19.2,
+                0.0,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                125.0,
+                0.0,
+                0.0,
+                1.5,
+                200.0,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                1214.5,
+                0.0,
+                0.0,
+                4.2,
+                0.0,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 16480.7,
+            "Carbohydrate": 1865.34,
+            "Fat": 340.105,
+            "Protein": 1363.095
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 16.480700000000002,
+            "Carbohydrate": 1.86534,
+            "Fat": 0.340105,
+            "Protein": 1.363095
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 0.8240350000000001,
+            "Carbohydrate": 0.6783054545454545,
+            "Fat": 0.43603205128205125,
+            "Protein": 2.72619
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 32.02312251044399,
+            "Carbohydrate": 3.6244826581171665,
+            "Fat": 0.6608471776935781,
+            "Protein": 2.648586417953949
+        }
+    },
+    {
+        "MenuItemName": "燒豬腩粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "cut roasted meat",
+            "shunmark cooking oil",
+            "water",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "pork",
+            "oil",
+            "water",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "PORK",
+            "OIL",
+            "WATER",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "切燒肉",
+            "順嘜食油",
+            "水",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            5000,
+            200,
+            40000,
+            150,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            5000.0,
+            200.0,
+            40000.0,
+            150.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                32.869819833333324,
+                0.27599999999999997,
+                0.0,
+                0.04918499999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                2.4342499999999996,
+                0.09573,
+                0.0984,
+                0.07179749999999999,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                1.8087499999999999,
+                0.006700000000000001,
+                0.009839999999999998,
+                0.03281590909090909,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                10.089731819999999,
+                0.0,
+                3.2800000000000002,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                1.894346027777778,
+                0.0,
+                0.0,
+                0.05683038083333333,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            49.096897681111095,
+            0.37842999999999993,
+            3.38824,
+            0.2106287899242424,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 59.08031936351262,
+        "CarbonLabelMenuItemPerServing": 0.05908031936351262,
+        "CarbonLabelMenuItemPer100g": 0.12447133543350389,
+        "CarbonLabelMenuItemPerKg": 1.2447133543350388,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                13150.0,
+                1768.0,
+                0.0,
+                105.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                0.0,
+                0.0,
+                0.0,
+                19.2,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                1060.0,
+                200.0,
+                0.0,
+                1.5,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                845.0,
+                0.0,
+                0.0,
+                4.2,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 22487.8,
+            "Carbohydrate": 1651.04,
+            "Fat": 1275.105,
+            "Protein": 993.5950000000001
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 22.4878,
+            "Carbohydrate": 1.65104,
+            "Fat": 1.275105,
+            "Protein": 0.9935950000000001
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 1.12439,
+            "Carbohydrate": 0.6003781818181818,
+            "Fat": 1.6347499999999997,
+            "Protein": 1.9871900000000002
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 47.37764668703255,
+            "Carbohydrate": 3.478436742863162,
+            "Fat": 2.686411039713473,
+            "Protein": 2.093321394711893
+        }
+    },
+    {
+        "MenuItemName": "白粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "water",
+            "shunmark cooking oil"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "water",
+            "oil"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "WATER",
+            "OIL"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "水",
+            "順嘜食油"
+        ],
+        "Amount": [
+            1515,
+            500,
+            40000,
+            200
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "ml",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            40000.0,
+            200.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                0.0,
+                0.27599999999999997
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                0.0984,
+                0.09573
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                0.009839999999999998,
+                0.006700000000000001
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                3.2800000000000002,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                0.0,
+                0.0
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            3.38824,
+            0.37842999999999993
+        ],
+        "CarbonLabelMenuItem": 9.632373699194444,
+        "CarbonLabelMenuItemPerServing": 0.009632373699194443,
+        "CarbonLabelMenuItemPer100g": 0.022817419635661362,
+        "CarbonLabelMenuItemPerKg": 0.22817419635661362,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                0.0,
+                1768.0
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                0.0,
+                0.0
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                0.0,
+                200.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                0.0,
+                0.0
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 9147.75,
+            "Carbohydrate": 1620.5,
+            "Fat": 213.605,
+            "Protein": 141.565
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 9.14775,
+            "Carbohydrate": 1.6205,
+            "Fat": 0.213605,
+            "Protein": 0.141565
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 0.4573875,
+            "Carbohydrate": 0.5892727272727273,
+            "Fat": 0.2738525641025641,
+            "Protein": 0.28313
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 21.669430297287697,
+            "Carbohydrate": 3.8386829326068934,
+            "Fat": 0.5059931304038849,
+            "Protein": 0.3353428875991946
+        }
+    },
+    {
+        "MenuItemName": "皮蛋瘦肉粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "sliced ​​meat",
+            "preserved egg",
+            "water",
+            "shunmark cooking oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "pork",
+            "egg",
+            "water",
+            "oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "PORK",
+            "EGG",
+            "WATER",
+            "OIL",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "肉片",
+            "皮蛋",
+            "水",
+            "順嘜食油",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            10000,
+            10,
+            40000,
+            200,
+            150,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "30/tray",
+            "ml",
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            10000.0,
+            0,
+            40000.0,
+            200.0,
+            150.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                65.73963966666665,
+                0.0,
+                0.0,
+                0.27599999999999997,
+                0.04918499999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                4.868499999999999,
+                0.0,
+                0.0984,
+                0.09573,
+                0.07179749999999999,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                3.6174999999999997,
+                0.0,
+                0.009839999999999998,
+                0.006700000000000001,
+                0.03281590909090909,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                20.179463639999998,
+                0.0,
+                3.2800000000000002,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                3.788692055555556,
+                0.0,
+                0.0,
+                0.0,
+                0.05683038083333333,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            98.19379536222219,
+            0.0,
+            3.38824,
+            0.37842999999999993,
+            0.2106287899242424,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 108.1772170446237,
+        "CarbonLabelMenuItemPerServing": 0.1081772170446237,
+        "CarbonLabelMenuItemPer100g": 0.20618930152410883,
+        "CarbonLabelMenuItemPerKg": 2.0618930152410884,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                26300.0,
+                0.0,
+                0.0,
+                1768.0,
+                105.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                19.2,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                2120.0,
+                0.0,
+                0.0,
+                200.0,
+                1.5,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                1690.0,
+                0.0,
+                0.0,
+                0.0,
+                4.2,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 35637.8,
+            "Carbohydrate": 1651.04,
+            "Fat": 2335.105,
+            "Protein": 1838.595
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 35.637800000000006,
+            "Carbohydrate": 1.65104,
+            "Fat": 2.335105,
+            "Protein": 1.838595
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 1.7818900000000002,
+            "Carbohydrate": 0.6003781818181818,
+            "Fat": 2.993724358974359,
+            "Protein": 3.6771899999999995
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 67.92680834842277,
+            "Carbohydrate": 3.1469360526064993,
+            "Fat": 4.450786238444677,
+            "Protein": 3.504421995616125
+        }
+    },
+    {
+        "MenuItemName": "菜乾鹹豬骨粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "pork ribs",
+            "dried vegetables",
+            "water",
+            "shunmark cooking oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "pork ribs",
+            "pickled vegetable",
+            "water",
+            "oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "PORK",
+            "VEGETABLE",
+            "WATER",
+            "OIL",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "排骨粒",
+            "菜乾",
+            "水",
+            "順嘜食油",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            10000,
+            1000,
+            40000,
+            200,
+            150,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml",
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            10000.0,
+            1000.0,
+            40000.0,
+            200.0,
+            150.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                65.73963966666665,
+                0.3247024999999997,
+                0.0,
+                0.27599999999999997,
+                0.04918499999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                4.868499999999999,
+                0.06865,
+                0.0984,
+                0.09573,
+                0.07179749999999999,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                3.6174999999999997,
+                0.0335,
+                0.009839999999999998,
+                0.006700000000000001,
+                0.03281590909090909,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                20.179463639999998,
+                0.003034,
+                3.2800000000000002,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                3.788692055555556,
+                0.3788692055555556,
+                0.0,
+                0.0,
+                0.05683038083333333,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            98.19379536222219,
+            0.8087557055555553,
+            3.38824,
+            0.37842999999999993,
+            0.2106287899242424,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 108.98597275017926,
+        "CarbonLabelMenuItemPerServing": 0.10898597275017925,
+        "CarbonLabelMenuItemPer100g": 0.20384545543847238,
+        "CarbonLabelMenuItemPerKg": 2.0384545543847237,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                39700.0,
+                178.6,
+                0.0,
+                1768.0,
+                105.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                0.0,
+                35.7,
+                0.0,
+                0.0,
+                19.2,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                3030.0,
+                0.0,
+                0.0,
+                200.0,
+                1.5,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                2906.0,
+                0.0,
+                0.0,
+                0.0,
+                4.2,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 49216.4,
+            "Carbohydrate": 1686.74,
+            "Fat": 3245.105,
+            "Protein": 3054.5950000000003
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 49.2164,
+            "Carbohydrate": 1.68674,
+            "Fat": 3.245105,
+            "Protein": 3.0545950000000004
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 2.46082,
+            "Carbohydrate": 0.6133599999999999,
+            "Fat": 4.160391025641026,
+            "Protein": 6.109190000000001
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 92.0534929393061,
+            "Carbohydrate": 3.154848966613673,
+            "Fat": 6.069587580660245,
+            "Protein": 5.713261011876929
+        }
+    },
+    {
+        "MenuItemName": "草菇肉碎粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "straw mushroom",
+            "minced meat",
+            "water",
+            "shunmark cooking oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "mushroom",
+            "pork",
+            "water",
+            "oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "FUNGUS",
+            "PORK",
+            "WATER",
+            "OIL",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "草菇",
+            "肉碎",
+            "水",
+            "順嘜食油",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            12000,
+            10000,
+            40000,
+            200,
+            150,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml",
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            12000.0,
+            10000.0,
+            40000.0,
+            200.0,
+            150.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                39.0,
+                65.73963966666665,
+                0.0,
+                0.27599999999999997,
+                0.04918499999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                0.9222,
+                4.868499999999999,
+                0.0984,
+                0.09573,
+                0.07179749999999999,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                0.402,
+                3.6174999999999997,
+                0.009839999999999998,
+                0.006700000000000001,
+                0.03281590909090909,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                24.215356367999995,
+                20.179463639999998,
+                3.2800000000000002,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                4.546430466666667,
+                3.788692055555556,
+                0.0,
+                0.0,
+                0.05683038083333333,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            69.08598683466666,
+            98.19379536222219,
+            3.38824,
+            0.37842999999999993,
+            0.2106287899242424,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 177.26320387929036,
+        "CarbonLabelMenuItemPerServing": 0.17726320387929037,
+        "CarbonLabelMenuItemPer100g": 0.27497588440128806,
+        "CarbonLabelMenuItemPerKg": 2.7497588440128804,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                2640.0,
+                26300.0,
+                0.0,
+                1768.0,
+                105.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                391.2,
+                0.0,
+                0.0,
+                0.0,
+                19.2,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                40.800000000000004,
+                2120.0,
+                0.0,
+                200.0,
+                1.5,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                370.8,
+                1690.0,
+                0.0,
+                0.0,
+                4.2,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 38277.8,
+            "Carbohydrate": 2042.24,
+            "Fat": 2375.905,
+            "Protein": 2209.3950000000004
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 38.277800000000006,
+            "Carbohydrate": 2.04224,
+            "Fat": 2.3759050000000004,
+            "Protein": 2.209395
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 1.9138900000000003,
+            "Carbohydrate": 0.7426327272727273,
+            "Fat": 3.046032051282052,
+            "Protein": 4.41879
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 59.377646785077175,
+            "Carbohydrate": 3.167982626231288,
+            "Fat": 3.685573567051889,
+            "Protein": 3.4272783681067254
+        }
+    },
+    {
+        "MenuItemName": "豬肉丸粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "pork balls",
+            "shunmark cooking oil",
+            "water",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "pork ball",
+            "oil",
+            "water",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "PORK",
+            "OIL",
+            "WATER",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "豬肉丸",
+            "順嘜食油",
+            "水",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            10000,
+            200,
+            40000,
+            150,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            10000.0,
+            200.0,
+            40000.0,
+            150.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                65.73963966666665,
+                0.27599999999999997,
+                0.0,
+                0.04918499999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                4.868499999999999,
+                0.09573,
+                0.0984,
+                0.07179749999999999,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                3.6174999999999997,
+                0.006700000000000001,
+                0.009839999999999998,
+                0.03281590909090909,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                20.179463639999998,
+                0.0,
+                3.2800000000000002,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                3.788692055555556,
+                0.0,
+                0.0,
+                0.05683038083333333,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            98.19379536222219,
+            0.37842999999999993,
+            3.38824,
+            0.2106287899242424,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 108.17721704462369,
+        "CarbonLabelMenuItemPerServing": 0.10817721704462369,
+        "CarbonLabelMenuItemPer100g": 0.20618930152410883,
+        "CarbonLabelMenuItemPerKg": 2.0618930152410884,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                27040.0,
+                1768.0,
+                0.0,
+                105.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                1100.0,
+                0.0,
+                0.0,
+                19.2,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                1580.0,
+                200.0,
+                0.0,
+                1.5,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                2100.0,
+                0.0,
+                0.0,
+                4.2,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 36377.8,
+            "Carbohydrate": 2751.04,
+            "Fat": 1795.105,
+            "Protein": 2248.595
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 36.3778,
+            "Carbohydrate": 2.75104,
+            "Fat": 1.795105,
+            "Protein": 2.248595
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 1.8188900000000001,
+            "Carbohydrate": 1.0003781818181818,
+            "Fat": 2.3014166666666664,
+            "Protein": 4.49719
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 69.3372724673592,
+            "Carbohydrate": 5.243571905079577,
+            "Fat": 3.421528638139712,
+            "Protein": 4.285895358810635
+        }
+    },
+    {
+        "MenuItemName": "雞球粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "chicken ball",
+            "shunmark cooking oil",
+            "water",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "chicken",
+            "oil",
+            "water",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "POULTRY",
+            "OIL",
+            "WATER",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "雞球",
+            "順嘜食油",
+            "水",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            10000,
+            200,
+            40000,
+            150,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            10000.0,
+            200.0,
+            40000.0,
+            150.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                51.41980936363636,
+                0.27599999999999997,
+                0.0,
+                0.04918499999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                4.868499999999999,
+                0.09573,
+                0.0984,
+                0.07179749999999999,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                3.6174999999999997,
+                0.006700000000000001,
+                0.009839999999999998,
+                0.03281590909090909,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                20.179463639999998,
+                0.0,
+                3.2800000000000002,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                3.788692055555556,
+                0.0,
+                0.0,
+                0.05683038083333333,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            83.87396505919192,
+            0.37842999999999993,
+            3.38824,
+            0.2106287899242424,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 93.85738674159342,
+        "CarbonLabelMenuItemPerServing": 0.09385738674159341,
+        "CarbonLabelMenuItemPer100g": 0.17889523823805092,
+        "CarbonLabelMenuItemPerKg": 1.7889523823805094,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                11100.0,
+                1768.0,
+                0.0,
+                105.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                0.0,
+                0.0,
+                0.0,
+                19.2,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                270.0,
+                200.0,
+                0.0,
+                1.5,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                2030.0,
+                0.0,
+                0.0,
+                4.2,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 20437.8,
+            "Carbohydrate": 1651.04,
+            "Fat": 485.105,
+            "Protein": 2178.595
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 20.4378,
+            "Carbohydrate": 1.65104,
+            "Fat": 0.485105,
+            "Protein": 2.1785949999999996
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 1.02189,
+            "Carbohydrate": 0.6003781818181818,
+            "Fat": 0.6219294871794872,
+            "Protein": 4.357189999999999
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 38.95511293243114,
+            "Carbohydrate": 3.1469360526064993,
+            "Fat": 0.9246259411035929,
+            "Protein": 4.1524730772896215
+        }
+    },
+    {
+        "MenuItemName": "香芋肉碎粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "taro",
+            "minced meat",
+            "water",
+            "shunmark cooking oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "taro",
+            "pork",
+            "water",
+            "oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "VEGETABLE",
+            "PORK",
+            "WATER",
+            "OIL",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "芋頭",
+            "肉碎",
+            "水",
+            "順嘜食油",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            1000,
+            6670,
+            40000,
+            200,
+            150,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml",
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            1000.0,
+            6670.0,
+            40000.0,
+            200.0,
+            150.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                0.3247024999999997,
+                43.84833965766665,
+                0.0,
+                0.27599999999999997,
+                0.04918499999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                0.06865,
+                3.2472894999999995,
+                0.0984,
+                0.09573,
+                0.07179749999999999,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                0.0335,
+                2.4128724999999998,
+                0.009839999999999998,
+                0.006700000000000001,
+                0.03281590909090909,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                0.003034,
+                13.459702247879997,
+                3.2800000000000002,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                0.3788692055555556,
+                2.5270576010555557,
+                0.0,
+                0.0,
+                0.05683038083333333,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            0.8087557055555553,
+            65.4952615066022,
+            3.38824,
+            0.37842999999999993,
+            0.2106287899242424,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 76.28743889455927,
+        "CarbonLabelMenuItemPerServing": 0.07628743889455927,
+        "CarbonLabelMenuItemPer100g": 0.1521640348949023,
+        "CarbonLabelMenuItemPerKg": 1.521640348949023,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                1120.0,
+                17542.1,
+                0.0,
+                1768.0,
+                105.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                265.0,
+                0.0,
+                0.0,
+                0.0,
+                19.2,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                2.0,
+                1414.04,
+                0.0,
+                200.0,
+                1.5,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                15.0,
+                1127.2299999999998,
+                0.0,
+                0.0,
+                4.2,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 27999.899999999998,
+            "Carbohydrate": 1916.04,
+            "Fat": 1631.145,
+            "Protein": 1290.8249999999998
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 27.999899999999997,
+            "Carbohydrate": 1.91604,
+            "Fat": 1.631145,
+            "Protein": 1.290825
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 1.3999949999999999,
+            "Carbohydrate": 0.6967418181818181,
+            "Fat": 2.091211538461539,
+            "Protein": 2.58165
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 55.84900767926598,
+            "Carbohydrate": 3.821761244639473,
+            "Fat": 3.2535055350553503,
+            "Protein": 2.5746983145507127
+        }
+    },
+    {
+        "MenuItemName": "鲍魚雞粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "chicken ball",
+            "abalone slices",
+            "water",
+            "shunmark cooking oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "chicken",
+            "abalone",
+            "water",
+            "oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "POULTRY",
+            "AQUATIC",
+            "WATER",
+            "OIL",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "雞球",
+            "鲍魚片",
+            "水",
+            "順嘜食油",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            6670,
+            6000,
+            40000,
+            200,
+            150,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml",
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            6670.0,
+            6000.0,
+            40000.0,
+            200.0,
+            150.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                34.29701284554545,
+                6.71777777777778,
+                0.0,
+                0.27599999999999997,
+                0.04918499999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                3.2472894999999995,
+                2.9210999999999996,
+                0.0984,
+                0.09573,
+                0.07179749999999999,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                2.4128724999999998,
+                0.3063333333333333,
+                0.009839999999999998,
+                0.006700000000000001,
+                0.03281590909090909,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                13.459702247879997,
+                12.107678183999997,
+                3.2800000000000002,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                2.5270576010555557,
+                2.2732152333333335,
+                0.0,
+                0.0,
+                0.05683038083333333,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            55.943934694481,
+            24.32610452844444,
+            3.38824,
+            0.37842999999999993,
+            0.2106287899242424,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 90.25346090532696,
+        "CarbonLabelMenuItemPerServing": 0.09025346090532696,
+        "CarbonLabelMenuItemPer100g": 0.16369540383663184,
+        "CarbonLabelMenuItemPerKg": 1.6369540383663184,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                7403.7,
+                6420.0,
+                0.0,
+                1768.0,
+                105.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                0.0,
+                581.9999999999999,
+                0.0,
+                0.0,
+                19.2,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                180.09,
+                12.0,
+                0.0,
+                200.0,
+                1.5,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                1354.01,
+                990.0,
+                0.0,
+                0.0,
+                4.2,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 23161.5,
+            "Carbohydrate": 2233.04,
+            "Fat": 407.195,
+            "Protein": 2492.6050000000005
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 23.1615,
+            "Carbohydrate": 2.23304,
+            "Fat": 0.407195,
+            "Protein": 2.4926050000000006
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 1.1580750000000002,
+            "Carbohydrate": 0.8120145454545454,
+            "Fat": 0.5220448717948718,
+            "Protein": 4.985210000000001
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 42.00870590369094,
+            "Carbohydrate": 4.050131495420332,
+            "Fat": 0.7385417611317674,
+            "Protein": 4.520912306157614
+        }
+    },
+    {
+        "MenuItemName": "皮蛋肉絲粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "shredded pork",
+            "preserved egg",
+            "water",
+            "shunmark cooking oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "pork",
+            "egg",
+            "water",
+            "oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "PORK",
+            "EGG",
+            "WATER",
+            "OIL",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "肉絲",
+            "皮蛋",
+            "水",
+            "順嘜食油",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            10000,
+            10,
+            40000,
+            200,
+            150,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "30/tray",
+            "ml",
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            10000.0,
+            0,
+            40000.0,
+            200.0,
+            150.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                65.73963966666665,
+                0.0,
+                0.0,
+                0.27599999999999997,
+                0.04918499999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                4.868499999999999,
+                0.0,
+                0.0984,
+                0.09573,
+                0.07179749999999999,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                3.6174999999999997,
+                0.0,
+                0.009839999999999998,
+                0.006700000000000001,
+                0.03281590909090909,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                20.179463639999998,
+                0.0,
+                3.2800000000000002,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                3.788692055555556,
+                0.0,
+                0.0,
+                0.0,
+                0.05683038083333333,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            98.19379536222219,
+            0.0,
+            3.38824,
+            0.37842999999999993,
+            0.2106287899242424,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 108.1772170446237,
+        "CarbonLabelMenuItemPerServing": 0.1081772170446237,
+        "CarbonLabelMenuItemPer100g": 0.20618930152410883,
+        "CarbonLabelMenuItemPerKg": 2.0618930152410884,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                26300.0,
+                0.0,
+                0.0,
+                1768.0,
+                105.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                19.2,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                2120.0,
+                0.0,
+                0.0,
+                200.0,
+                1.5,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                1690.0,
+                0.0,
+                0.0,
+                0.0,
+                4.2,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 35637.8,
+            "Carbohydrate": 1651.04,
+            "Fat": 2335.105,
+            "Protein": 1838.595
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 35.637800000000006,
+            "Carbohydrate": 1.65104,
+            "Fat": 2.335105,
+            "Protein": 1.838595
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 1.7818900000000002,
+            "Carbohydrate": 0.6003781818181818,
+            "Fat": 2.993724358974359,
+            "Protein": 3.6771899999999995
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 67.92680834842277,
+            "Carbohydrate": 3.1469360526064993,
+            "Fat": 4.450786238444677,
+            "Protein": 3.504421995616125
+        }
+    },
+    {
+        "MenuItemName": "粟米魚茸粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "corn kernels",
+            "long li liu",
+            "water",
+            "shunmark cooking oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "sweet corn",
+            "fish",
+            "water",
+            "oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "MAIZE",
+            "AQUATIC",
+            "WATER",
+            "OIL",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "粟米粒",
+            "龍利柳",
+            "水",
+            "順嘜食油",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            2000,
+            3330,
+            40000,
+            200,
+            150,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml",
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            2000.0,
+            3330.0,
+            40000.0,
+            200.0,
+            150.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                1.294,
+                3.728366666666668,
+                0.0,
+                0.27599999999999997,
+                0.04918499999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                0.9572999999999999,
+                1.6212104999999999,
+                0.0984,
+                0.09573,
+                0.07179749999999999,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                0.067,
+                0.17001499999999997,
+                0.009839999999999998,
+                0.006700000000000001,
+                0.03281590909090909,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                1.64,
+                6.719761392119999,
+                3.2800000000000002,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                0.7577384111111112,
+                1.2616344545000002,
+                0.0,
+                0.0,
+                0.05683038083333333,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            4.7160384111111116,
+            13.500988013286669,
+            3.38824,
+            0.37842999999999993,
+            0.2106287899242424,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 28.200448106799293,
+        "CarbonLabelMenuItemPerServing": 0.02820044810679929,
+        "CarbonLabelMenuItemPer100g": 0.05900292521560684,
+        "CarbonLabelMenuItemPerKg": 0.5900292521560684,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                1760.0,
+                2464.2,
+                0.0,
+                1768.0,
+                105.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                414.0,
+                0.0,
+                0.0,
+                0.0,
+                19.2,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                16.0,
+                16.65,
+                0.0,
+                200.0,
+                1.5,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                60.0,
+                542.79,
+                0.0,
+                0.0,
+                4.2,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 13562.0,
+            "Carbohydrate": 2065.04,
+            "Fat": 247.755,
+            "Protein": 751.385
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 13.562,
+            "Carbohydrate": 2.0650399999999998,
+            "Fat": 0.247755,
+            "Protein": 0.751385
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 0.6780999999999999,
+            "Carbohydrate": 0.7509236363636363,
+            "Fat": 0.31763461538461535,
+            "Protein": 1.50277
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 28.375353070404852,
+            "Carbohydrate": 4.320619311643478,
+            "Fat": 0.5183701223977403,
+            "Protein": 1.5720995920075322
+        }
+    },
+    {
+        "MenuItemName": "生菜火鴨粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "roast duck",
+            "lettuce",
+            "water",
+            "shunmark cooking oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "duck roast",
+            "lettuce",
+            "water",
+            "oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "POULTRY",
+            "VEGETABLE",
+            "WATER",
+            "OIL",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "燒鴨",
+            "西生菜",
+            "水",
+            "順嘜食油",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            13000,
+            1500,
+            40000,
+            200,
+            150,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml",
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            13000.0,
+            1500.0,
+            40000.0,
+            200.0,
+            150.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                66.84575217272726,
+                0.4870537499999996,
+                0.0,
+                0.27599999999999997,
+                0.04918499999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                6.32905,
+                0.10297500000000001,
+                0.0984,
+                0.09573,
+                0.07179749999999999,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                4.702749999999999,
+                0.05025,
+                0.009839999999999998,
+                0.006700000000000001,
+                0.03281590909090909,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                26.233302731999995,
+                0.0045509999999999995,
+                3.2800000000000002,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                4.925299672222223,
+                0.5683038083333334,
+                0.0,
+                0.0,
+                0.05683038083333333,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            109.03615457694947,
+            1.213133558333333,
+            3.38824,
+            0.37842999999999993,
+            0.2106287899242424,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 120.23270981768432,
+        "CarbonLabelMenuItemPerServing": 0.12023270981768433,
+        "CarbonLabelMenuItemPer100g": 0.21106417943945288,
+        "CarbonLabelMenuItemPerKg": 2.1106417943945286,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                43810.0,
+                225.0,
+                0.0,
+                1768.0,
+                105.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                0.0,
+                43.5,
+                0.0,
+                0.0,
+                19.2,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                3685.5,
+                3.0,
+                0.0,
+                200.0,
+                1.5,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                2468.7,
+                21.0,
+                0.0,
+                0.0,
+                4.2,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 53372.8,
+            "Carbohydrate": 1694.54,
+            "Fat": 3903.605,
+            "Protein": 2638.295
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 53.372800000000005,
+            "Carbohydrate": 1.69454,
+            "Fat": 3.903605,
+            "Protein": 2.6382950000000003
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 2.6686400000000003,
+            "Carbohydrate": 0.6161963636363635,
+            "Fat": 5.004621794871795,
+            "Protein": 5.276590000000001
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 93.69402264548408,
+            "Carbohydrate": 2.9747037654700255,
+            "Fat": 6.852637584481699,
+            "Protein": 4.631431580795225
+        }
+    },
+    {
+        "MenuItemName": "燕麥红棗粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "red dates",
+            "oat",
+            "water",
+            "shunmark cooking oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "red dates",
+            "oats",
+            "water",
+            "oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "VEGETABLE",
+            "WHEAT",
+            "WATER",
+            "OIL",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "红棗",
+            "燕麥",
+            "水",
+            "順嘜食油",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            1330,
+            1670,
+            40000,
+            200,
+            150,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml",
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            1330.0,
+            1670.0,
+            40000.0,
+            200.0,
+            150.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                0.43185432499999965,
+                0.9464128571428572,
+                0.0,
+                0.27599999999999997,
+                0.04918499999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                0.09130450000000001,
+                0.7993454999999999,
+                0.0984,
+                0.09573,
+                0.07179749999999999,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                0.044555000000000004,
+                0.45925,
+                0.009839999999999998,
+                0.006700000000000001,
+                0.03281590909090909,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                0.00403522,
+                1.3694,
+                3.2800000000000002,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                0.5038960433888889,
+                0.6327115732777778,
+                0.0,
+                0.0,
+                0.05683038083333333,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            1.0756450883888886,
+            4.207119930420634,
+            3.38824,
+            0.37842999999999993,
+            0.2106287899242424,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 15.266186701211039,
+        "CarbonLabelMenuItemPerServing": 0.015266186701211038,
+        "CarbonLabelMenuItemPer100g": 0.03357788782846374,
+        "CarbonLabelMenuItemPerKg": 0.3357788782846374,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                3750.6,
+                6329.3,
+                0.0,
+                1768.0,
+                105.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                997.8990000000001,
+                1130.59,
+                0.0,
+                0.0,
+                19.2,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                5.187,
+                108.55,
+                0.0,
+                200.0,
+                1.5,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                32.58500000000001,
+                220.44,
+                0.0,
+                0.0,
+                4.2,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 19417.7,
+            "Carbohydrate": 3779.529,
+            "Fat": 328.842,
+            "Protein": 401.62
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 19.4177,
+            "Carbohydrate": 3.779529,
+            "Fat": 0.32884199999999997,
+            "Protein": 0.40162
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 0.970885,
+            "Carbohydrate": 1.374374181818182,
+            "Fat": 0.42159230769230766,
+            "Protein": 0.8032400000000001
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 42.70911690311229,
+            "Carbohydrate": 8.313051798086441,
+            "Fat": 0.7232860442098317,
+            "Protein": 0.8833608270097878
+        }
+    },
+    {
+        "MenuItemName": "燕麥南瓜小米粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "pumpkin",
+            "millet",
+            "oat",
+            "water",
+            "shunmark cooking oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "pumpkin",
+            "millet",
+            "oats",
+            "water",
+            "oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "VEGETABLE",
+            "WHEAT",
+            "WHEAT",
+            "WATER",
+            "OIL",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "南瓜",
+            "小米",
+            "燕麥",
+            "水",
+            "順嘜食油",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            10000,
+            5000,
+            1670,
+            40000,
+            200,
+            150,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml",
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            10000.0,
+            5000.0,
+            1670.0,
+            40000.0,
+            200.0,
+            150.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                3.247024999999997,
+                2.8335714285714286,
+                0.9464128571428572,
+                0.0,
+                0.27599999999999997,
+                0.04918499999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                0.6865,
+                2.3932499999999997,
+                0.7993454999999999,
+                0.0984,
+                0.09573,
+                0.07179749999999999,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                0.335,
+                1.375,
+                0.45925,
+                0.009839999999999998,
+                0.006700000000000001,
+                0.03281590909090909,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                0.03034,
+                4.1,
+                1.3694,
+                3.2800000000000002,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                3.788692055555556,
+                1.894346027777778,
+                0.6327115732777778,
+                0.0,
+                0.0,
+                0.05683038083333333,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            8.087557055555553,
+            12.596167456349207,
+            4.207119930420634,
+            3.38824,
+            0.37842999999999993,
+            0.2106287899242424,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 34.874266124726915,
+        "CarbonLabelMenuItemPerServing": 0.03487426612472692,
+        "CarbonLabelMenuItemPer100g": 0.05897398516061033,
+        "CarbonLabelMenuItemPerKg": 0.5897398516061033,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                2600.0,
+                18900.0,
+                6329.3,
+                0.0,
+                1768.0,
+                105.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                650.0,
+                3645.0,
+                1130.59,
+                0.0,
+                0.0,
+                19.2,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                10.0,
+                210.0,
+                108.55,
+                0.0,
+                200.0,
+                1.5,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                100.0,
+                550.0,
+                220.44,
+                0.0,
+                0.0,
+                4.2,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 37167.100000000006,
+            "Carbohydrate": 7076.63,
+            "Fat": 543.655,
+            "Protein": 1019.0350000000001
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 37.167100000000005,
+            "Carbohydrate": 7.07663,
+            "Fat": 0.543655,
+            "Protein": 1.0190350000000001
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 1.858355,
+            "Carbohydrate": 2.57332,
+            "Fat": 0.6969935897435897,
+            "Protein": 2.0380700000000003
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 62.851272512048716,
+            "Carbohydrate": 11.966906231504186,
+            "Fat": 0.9193455652320961,
+            "Protein": 1.723234970829458
+        }
+    },
+    {
+        "MenuItemName": "南瓜小米粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "pumpkin",
+            "millet",
+            "water",
+            "shunmark cooking oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "pumpkin",
+            "millet",
+            "water",
+            "oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "VEGETABLE",
+            "WHEAT",
+            "WATER",
+            "OIL",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "南瓜",
+            "小米",
+            "水",
+            "順嘜食油",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            10000,
+            5000,
+            40000,
+            200,
+            150,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml",
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            10000.0,
+            5000.0,
+            40000.0,
+            200.0,
+            150.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                3.247024999999997,
+                2.8335714285714286,
+                0.0,
+                0.27599999999999997,
+                0.04918499999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                0.6865,
+                2.3932499999999997,
+                0.0984,
+                0.09573,
+                0.07179749999999999,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                0.335,
+                1.375,
+                0.009839999999999998,
+                0.006700000000000001,
+                0.03281590909090909,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                0.03034,
+                4.1,
+                3.2800000000000002,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                3.788692055555556,
+                1.894346027777778,
+                0.0,
+                0.0,
+                0.05683038083333333,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            8.087557055555553,
+            12.596167456349207,
+            3.38824,
+            0.37842999999999993,
+            0.2106287899242424,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 30.667146194306277,
+        "CarbonLabelMenuItemPerServing": 0.030667146194306275,
+        "CarbonLabelMenuItemPer100g": 0.05336665134308932,
+        "CarbonLabelMenuItemPerKg": 0.5336665134308932,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                2600.0,
+                18900.0,
+                0.0,
+                1768.0,
+                105.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                650.0,
+                3645.0,
+                0.0,
+                0.0,
+                19.2,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                10.0,
+                210.0,
+                0.0,
+                200.0,
+                1.5,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                100.0,
+                550.0,
+                0.0,
+                0.0,
+                4.2,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 30837.8,
+            "Carbohydrate": 5946.04,
+            "Fat": 435.105,
+            "Protein": 798.595
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 30.837799999999998,
+            "Carbohydrate": 5.94604,
+            "Fat": 0.435105,
+            "Protein": 0.798595
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 1.54189,
+            "Carbohydrate": 2.1621963636363635,
+            "Fat": 0.5578269230769232,
+            "Protein": 1.59719
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 53.663621334725484,
+            "Carbohydrate": 10.347237448881929,
+            "Fat": 0.7571652310101802,
+            "Protein": 1.3897067780388062
+        }
+    },
+    {
+        "MenuItemName": "花生豬骨粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "pork ribs",
+            "peanut",
+            "water",
+            "shunmark cooking oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "pork ribs",
+            "peanut",
+            "water",
+            "oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "PORK",
+            "NUT",
+            "WATER",
+            "OIL",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "排骨粒",
+            "花生",
+            "水",
+            "順嘜食油",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            8330,
+            3330,
+            40000,
+            200,
+            150,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml",
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            8330.0,
+            3330.0,
+            40000.0,
+            200.0,
+            150.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                54.761119842333315,
+                4.5954,
+                0.0,
+                0.27599999999999997,
+                0.04918499999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                4.0554605,
+                1.5939044999999998,
+                0.0984,
+                0.09573,
+                0.07179749999999999,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                3.0133775,
+                0.11155500000000002,
+                0.009839999999999998,
+                0.006700000000000001,
+                0.03281590909090909,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                16.809493212119996,
+                0.0,
+                3.2800000000000002,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                3.155980482277778,
+                1.2616344545000002,
+                0.0,
+                0.0,
+                0.05683038083333333,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            81.79543153673109,
+            7.5624939545,
+            3.38824,
+            0.37842999999999993,
+            0.2106287899242424,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 99.3413471736326,
+        "CarbonLabelMenuItemPerServing": 0.0993413471736326,
+        "CarbonLabelMenuItemPer100g": 0.18354059523996785,
+        "CarbonLabelMenuItemPerKg": 1.8354059523996784,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                33070.1,
+                18881.1,
+                0.0,
+                1768.0,
+                105.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                0.0,
+                537.1289999999999,
+                0.0,
+                0.0,
+                19.2,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                2523.99,
+                973.692,
+                0.0,
+                200.0,
+                1.5,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                2420.698,
+                859.14,
+                0.0,
+                0.0,
+                4.2,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 61289.0,
+            "Carbohydrate": 2188.169,
+            "Fat": 3712.787,
+            "Protein": 3428.433
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 61.289,
+            "Carbohydrate": 2.188169,
+            "Fat": 3.7127869999999996,
+            "Protein": 3.428433
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 3.0644500000000003,
+            "Carbohydrate": 0.7956978181818181,
+            "Fat": 4.759983333333333,
+            "Protein": 6.856866
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 113.23602771362586,
+            "Carbohydrate": 4.042806466512702,
+            "Fat": 6.859652655889145,
+            "Protein": 6.334287297921478
+        }
+    },
+    {
+        "MenuItemName": "冬菜魚茸粥",
+        "MenuItemType": "Congee-粥類",
+        "RawIngredientsEng": [
+            "apricot rice",
+            "thai sticky rice",
+            "winter vegetables",
+            "long li liu",
+            "water",
+            "shunmark cooking oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice",
+            "rice glutinous",
+            "pickled vegetable",
+            "fish",
+            "water",
+            "oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "RICE",
+            "RICE",
+            "VEGETABLE",
+            "AQUATIC",
+            "WATER",
+            "OIL",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "杏花米",
+            "泰國糯米",
+            "冬菜",
+            "龍利柳",
+            "水",
+            "順嘜食油",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            1515,
+            500,
+            3600,
+            3330,
+            40000,
+            200,
+            150,
+            100
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml",
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            1515.0,
+            500.0,
+            3600.0,
+            3330.0,
+            40000.0,
+            200.0,
+            150.0,
+            100.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                1.8179999999999998,
+                0.6,
+                1.168928999999999,
+                3.728366666666668,
+                0.0,
+                0.27599999999999997,
+                0.04918499999999997,
+                0.03278999999999998
+            ],
+            "Processing": [
+                0.7251547499999998,
+                0.23932499999999998,
+                0.24714000000000003,
+                1.6212104999999999,
+                0.0984,
+                0.09573,
+                0.07179749999999999,
+                0.047865
+            ],
+            "Distribution": [
+                0.0507525,
+                0.01675,
+                0.12060000000000001,
+                0.17001499999999997,
+                0.009839999999999998,
+                0.006700000000000001,
+                0.03281590909090909,
+                0.02187727272727273
+            ],
+            "Consumption": [
+                1.2422999999999997,
+                0.41,
+                0.010922399999999999,
+                6.719761392119999,
+                3.2800000000000002,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                0.5739868464166666,
+                0.1894346027777778,
+                1.3639291400000002,
+                1.2616344545000002,
+                0.0,
+                0.0,
+                0.05683038083333333,
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4.410194096416666,
+            1.4555096027777779,
+            2.9115205399999993,
+            13.500988013286669,
+            3.38824,
+            0.37842999999999993,
+            0.2106287899242424,
+            0.14041919328282826
+        ],
+        "CarbonLabelMenuItem": 26.395930235688184,
+        "CarbonLabelMenuItemPerServing": 0.026395930235688182,
+        "CarbonLabelMenuItemPer100g": 0.053438465908873745,
+        "CarbonLabelMenuItemPerKg": 0.5343846590887374,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                5529.75,
+                1850.0,
+                642.96,
+                2464.2,
+                0.0,
+                1768.0,
+                105.0,
+                85.05
+            ],
+            "Carbohydrate": [
+                1212.0,
+                408.5,
+                128.52,
+                0.0,
+                0.0,
+                0.0,
+                19.2,
+                11.34
+            ],
+            "Fat": [
+                10.605,
+                3.0,
+                0.0,
+                16.65,
+                0.0,
+                200.0,
+                1.5,
+                0.0
+            ],
+            "Protein": [
+                107.565,
+                34.0,
+                0.0,
+                542.79,
+                0.0,
+                0.0,
+                4.2,
+                2.83
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 12444.96,
+            "Carbohydrate": 1779.56,
+            "Fat": 231.755,
+            "Protein": 691.385
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 12.444959999999998,
+            "Carbohydrate": 1.77956,
+            "Fat": 0.231755,
+            "Protein": 0.691385
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 0.6222479999999999,
+            "Carbohydrate": 0.6471127272727273,
+            "Fat": 0.29712179487179485,
+            "Protein": 1.38277
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 25.194776799271178,
+            "Carbohydrate": 3.6027128251847356,
+            "Fat": 0.46918716469278265,
+            "Protein": 1.3997064480210546
+        }
+    },
+    {
+        "MenuItemName": "蘋果",
+        "MenuItemType": "Fruit-水果類",
+        "RawIngredientsEng": [
+            "apple"
+        ],
+        "RawIngredientsEngSimple": [
+            "apple"
+        ],
+        "RawIngredientsType": [
+            "FRUIT"
+        ],
+        "RawIngredientsChinese": [
+            "蘋果"
+        ],
+        "Amount": [
+            133
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            133.0
+        ],
+        "AmountServings": "1 盆/1 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.0289234113805
+            ],
+            "Processing": [
+                0.01022105
+            ],
+            "Distribution": [
+                0.0044555
+            ],
+            "Consumption": [
+                0.000403522
+            ],
+            "Management": [
+                0.050389604338888894
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.0943930877193889
+        ],
+        "CarbonLabelMenuItem": 0.0943930877193889,
+        "CarbonLabelMenuItemPerServing": 0.0943930877193889,
+        "CarbonLabelMenuItemPer100g": 0.07097224640555555,
+        "CarbonLabelMenuItemPerKg": 0.7097224640555556,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                69.16
+            ],
+            "Carbohydrate": [
+                18.354
+            ],
+            "Fat": [
+                0.266
+            ],
+            "Protein": [
+                0.39899999999999997
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 69.16,
+            "Carbohydrate": 18.354,
+            "Fat": 0.266,
+            "Protein": 0.39899999999999997
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 69.16,
+            "Carbohydrate": 18.354,
+            "Fat": 0.266,
+            "Protein": 0.39899999999999997
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 3.458,
+            "Carbohydrate": 6.674181818181818,
+            "Fat": 0.34102564102564104,
+            "Protein": 0.7979999999999999
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 52.0,
+            "Carbohydrate": 13.799999999999999,
+            "Fat": 0.2,
+            "Protein": 0.3
+        }
+    },
+    {
+        "MenuItemName": "亞之竹芯",
+        "MenuItemType": "Vegetable-菜類",
+        "RawIngredientsEng": [
+            "azhi bamboo core"
+        ],
+        "RawIngredientsEngSimple": [
+            "artichoke heart"
+        ],
+        "RawIngredientsType": [
+            "VEGETABLE"
+        ],
+        "RawIngredientsChinese": [
+            "亞之竹芯"
+        ],
+        "Amount": [
+            27
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            27.0
+        ],
+        "AmountServings": "1 盆/1 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.008766967499999993
+            ],
+            "Processing": [
+                0.00185355
+            ],
+            "Distribution": [
+                0.0009045
+            ],
+            "Consumption": [
+                8.1918e-05
+            ],
+            "Management": [
+                0.01022946855
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.021836404049999994
+        ],
+        "CarbonLabelMenuItem": 0.021836404049999994,
+        "CarbonLabelMenuItemPerServing": 0.021836404049999994,
+        "CarbonLabelMenuItemPer100g": 0.08087557055555554,
+        "CarbonLabelMenuItemPerKg": 0.8087557055555553,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                14.229000000000001
+            ],
+            "Carbohydrate": [
+                3.213
+            ],
+            "Fat": [
+                0.081
+            ],
+            "Protein": [
+                0.7829999999999999
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 14.229000000000001,
+            "Carbohydrate": 3.213,
+            "Fat": 0.081,
+            "Protein": 0.7829999999999999
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 14.229000000000001,
+            "Carbohydrate": 3.213,
+            "Fat": 0.081,
+            "Protein": 0.7829999999999999
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 0.71145,
+            "Carbohydrate": 1.1683636363636363,
+            "Fat": 0.10384615384615384,
+            "Protein": 1.5659999999999996
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 52.7,
+            "Carbohydrate": 11.9,
+            "Fat": 0.3,
+            "Protein": 2.9
+        }
+    },
+    {
+        "MenuItemName": "紅菜頭",
+        "MenuItemType": "Vegetable-菜類",
+        "RawIngredientsEng": [
+            "beetroot"
+        ],
+        "RawIngredientsEngSimple": [
+            "beetroot"
+        ],
+        "RawIngredientsType": [
+            "VEGETABLE"
+        ],
+        "RawIngredientsChinese": [
+            "紅菜頭"
+        ],
+        "Amount": [
+            100
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            100.0
+        ],
+        "AmountServings": "1 盆/1 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.03247024999999997
+            ],
+            "Processing": [
+                0.0068650000000000004
+            ],
+            "Distribution": [
+                0.0033500000000000005
+            ],
+            "Consumption": [
+                0.0003034
+            ],
+            "Management": [
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.08087557055555554
+        ],
+        "CarbonLabelMenuItem": 0.08087557055555554,
+        "CarbonLabelMenuItemPerServing": 0.08087557055555554,
+        "CarbonLabelMenuItemPer100g": 0.08087557055555554,
+        "CarbonLabelMenuItemPerKg": 0.8087557055555553,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                43.0
+            ],
+            "Carbohydrate": [
+                9.6
+            ],
+            "Fat": [
+                0.2
+            ],
+            "Protein": [
+                1.6
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 43.0,
+            "Carbohydrate": 9.6,
+            "Fat": 0.2,
+            "Protein": 1.6
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 43.0,
+            "Carbohydrate": 9.6,
+            "Fat": 0.2,
+            "Protein": 1.6
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 2.15,
+            "Carbohydrate": 3.490909090909091,
+            "Fat": 0.2564102564102564,
+            "Protein": 3.2
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 43.0,
+            "Carbohydrate": 9.6,
+            "Fat": 0.2,
+            "Protein": 1.6
+        }
+    },
+    {
+        "MenuItemName": "車厘茄",
+        "MenuItemType": "Vegetable-菜類",
+        "RawIngredientsEng": [
+            "cherry tomatoes"
+        ],
+        "RawIngredientsEngSimple": [
+            "tomato cherry"
+        ],
+        "RawIngredientsType": [
+            "VEGETABLE"
+        ],
+        "RawIngredientsChinese": [
+            "車厘茄"
+        ],
+        "Amount": [
+            17
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            17.0
+        ],
+        "AmountServings": "1 盆/1 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.005519942499999996
+            ],
+            "Processing": [
+                0.0011670500000000002
+            ],
+            "Distribution": [
+                0.0005695000000000001
+            ],
+            "Consumption": [
+                5.1578e-05
+            ],
+            "Management": [
+                0.006440776494444445
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.013748846994444442
+        ],
+        "CarbonLabelMenuItem": 0.013748846994444442,
+        "CarbonLabelMenuItemPerServing": 0.013748846994444442,
+        "CarbonLabelMenuItemPer100g": 0.08087557055555554,
+        "CarbonLabelMenuItemPerKg": 0.8087557055555553,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                3.06
+            ],
+            "Carbohydrate": [
+                0.6629999999999999
+            ],
+            "Fat": [
+                0.034
+            ],
+            "Protein": [
+                0.153
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 3.06,
+            "Carbohydrate": 0.6629999999999999,
+            "Fat": 0.034,
+            "Protein": 0.153
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 3.06,
+            "Carbohydrate": 0.6629999999999999,
+            "Fat": 0.034,
+            "Protein": 0.153
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 0.15300000000000002,
+            "Carbohydrate": 0.24109090909090908,
+            "Fat": 0.04358974358974359,
+            "Protein": 0.306
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 18.0,
+            "Carbohydrate": 3.8999999999999995,
+            "Fat": 0.2,
+            "Protein": 0.8999999999999999
+        }
+    },
+    {
+        "MenuItemName": "青瓜",
+        "MenuItemType": "Vegetable-菜類",
+        "RawIngredientsEng": [
+            "cucumber"
+        ],
+        "RawIngredientsEngSimple": [
+            "cucumber"
+        ],
+        "RawIngredientsType": [
+            "VEGETABLE"
+        ],
+        "RawIngredientsChinese": [
+            "青瓜"
+        ],
+        "Amount": [
+            100
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            100.0
+        ],
+        "AmountServings": "1 盆/1 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.03247024999999997
+            ],
+            "Processing": [
+                0.0068650000000000004
+            ],
+            "Distribution": [
+                0.0033500000000000005
+            ],
+            "Consumption": [
+                0.0003034
+            ],
+            "Management": [
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.08087557055555554
+        ],
+        "CarbonLabelMenuItem": 0.08087557055555554,
+        "CarbonLabelMenuItemPerServing": 0.08087557055555554,
+        "CarbonLabelMenuItemPer100g": 0.08087557055555554,
+        "CarbonLabelMenuItemPerKg": 0.8087557055555553,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                15.0
+            ],
+            "Carbohydrate": [
+                3.6
+            ],
+            "Fat": [
+                0.1
+            ],
+            "Protein": [
+                0.7
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 15.0,
+            "Carbohydrate": 3.6,
+            "Fat": 0.1,
+            "Protein": 0.7
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 15.0,
+            "Carbohydrate": 3.6,
+            "Fat": 0.1,
+            "Protein": 0.7
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 0.75,
+            "Carbohydrate": 1.309090909090909,
+            "Fat": 0.1282051282051282,
+            "Protein": 1.4
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 15.0,
+            "Carbohydrate": 3.6000000000000005,
+            "Fat": 0.1,
+            "Protein": 0.7
+        }
+    },
+    {
+        "MenuItemName": "雜錦生菜",
+        "MenuItemType": "Vegetable-菜類",
+        "RawIngredientsEng": [
+            "mixed lettuce"
+        ],
+        "RawIngredientsEngSimple": [
+            "lettuce mesclun"
+        ],
+        "RawIngredientsType": [
+            "VEGETABLE"
+        ],
+        "RawIngredientsChinese": [
+            "雜錦生菜"
+        ],
+        "Amount": [
+            100
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            100.0
+        ],
+        "AmountServings": "1 盆/1 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.03247024999999997
+            ],
+            "Processing": [
+                0.0068650000000000004
+            ],
+            "Distribution": [
+                0.0033500000000000005
+            ],
+            "Consumption": [
+                0.0003034
+            ],
+            "Management": [
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.08087557055555554
+        ],
+        "CarbonLabelMenuItem": 0.08087557055555554,
+        "CarbonLabelMenuItemPerServing": 0.08087557055555554,
+        "CarbonLabelMenuItemPer100g": 0.08087557055555554,
+        "CarbonLabelMenuItemPerKg": 0.8087557055555553,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                21.0
+            ],
+            "Carbohydrate": [
+                3.6
+            ],
+            "Fat": [
+                0.3
+            ],
+            "Protein": [
+                1.9
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 21.0,
+            "Carbohydrate": 3.6,
+            "Fat": 0.3,
+            "Protein": 1.9
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 21.0,
+            "Carbohydrate": 3.6,
+            "Fat": 0.3,
+            "Protein": 1.9
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 1.05,
+            "Carbohydrate": 1.309090909090909,
+            "Fat": 0.3846153846153846,
+            "Protein": 3.8
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 21.0,
+            "Carbohydrate": 3.6000000000000005,
+            "Fat": 0.3,
+            "Protein": 1.9
+        }
+    },
+    {
+        "MenuItemName": "橙子",
+        "MenuItemType": "Fruit-水果類",
+        "RawIngredientsEng": [
+            "orange"
+        ],
+        "RawIngredientsEngSimple": [
+            "orange"
+        ],
+        "RawIngredientsType": [
+            "FRUIT"
+        ],
+        "RawIngredientsChinese": [
+            "橙子"
+        ],
+        "Amount": [
+            190
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            190.0
+        ],
+        "AmountServings": "1 盆/1 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.041319159115
+            ],
+            "Processing": [
+                0.0146015
+            ],
+            "Distribution": [
+                0.006365000000000001
+            ],
+            "Consumption": [
+                0.00057646
+            ],
+            "Management": [
+                0.07198514905555556
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.13484726817055553
+        ],
+        "CarbonLabelMenuItem": 0.13484726817055553,
+        "CarbonLabelMenuItemPerServing": 0.13484726817055553,
+        "CarbonLabelMenuItemPer100g": 0.07097224640555555,
+        "CarbonLabelMenuItemPerKg": 0.7097224640555555,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                89.3
+            ],
+            "Carbohydrate": [
+                22.42
+            ],
+            "Fat": [
+                0.19
+            ],
+            "Protein": [
+                1.71
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 89.3,
+            "Carbohydrate": 22.42,
+            "Fat": 0.19,
+            "Protein": 1.71
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 89.3,
+            "Carbohydrate": 22.42,
+            "Fat": 0.19,
+            "Protein": 1.71
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 4.465,
+            "Carbohydrate": 8.152727272727274,
+            "Fat": 0.2435897435897436,
+            "Protein": 3.42
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 47.0,
+            "Carbohydrate": 11.8,
+            "Fat": 0.1,
+            "Protein": 0.8999999999999999
+        }
+    },
+    {
+        "MenuItemName": "梨子",
+        "MenuItemType": "Fruit-水果類",
+        "RawIngredientsEng": [
+            "pear"
+        ],
+        "RawIngredientsEngSimple": [
+            "pear"
+        ],
+        "RawIngredientsType": [
+            "FRUIT"
+        ],
+        "RawIngredientsChinese": [
+            "梨子"
+        ],
+        "Amount": [
+            178
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            178.0
+        ],
+        "AmountServings": "1 盆/1 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.038709528013
+            ],
+            "Processing": [
+                0.0136793
+            ],
+            "Distribution": [
+                0.005963
+            ],
+            "Consumption": [
+                0.000540052
+            ],
+            "Management": [
+                0.06743871858888889
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.1263305986018889
+        ],
+        "CarbonLabelMenuItem": 0.1263305986018889,
+        "CarbonLabelMenuItemPerServing": 0.1263305986018889,
+        "CarbonLabelMenuItemPer100g": 0.07097224640555555,
+        "CarbonLabelMenuItemPerKg": 0.7097224640555556,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                101.46
+            ],
+            "Carbohydrate": [
+                27.055999999999997
+            ],
+            "Fat": [
+                0.17800000000000002
+            ],
+            "Protein": [
+                0.7120000000000001
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 101.46,
+            "Carbohydrate": 27.055999999999997,
+            "Fat": 0.17800000000000002,
+            "Protein": 0.7120000000000001
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 101.46,
+            "Carbohydrate": 27.055999999999997,
+            "Fat": 0.17800000000000002,
+            "Protein": 0.7120000000000001
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 5.0729999999999995,
+            "Carbohydrate": 9.838545454545454,
+            "Fat": 0.22820512820512823,
+            "Protein": 1.4240000000000002
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 56.99999999999999,
+            "Carbohydrate": 15.2,
+            "Fat": 0.1,
+            "Protein": 0.4
+        }
+    },
+    {
+        "MenuItemName": "紅及黃甜椒",
+        "MenuItemType": "Vegetable-菜類",
+        "RawIngredientsEng": [
+            "red pepper corner",
+            "yellow bell pepper wedges"
+        ],
+        "RawIngredientsEngSimple": [
+            "pepper",
+            "pepper"
+        ],
+        "RawIngredientsType": [
+            "VEGETABLE",
+            "VEGETABLE"
+        ],
+        "RawIngredientsChinese": [
+            "红椒角",
+            "黄甜椒角"
+        ],
+        "Amount": [
+            50,
+            50
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            50.0,
+            50.0
+        ],
+        "AmountServings": "1 盆/1 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.016235124999999986,
+                0.016235124999999986
+            ],
+            "Processing": [
+                0.0034325000000000002,
+                0.0034325000000000002
+            ],
+            "Distribution": [
+                0.0016750000000000003,
+                0.0016750000000000003
+            ],
+            "Consumption": [
+                0.0001517,
+                0.0001517
+            ],
+            "Management": [
+                0.018943460277777782,
+                0.018943460277777782
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.04043778527777777,
+            0.04043778527777777
+        ],
+        "CarbonLabelMenuItem": 0.08072387055555555,
+        "CarbonLabelMenuItemPerServing": 0.08072387055555555,
+        "CarbonLabelMenuItemPer100g": 0.08072387055555555,
+        "CarbonLabelMenuItemPerKg": 0.8072387055555554,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                13.0,
+                13.0
+            ],
+            "Carbohydrate": [
+                3.015,
+                3.015
+            ],
+            "Fat": [
+                0.15,
+                0.15
+            ],
+            "Protein": [
+                0.495,
+                0.495
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 26.0,
+            "Carbohydrate": 6.03,
+            "Fat": 0.3,
+            "Protein": 0.99
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 26.0,
+            "Carbohydrate": 6.03,
+            "Fat": 0.3,
+            "Protein": 0.99
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 1.3,
+            "Carbohydrate": 2.192727272727273,
+            "Fat": 0.3846153846153846,
+            "Protein": 1.9799999999999998
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 26.0,
+            "Carbohydrate": 6.03,
+            "Fat": 0.3,
+            "Protein": 0.9899999999999999
+        }
+    },
+    {
+        "MenuItemName": "粟米粒",
+        "MenuItemType": "Vegetable-菜類",
+        "RawIngredientsEng": [
+            "corn kernels"
+        ],
+        "RawIngredientsEngSimple": [
+            "sweet corn"
+        ],
+        "RawIngredientsType": [
+            "MAIZE"
+        ],
+        "RawIngredientsChinese": [
+            "粟米粒"
+        ],
+        "Amount": [
+            100
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            100.0
+        ],
+        "AmountServings": "1 盆/1 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.06470000000000001
+            ],
+            "Processing": [
+                0.047865
+            ],
+            "Distribution": [
+                0.0033500000000000005
+            ],
+            "Consumption": [
+                0.082
+            ],
+            "Management": [
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.23580192055555557
+        ],
+        "CarbonLabelMenuItem": 0.2358019205555556,
+        "CarbonLabelMenuItemPerServing": 0.2358019205555556,
+        "CarbonLabelMenuItemPer100g": 0.2358019205555556,
+        "CarbonLabelMenuItemPerKg": 2.3580192055555558,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                88.0
+            ],
+            "Carbohydrate": [
+                20.7
+            ],
+            "Fat": [
+                0.8
+            ],
+            "Protein": [
+                3.0
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 88.0,
+            "Carbohydrate": 20.7,
+            "Fat": 0.8,
+            "Protein": 3.0
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 88.0,
+            "Carbohydrate": 20.7,
+            "Fat": 0.8,
+            "Protein": 3.0
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 4.3999999999999995,
+            "Carbohydrate": 7.527272727272727,
+            "Fat": 1.0256410256410255,
+            "Protein": 6.0
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 88.0,
+            "Carbohydrate": 20.7,
+            "Fat": 0.8,
+            "Protein": 3.0
+        }
+    },
+    {
+        "MenuItemName": "吞拿魚",
+        "MenuItemType": "Seafood-海鲜類",
+        "RawIngredientsEng": [
+            "tuna fish"
+        ],
+        "RawIngredientsEngSimple": [
+            "fish tuna canned"
+        ],
+        "RawIngredientsType": [
+            "AQUATIC"
+        ],
+        "RawIngredientsChinese": [
+            "吞拿魚"
+        ],
+        "Amount": [
+            100
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            100.0
+        ],
+        "AmountServings": "1 盆/1 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.111962962962963
+            ],
+            "Processing": [
+                0.048685
+            ],
+            "Distribution": [
+                0.005105555555555555
+            ],
+            "Consumption": [
+                0.20179463639999998
+            ],
+            "Management": [
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.4054350754740741
+        ],
+        "CarbonLabelMenuItem": 0.4054350754740741,
+        "CarbonLabelMenuItemPerServing": 0.4054350754740741,
+        "CarbonLabelMenuItemPer100g": 0.40543507547407415,
+        "CarbonLabelMenuItemPerKg": 4.054350754740741,
+        "CarbonLabelMenuItemTrafficLight": "orange",
+        "Nutrition": {
+            "Calories": [
+                116.0
+            ],
+            "Carbohydrate": [
+                0.0
+            ],
+            "Fat": [
+                0.8
+            ],
+            "Protein": [
+                25.5
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 116.0,
+            "Carbohydrate": 0.0,
+            "Fat": 0.8,
+            "Protein": 25.5
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 116.0,
+            "Carbohydrate": 0.0,
+            "Fat": 0.8,
+            "Protein": 25.5
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 5.800000000000001,
+            "Carbohydrate": 0.0,
+            "Fat": 1.0256410256410255,
+            "Protein": 51.0
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 115.99999999999999,
+            "Carbohydrate": 0.0,
+            "Fat": 0.8,
+            "Protein": 25.5
+        }
+    },
+    {
         "MenuItemName": "香辣孜然燜牛腩",
         "MenuItemType": "Beef-牛肉類",
         "RawIngredientsEng": [
@@ -23748,7 +29200,7 @@
     },
     {
         "MenuItemName": "香辣醬腸粉",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "steamed vermicelli roll",
             "dried shrimp",
@@ -24033,7 +29485,7 @@
     },
     {
         "MenuItemName": "日式炒麵",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "jinmei ham",
             "oil noodles",
@@ -24266,7 +29718,7 @@
     },
     {
         "MenuItemName": "鲜茄雞絲油麺",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "chicken shreds",
             "tomato wedges",
@@ -24499,7 +29951,7 @@
     },
     {
         "MenuItemName": "節瓜蝦米煮粉絲",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "fan",
             "carrot shreds",
@@ -24770,7 +30222,7 @@
     },
     {
         "MenuItemName": "雜菌燜伊麵",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "yimian",
             "xiuzhen mushroom",
@@ -24999,7 +30451,7 @@
     },
     {
         "MenuItemName": "鲜茄肉絲意粉",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "carnitas",
             "tomato wedges",
@@ -25230,7 +30682,7 @@
     },
     {
         "MenuItemName": "臘腸糯米飯",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "sticky rice",
             "sausage",
@@ -25465,7 +30917,7 @@
     },
     {
         "MenuItemName": "火腿雜菌燜伊麵",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "yimian",
             "xiuzhen mushroom",
@@ -25714,7 +31166,7 @@
     },
     {
         "MenuItemName": "XO醤火腿炒米粉",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "jiangmen rice noodles",
             "shredded cauliflower",
@@ -25987,7 +31439,7 @@
     },
     {
         "MenuItemName": "火腿雜菜蛋炒飯",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "ham",
             "mixed vegetables",
@@ -26204,7 +31656,7 @@
     },
     {
         "MenuItemName": "蝦子鮑魚燜伊麵",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "yimian",
             "plain abalone",
@@ -26433,7 +31885,7 @@
     },
     {
         "MenuItemName": "雪菜肉絲燜米",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "carnitas",
             "shredded ham",
@@ -26670,7 +32122,7 @@
     },
     {
         "MenuItemName": "鲜茄雞絲意粉",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "chicken shreds",
             "tomato wedges",
@@ -26901,7 +32353,7 @@
     },
     {
         "MenuItemName": "鮑魚金菇燜伊麵",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "yimian",
             "xiuzhen mushroom",
@@ -27112,7 +32564,7 @@
     },
     {
         "MenuItemName": "薑蔥叉燒撈麵",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "char siew",
             "shredded cauliflower",
@@ -27329,7 +32781,7 @@
     },
     {
         "MenuItemName": "星洲炒飯",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "frozen egg custard",
             "shrimp 4150",
@@ -27600,7 +33052,7 @@
     },
     {
         "MenuItemName": "乾炒肉絲麺",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "pork slices",
             "shredded cauliflower",
@@ -27813,7 +33265,7 @@
     },
     {
         "MenuItemName": "吞那魚炒飯",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "frozen egg custard",
             "tuna",
@@ -28030,7 +33482,7 @@
     },
     {
         "MenuItemName": "乾炒肉絲河",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "pork slices",
             "shredded cauliflower",
@@ -28243,7 +33695,7 @@
     },
     {
         "MenuItemName": "上海粗炒麺",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "carnitas",
             "shredded cauliflower",
@@ -28474,7 +33926,7 @@
     },
     {
         "MenuItemName": "鳳瓜排骨蒸陳村粉",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "pork ribs",
             "fried chicken feet",
@@ -28689,7 +34141,7 @@
     },
     {
         "MenuItemName": "炒貴刁",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "pork slices",
             "shredded cauliflower",
@@ -28978,7 +34430,7 @@
     },
     {
         "MenuItemName": "三絲炒米粉",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "carnitas",
             "shredded cauliflower",
@@ -29213,7 +34665,7 @@
     },
     {
         "MenuItemName": "鹹魚雞絲炒飯",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "chicken shreds",
             "ma you salted fish",
@@ -29450,7 +34902,7 @@
     },
     {
         "MenuItemName": "瑤柱雜菌燜伊麵",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "yimian",
             "xiuzhen mushroom",
@@ -29661,7 +35113,7 @@
     },
     {
         "MenuItemName": "雞絲炒米粉",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "chicken shreds",
             "shredded cauliflower",
@@ -29876,7 +35328,7 @@
     },
     {
         "MenuItemName": "XO醬炒粉絲",
-        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "MenuItemType": "Rice-Nooldes-熱盤-飯及粉類",
         "RawIngredientsEng": [
             "fan",
             "shredded cauliflower",
@@ -41086,6 +46538,931 @@
             "Carbohydrate": 1.9765984251968505,
             "Fat": 0.9743202099737533,
             "Protein": 12.005138357705288
+        }
+    },
+    {
+        "MenuItemName": "粟米魚柳",
+        "MenuItemType": "Seafood-海鲜類",
+        "RawIngredientsEng": [
+            "long li liu",
+            "cornmeal",
+            "green beans",
+            "corn kernels",
+            "red pepper ring",
+            "chopped green onion",
+            "shunmark cooking oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsEngSimple": [
+            "fish",
+            "cornmeal mush",
+            "green pea",
+            "sweet corn",
+            "pepper",
+            "green onion",
+            "oil",
+            "salt",
+            "chicken powder"
+        ],
+        "RawIngredientsType": [
+            "AQUATIC",
+            "MAIZE",
+            "VEGETABLE",
+            "MAIZE",
+            "VEGETABLE",
+            "VEGETABLE",
+            "OIL",
+            "SEASONING",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "龍利柳",
+            "粟米茸",
+            "青豆粒",
+            "粟米粒",
+            "红椒圈",
+            "葱花",
+            "順嘜食油",
+            "盐",
+            "雞粉"
+        ],
+        "Amount": [
+            100000,
+            13600,
+            4000,
+            8000,
+            1000,
+            1000,
+            1000,
+            800,
+            800
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            100000.0,
+            13600.0,
+            4000.0,
+            8000.0,
+            1000.0,
+            1000.0,
+            1000.0,
+            800.0,
+            800.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                111.96296296296299,
+                8.7992,
+                1.298809999999999,
+                5.176,
+                0.3247024999999997,
+                0.3247024999999997,
+                1.38,
+                0.26231999999999983,
+                0.26231999999999983
+            ],
+            "Processing": [
+                48.684999999999995,
+                6.509639999999999,
+                0.2746,
+                3.8291999999999997,
+                0.06865,
+                0.06865,
+                0.47864999999999996,
+                0.38292,
+                0.38292
+            ],
+            "Distribution": [
+                5.105555555555555,
+                0.4556,
+                0.134,
+                0.268,
+                0.0335,
+                0.0335,
+                0.0335,
+                0.17501818181818185,
+                0.17501818181818185
+            ],
+            "Consumption": [
+                201.79463639999997,
+                11.152,
+                0.012136,
+                6.56,
+                0.003034,
+                0.003034,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Management": [
+                37.88692055555556,
+                5.152621195555556,
+                1.5154768222222224,
+                3.0309536444444447,
+                0.3788692055555556,
+                0.3788692055555556,
+                0.0,
+                0.3030953644444445,
+                0.3030953644444445
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            405.4350754740741,
+            32.069061195555555,
+            3.2350228222222213,
+            18.864153644444446,
+            0.8087557055555553,
+            0.8087557055555553,
+            1.89215,
+            1.123353546262626,
+            1.123353546262626
+        ],
+        "CarbonLabelMenuItem": 465.3596816399327,
+        "CarbonLabelMenuItemPerServing": 0.46535968163993274,
+        "CarbonLabelMenuItemPer100g": 0.357419110322529,
+        "CarbonLabelMenuItemPerKg": 3.57419110322529,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                74000.0,
+                8268.8,
+                3080.0,
+                7040.0,
+                260.0,
+                270.0,
+                8840.0,
+                560.0,
+                680.4
+            ],
+            "Carbohydrate": [
+                0.0,
+                1781.6,
+                544.0,
+                1656.0,
+                60.3,
+                57.4,
+                0.0,
+                102.4,
+                90.72
+            ],
+            "Fat": [
+                500.0,
+                40.8,
+                16.0,
+                64.0,
+                3.0,
+                4.7,
+                1000.0,
+                8.0,
+                0.0
+            ],
+            "Protein": [
+                16300.0,
+                163.2,
+                208.0,
+                240.0,
+                9.9,
+                9.7,
+                0.0,
+                22.4,
+                22.64
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 102999.2,
+            "Carbohydrate": 4292.42,
+            "Fat": 1636.5,
+            "Protein": 16975.84
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 102.9992,
+            "Carbohydrate": 4.29242,
+            "Fat": 1.6365,
+            "Protein": 16.97584
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 5.14996,
+            "Carbohydrate": 1.5608799999999998,
+            "Fat": 2.098076923076923,
+            "Protein": 33.95168
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 79.1084485407066,
+            "Carbohydrate": 3.29678955453149,
+            "Fat": 1.2569124423963134,
+            "Protein": 13.038279569892472
+        }
+    },
+    {
+        "MenuItemName": "霸王花豬骨湯",
+        "MenuItemType": "Soup-湯類",
+        "RawIngredientsEng": [
+            "pork bone",
+            "overlord flower",
+            "south apricot",
+            "north apricot",
+            "candied dates",
+            "salt",
+            "chicken powder",
+            "water"
+        ],
+        "RawIngredientsEngSimple": [
+            "pork bone",
+            "flower blossom",
+            "sweet apricot kernel",
+            "bitter apricot kernel",
+            "date",
+            "salt",
+            "chicken powder",
+            "water"
+        ],
+        "RawIngredientsType": [
+            "PORK",
+            "VEGETABLE",
+            "NUT",
+            "NUT",
+            "FRUIT",
+            "SEASONING",
+            "SEASONING",
+            "WATER"
+        ],
+        "RawIngredientsChinese": [
+            "豬骨",
+            "霸王花",
+            "南杏",
+            "北杏",
+            "蜜棗",
+            "盐",
+            "雞粉",
+            "水"
+        ],
+        "Amount": [
+            26666,
+            4000,
+            666,
+            666,
+            1000,
+            333,
+            500,
+            40000
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml"
+        ],
+        "AmountInGrams": [
+            26666.0,
+            4000.0,
+            666.0,
+            666.0,
+            1000.0,
+            333.0,
+            500.0,
+            40000.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                175.30132313513326,
+                1.298809999999999,
+                0.91908,
+                0.91908,
+                0.21746925849999998,
+                0.10919069999999995,
+                0.1639499999999999,
+                0.0
+            ],
+            "Processing": [
+                12.982342099999999,
+                0.2746,
+                0.3187809,
+                0.3187809,
+                0.07685,
+                0.15939045,
+                0.23932499999999998,
+                0.0984
+            ],
+            "Distribution": [
+                9.6464255,
+                0.134,
+                0.022311,
+                0.022311,
+                0.0335,
+                0.07285131818181818,
+                0.10938636363636364,
+                0.009839999999999998
+            ],
+            "Consumption": [
+                53.810557742423995,
+                0.012136,
+                0.0,
+                0.0,
+                0.003034,
+                0.0,
+                0.0,
+                3.2800000000000002
+            ],
+            "Management": [
+                10.102926235344446,
+                1.5154768222222224,
+                0.25232689090000004,
+                0.25232689090000004,
+                0.3788692055555556,
+                0.12616344545000002,
+                0.1894346027777778,
+                0.0
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            261.8435747129017,
+            3.2350228222222213,
+            1.5124987909,
+            1.5124987909,
+            0.7097224640555555,
+            0.4675959136318181,
+            0.7020959664141413,
+            3.38824
+        ],
+        "CarbonLabelMenuItem": 273.37124946102546,
+        "CarbonLabelMenuItemPerServing": 0.2733712494610255,
+        "CarbonLabelMenuItemPer100g": 0.3702662153580819,
+        "CarbonLabelMenuItemPerKg": 3.7026621535808193,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                57065.24,
+                600.0,
+                3330.0,
+                3996.0,
+                2820.0,
+                233.1,
+                425.25,
+                0.0
+            ],
+            "Carbohydrate": [
+                0.0,
+                132.0,
+                266.4,
+                66.6,
+                750.0,
+                42.624,
+                56.7,
+                0.0
+            ],
+            "Fat": [
+                2693.2659999999996,
+                4.0,
+                266.4,
+                333.0,
+                4.0,
+                3.33,
+                0.0,
+                0.0
+            ],
+            "Protein": [
+                7679.808000000001,
+                40.0,
+                133.2,
+                133.2,
+                25.0,
+                9.324,
+                14.15,
+                0.0
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 68469.59,
+            "Carbohydrate": 1314.324,
+            "Fat": 3303.9959999999996,
+            "Protein": 8034.682000000001
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 68.46959,
+            "Carbohydrate": 1.314324,
+            "Fat": 3.3039959999999997,
+            "Protein": 8.034682
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 3.4234795,
+            "Carbohydrate": 0.47793599999999997,
+            "Fat": 4.235892307692307,
+            "Protein": 16.069364
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 92.73826712356598,
+            "Carbohydrate": 1.7801790575774405,
+            "Fat": 4.475079573620836,
+            "Protein": 10.88253172786499
+        }
+    },
+    {
+        "MenuItemName": "状元茶",
+        "MenuItemType": "Soup-湯類",
+        "RawIngredientsEng": [
+            "red dates",
+            "round meat",
+            "wolfberry",
+            "crystal sugar",
+            "water"
+        ],
+        "RawIngredientsEngSimple": [
+            "date",
+            "longan",
+            "goji berry",
+            "sugar",
+            "water"
+        ],
+        "RawIngredientsType": [
+            "FRUIT",
+            "FRUIT",
+            "FRUIT",
+            "SEASONING",
+            "WATER"
+        ],
+        "RawIngredientsChinese": [
+            "紅棗",
+            "圓肉",
+            "杞子",
+            "冰糖",
+            "水"
+        ],
+        "Amount": [
+            2666,
+            2666,
+            3000,
+            9000,
+            40000
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "gram",
+            "ml"
+        ],
+        "AmountInGrams": [
+            2666.0,
+            2666.0,
+            3000.0,
+            9000.0,
+            40000.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.579773043161,
+                0.579773043161,
+                0.6524077755,
+                2.951099999999998,
+                0.0
+            ],
+            "Processing": [
+                0.2048821,
+                0.2048821,
+                0.23055,
+                4.307849999999999,
+                0.0984
+            ],
+            "Distribution": [
+                0.089311,
+                0.089311,
+                0.1005,
+                1.9689545454545456,
+                0.009839999999999998
+            ],
+            "Consumption": [
+                0.008088643999999999,
+                0.008088643999999999,
+                0.009101999999999999,
+                0.0,
+                3.2800000000000002
+            ],
+            "Management": [
+                1.0100653020111112,
+                1.0100653020111112,
+                1.1366076166666668,
+                3.4098228500000003,
+                0.0
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            1.8921200891721113,
+            1.8921200891721113,
+            2.129167392166667,
+            12.637727395454544,
+            3.38824
+        ],
+        "CarbonLabelMenuItem": 21.93937496596543,
+        "CarbonLabelMenuItemPerServing": 0.02193937496596543,
+        "CarbonLabelMenuItemPer100g": 0.03826724162067507,
+        "CarbonLabelMenuItemPerKg": 0.3826724162067507,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                7518.12,
+                7624.76,
+                10860.0,
+                35010.0,
+                0.0
+            ],
+            "Carbohydrate": [
+                1999.5,
+                1972.84,
+                2222.9999999999995,
+                8979.3,
+                0.0
+            ],
+            "Fat": [
+                10.664000000000001,
+                10.664000000000001,
+                213.0,
+                0.0,
+                0.0
+            ],
+            "Protein": [
+                66.65,
+                130.63400000000001,
+                363.0,
+                0.0,
+                0.0
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 61012.880000000005,
+            "Carbohydrate": 15174.64,
+            "Fat": 234.328,
+            "Protein": 560.284
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 61.01288,
+            "Carbohydrate": 15.17464,
+            "Fat": 0.234328,
+            "Protein": 0.560284
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 3.050644,
+            "Carbohydrate": 5.518050909090909,
+            "Fat": 0.3004205128205128,
+            "Protein": 1.120568
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 106.4202888439266,
+            "Carbohydrate": 26.468010883974046,
+            "Fat": 0.4087211330496058,
+            "Protein": 0.9772622619130678
+        }
+    },
+    {
+        "MenuItemName": "小棠菜",
+        "MenuItemType": "Vegetable-菜類",
+        "RawIngredientsEng": [
+            "broccoli",
+            "shunmark cooking oil",
+            "salt",
+            "water"
+        ],
+        "RawIngredientsEngSimple": [
+            "broccoli",
+            "oil",
+            "salt",
+            "water"
+        ],
+        "RawIngredientsType": [
+            "VEGETABLE",
+            "OIL",
+            "SEASONING",
+            "WATER"
+        ],
+        "RawIngredientsChinese": [
+            "西蘭花",
+            "順嘜食油",
+            "盐",
+            "水"
+        ],
+        "Amount": [
+            66666,
+            500,
+            600,
+            10000
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "ml"
+        ],
+        "AmountInGrams": [
+            66666.0,
+            500.0,
+            600.0,
+            10000.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                21.64661686499998,
+                0.69,
+                0.1967399999999999,
+                0.0
+            ],
+            "Processing": [
+                4.5766209,
+                0.23932499999999998,
+                0.28718999999999995,
+                0.0246
+            ],
+            "Distribution": [
+                2.233311,
+                0.01675,
+                0.13126363636363636,
+                0.0024599999999999995
+            ],
+            "Consumption": [
+                0.20226464399999997,
+                0.0,
+                0.0,
+                0.8200000000000001
+            ],
+            "Management": [
+                25.257694457566668,
+                0.0,
+                0.22732152333333333,
+                0.0
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            53.91650786656665,
+            0.946075,
+            0.8425151596969696,
+            0.84706
+        ],
+        "CarbonLabelMenuItem": 56.55215802626362,
+        "CarbonLabelMenuItemPerServing": 0.05655215802626362,
+        "CarbonLabelMenuItemPer100g": 0.07272092948880438,
+        "CarbonLabelMenuItemPerKg": 0.7272092948880439,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                22666.44,
+                4420.0,
+                420.0,
+                0.0
+            ],
+            "Carbohydrate": [
+                4426.6224,
+                0.0,
+                76.8,
+                0.0
+            ],
+            "Fat": [
+                246.6642,
+                500.0,
+                6.0,
+                0.0
+            ],
+            "Protein": [
+                1879.9812,
+                0.0,
+                16.8,
+                0.0
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 27506.44,
+            "Carbohydrate": 4503.4224,
+            "Fat": 752.6641999999999,
+            "Protein": 1896.7812
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 27.506439999999998,
+            "Carbohydrate": 4.503422400000001,
+            "Fat": 0.7526641999999999,
+            "Protein": 1.8967812
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 1.375322,
+            "Carbohydrate": 1.6376081454545457,
+            "Fat": 0.9649541025641025,
+            "Protein": 3.7935624
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 35.3707790036777,
+            "Carbohydrate": 5.790991435846,
+            "Fat": 0.9678576755908752,
+            "Protein": 2.4390880333307616
+        }
+    },
+    {
+        "MenuItemName": "西蘭花",
+        "MenuItemType": "Vegetable-菜類",
+        "RawIngredientsEng": [
+            "broccoli",
+            "shunmark cooking oil",
+            "salt",
+            "water"
+        ],
+        "RawIngredientsEngSimple": [
+            "broccoli",
+            "oil",
+            "salt",
+            "water"
+        ],
+        "RawIngredientsType": [
+            "VEGETABLE",
+            "OIL",
+            "SEASONING",
+            "WATER"
+        ],
+        "RawIngredientsChinese": [
+            "西蘭花",
+            "順嘜食油",
+            "盐",
+            "水"
+        ],
+        "Amount": [
+            66666,
+            500,
+            600,
+            10000
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram",
+            "ml"
+        ],
+        "AmountInGrams": [
+            66666.0,
+            500.0,
+            600.0,
+            10000.0
+        ],
+        "AmountServings": "50 盆/1000 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                21.64661686499998,
+                0.69,
+                0.1967399999999999,
+                0.0
+            ],
+            "Processing": [
+                4.5766209,
+                0.23932499999999998,
+                0.28718999999999995,
+                0.0246
+            ],
+            "Distribution": [
+                2.233311,
+                0.01675,
+                0.13126363636363636,
+                0.0024599999999999995
+            ],
+            "Consumption": [
+                0.20226464399999997,
+                0.0,
+                0.0,
+                0.8200000000000001
+            ],
+            "Management": [
+                25.257694457566668,
+                0.0,
+                0.22732152333333333,
+                0.0
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            53.91650786656665,
+            0.946075,
+            0.8425151596969696,
+            0.84706
+        ],
+        "CarbonLabelMenuItem": 56.55215802626362,
+        "CarbonLabelMenuItemPerServing": 0.05655215802626362,
+        "CarbonLabelMenuItemPer100g": 0.07272092948880438,
+        "CarbonLabelMenuItemPerKg": 0.7272092948880439,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                22666.44,
+                4420.0,
+                420.0,
+                0.0
+            ],
+            "Carbohydrate": [
+                4426.6224,
+                0.0,
+                76.8,
+                0.0
+            ],
+            "Fat": [
+                246.6642,
+                500.0,
+                6.0,
+                0.0
+            ],
+            "Protein": [
+                1879.9812,
+                0.0,
+                16.8,
+                0.0
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 27506.44,
+            "Carbohydrate": 4503.4224,
+            "Fat": 752.6641999999999,
+            "Protein": 1896.7812
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 27.506439999999998,
+            "Carbohydrate": 4.503422400000001,
+            "Fat": 0.7526641999999999,
+            "Protein": 1.8967812
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 1.375322,
+            "Carbohydrate": 1.6376081454545457,
+            "Fat": 0.9649541025641025,
+            "Protein": 3.7935624
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 35.3707790036777,
+            "Carbohydrate": 5.790991435846,
+            "Fat": 0.9678576755908752,
+            "Protein": 2.4390880333307616
         }
     },
     {
@@ -67269,6 +73646,386 @@
             "Carbohydrate": 9.071588785046728,
             "Fat": 6.428785046728971,
             "Protein": 2.317102803738318
+        }
+    },
+    {
+        "MenuItemName": "乳酪",
+        "MenuItemType": "Dessert-甜品類",
+        "RawIngredientsEng": [
+            "cheese"
+        ],
+        "RawIngredientsEngSimple": [
+            "yogurt fruit"
+        ],
+        "RawIngredientsType": [
+            "DAIRY"
+        ],
+        "RawIngredientsChinese": [
+            "乳酪"
+        ],
+        "Amount": [
+            100
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            100.0
+        ],
+        "AmountServings": "1 盆/1 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.43205412246666675
+            ],
+            "Processing": [
+                0.048685
+            ],
+            "Distribution": [
+                0.05830000000000001
+            ],
+            "Consumption": [
+                0.0003034
+            ],
+            "Management": [
+                0.037886920555555564
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.5772294430222222
+        ],
+        "CarbonLabelMenuItem": 0.5772294430222222,
+        "CarbonLabelMenuItemPerServing": 0.5772294430222222,
+        "CarbonLabelMenuItemPer100g": 0.5772294430222222,
+        "CarbonLabelMenuItemPerKg": 5.772294430222222,
+        "CarbonLabelMenuItemTrafficLight": "orange",
+        "Nutrition": {
+            "Calories": [
+                89.1
+            ],
+            "Carbohydrate": [
+                11.2
+            ],
+            "Fat": [
+                3.5
+            ],
+            "Protein": [
+                3.4
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 89.1,
+            "Carbohydrate": 11.2,
+            "Fat": 3.5,
+            "Protein": 3.4
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 89.1,
+            "Carbohydrate": 11.2,
+            "Fat": 3.5,
+            "Protein": 3.4
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 4.455,
+            "Carbohydrate": 4.072727272727272,
+            "Fat": 4.487179487179487,
+            "Protein": 6.800000000000001
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 89.1,
+            "Carbohydrate": 11.2,
+            "Fat": 3.5000000000000004,
+            "Protein": 3.4000000000000004
+        }
+    },
+    {
+        "MenuItemName": "龜苓膏",
+        "MenuItemType": "Dessert-甜品類",
+        "RawIngredientsEng": [
+            "turtle paste"
+        ],
+        "RawIngredientsEngSimple": [
+            "grass jelly"
+        ],
+        "RawIngredientsType": [
+            "VEGETABLE"
+        ],
+        "RawIngredientsChinese": [
+            "龜苓膏"
+        ],
+        "Amount": [
+            200
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            200.0
+        ],
+        "AmountServings": "1 盆/1 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.06494049999999994
+            ],
+            "Processing": [
+                0.013730000000000001
+            ],
+            "Distribution": [
+                0.006700000000000001
+            ],
+            "Consumption": [
+                0.0006068
+            ],
+            "Management": [
+                0.07577384111111113
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.16175114111111108
+        ],
+        "CarbonLabelMenuItem": 0.16175114111111108,
+        "CarbonLabelMenuItemPerServing": 0.16175114111111108,
+        "CarbonLabelMenuItemPer100g": 0.08087557055555554,
+        "CarbonLabelMenuItemPerKg": 0.8087557055555553,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                114.0
+            ],
+            "Carbohydrate": [
+                28.0
+            ],
+            "Fat": [
+                0.0
+            ],
+            "Protein": [
+                0.0
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 114.0,
+            "Carbohydrate": 28.0,
+            "Fat": 0.0,
+            "Protein": 0.0
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 114.0,
+            "Carbohydrate": 28.0,
+            "Fat": 0.0,
+            "Protein": 0.0
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 5.7,
+            "Carbohydrate": 10.181818181818182,
+            "Fat": 0.0,
+            "Protein": 0.0
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 56.99999999999999,
+            "Carbohydrate": 14.000000000000002,
+            "Fat": 0.0,
+            "Protein": 0.0
+        }
+    },
+    {
+        "MenuItemName": "士多啤梨蛋糕",
+        "MenuItemType": "Dessert-甜品類",
+        "RawIngredientsEng": [
+            "strawberry cake"
+        ],
+        "RawIngredientsEngSimple": [
+            "cake strawberry"
+        ],
+        "RawIngredientsType": [
+            "WHEAT"
+        ],
+        "RawIngredientsChinese": [
+            "士多啤梨蛋糕"
+        ],
+        "Amount": [
+            150
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            150.0
+        ],
+        "AmountServings": "1 盆/1 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.08500714285714285
+            ],
+            "Processing": [
+                0.07179749999999999
+            ],
+            "Distribution": [
+                0.04125
+            ],
+            "Consumption": [
+                0.12299999999999998
+            ],
+            "Management": [
+                0.05683038083333333
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.37788502369047616
+        ],
+        "CarbonLabelMenuItem": 0.37788502369047616,
+        "CarbonLabelMenuItemPerServing": 0.37788502369047616,
+        "CarbonLabelMenuItemPer100g": 0.2519233491269841,
+        "CarbonLabelMenuItemPerKg": 2.519233491269841,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                642.9
+            ],
+            "Carbohydrate": [
+                101.85
+            ],
+            "Fat": [
+                21.45
+            ],
+            "Protein": [
+                10.65
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 642.9,
+            "Carbohydrate": 101.85,
+            "Fat": 21.45,
+            "Protein": 10.65
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 642.9,
+            "Carbohydrate": 101.85,
+            "Fat": 21.45,
+            "Protein": 10.65
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 32.145,
+            "Carbohydrate": 37.03636363636363,
+            "Fat": 27.499999999999996,
+            "Protein": 21.3
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 428.59999999999997,
+            "Carbohydrate": 67.89999999999999,
+            "Fat": 14.299999999999999,
+            "Protein": 7.1000000000000005
+        }
+    },
+    {
+        "MenuItemName": "豆腐花",
+        "MenuItemType": "Dessert-甜品類",
+        "RawIngredientsEng": [
+            "tofu flower"
+        ],
+        "RawIngredientsEngSimple": [
+            "tofu pudding"
+        ],
+        "RawIngredientsType": [
+            "LEGUME"
+        ],
+        "RawIngredientsChinese": [
+            "豆腐花"
+        ],
+        "Amount": [
+            150
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            150.0
+        ],
+        "AmountServings": "1 盆/1 人份量",
+        "Method": [],
+        "MethodChinese": [],
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.30750000000000005
+            ],
+            "Processing": [
+                0.07179749999999999
+            ],
+            "Distribution": [
+                0.005025
+            ],
+            "Consumption": [
+                0.12299999999999998
+            ],
+            "Management": [
+                0.05683038083333333
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.5641528808333334
+        ],
+        "CarbonLabelMenuItem": 0.5641528808333334,
+        "CarbonLabelMenuItemPerServing": 0.5641528808333334,
+        "CarbonLabelMenuItemPer100g": 0.3761019205555556,
+        "CarbonLabelMenuItemPerKg": 3.761019205555556,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                59.55
+            ],
+            "Carbohydrate": [
+                4.14
+            ],
+            "Fat": [
+                2.7
+            ],
+            "Protein": [
+                4.65
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 59.55,
+            "Carbohydrate": 4.14,
+            "Fat": 2.7,
+            "Protein": 4.65
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 59.55,
+            "Carbohydrate": 4.14,
+            "Fat": 2.7,
+            "Protein": 4.65
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 2.9775,
+            "Carbohydrate": 1.5054545454545454,
+            "Fat": 3.4615384615384617,
+            "Protein": 9.3
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 39.699999999999996,
+            "Carbohydrate": 2.76,
+            "Fat": 1.8000000000000003,
+            "Protein": 3.1000000000000005
         }
     }
 ]

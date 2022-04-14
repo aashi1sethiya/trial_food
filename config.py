@@ -10,13 +10,13 @@ PATH_TO_HTML_CSS = "/usr/src/app/apps/css/"
 
 
 ## Menu
-MENU_BREAKFAST = ["congee with fish and sweet corn",
-                  "plain congee with condiment",
+MENU_BREAKFAST = ["粟米魚茸粥",
+                  "白粥",
                   "fried bread sticks",
-                  "braised e-fu noodle with ham and mushroom",
+                  "火腿雜菌燜伊麵",
                   "chinese dim sum"]
 
-MENU_SALAD_BAR = ["boiled egg",
+MENU_SALAD_BAR = ["烚蛋",
                   "seasonal vegetable",
                   "oatmeal porridge",
                   "baked beans",
@@ -24,15 +24,17 @@ MENU_SALAD_BAR = ["boiled egg",
                   "pancake",
                   "roasted cocktail potato",
                   "bacon",
-                  "sweet corn",
-                  "sliced cucumber",
-                  "mesclun leave",
-                  "beet root",
-                  "cherry tomato",
-                  "tuna mix",
-                  "red and yellow bell pepper",
-                  "artichoke heart",
-                  "seasonal fruits"
+                  "粟米粒",
+                  "青瓜",
+                  "雜錦生菜",
+                  "紅菜頭",
+                  "車厘茄",
+                  "吞拿魚",
+                  "紅及黃甜椒",
+                  "亞之竹芯",
+                  "蘋果",
+                  "橙子",
+                  "梨子",
                   ]
 
 MENU_ASIAN = ['四川擔擔鷄湯粉麵',
@@ -51,7 +53,7 @@ MENU_INTERNATIONAL = ['thai green curry brisket',
                       'cauliflower with cheese',
                       'caldo verde']
 
-MENU_DESSERT = ["fruit yogurt cup",
-                "strawberry cake",
-                "tofu pudding",
-                "grass jelly"]
+MENU_DESSERT = ["乳酪",
+                "士多啤梨蛋糕",
+                "豆腐花",
+                "龜苓膏"]
