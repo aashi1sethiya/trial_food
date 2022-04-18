@@ -2,11 +2,15 @@
 This is the Design your meal page, where the user can select dishes
 and see the carbon footprint and nutrition values for their meal.
 """
+from importlib.resources import path
 import numpy as np  # math operations
 import pandas as pd
+import os
 from datetime import datetime
 import streamlit as st  # pip install streamlit
 from util import utils, plots  # utility functions for graphics
+from util.utils import DBTools  # database management
+import config
 
 
 class MealDesign:
@@ -23,6 +27,7 @@ class MealDesign:
         """
         self.username = username
         self.df = utils.get_data_from_json("data/menu_edr_dishes_only.json")
+        self.df['MenuItemName'] = self.df['MenuItemName'].apply(lambda x: x.lower()) # Convert menu item names to lower case
 
     def select_dishes(self, form_name, location="main"):
         """Select your dishes.
@@ -56,41 +61,78 @@ class MealDesign:
             meal_placeholder = st.empty()
             meal_form = meal_placeholder.container()
         elif self.location == "sidebar":
-            with open("./styles/style.css") as f:
+            with open(config.PATH_TO_CSS) as f:
                 st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
             meal_placeholder = st.sidebar.empty()
             meal_form = meal_placeholder.container()
 
         meal_form.subheader(self.form_name)
-        menu_item_type = meal_form.multiselect(
-            "Select the dish types:",
-            options=self.df["MenuItemType"].unique(),
-            default=None,  # display no selections
-            key="menu_item_type_key",
+
+        # Breakfast 
+        menu_item_breakfast = meal_form.multiselect(
+            "Breakfast:",
+            options=self.df[self.df.MenuItemName.isin(config.MENU_BREAKFAST)],
+            default=None,
+            key="menu_item_breakfast_key",
         )
 
-        menu_item_name = meal_form.multiselect(
-            "Select the dish names:",
-            options=self.df.query("MenuItemType == @menu_item_type")[
-                "MenuItemName"
-            ].unique(),
+        # Salad bar 
+        menu_item_salad_bar = meal_form.multiselect(
+            "Salad:",
+            options=self.df[self.df.MenuItemName.isin(config.MENU_SALAD_BAR)],
             default=None,
-            key="menu_item_name_key",
+            key="menu_item_salad_key",
         )
+
+        # Asian  
+        menu_item_asian = meal_form.multiselect(
+            "Asian:",
+            options=self.df[self.df.MenuItemName.isin(config.MENU_ASIAN)],
+            default=None,
+            key="menu_item_asian_key",
+        )
+
+        # International
+        menu_item_international = meal_form.multiselect(
+            "International:",
+            options=self.df[self.df.MenuItemName.isin(config.MENU_INTERNATIONAL)],
+            default=None,
+            key="menu_item_international_key",
+        )
+
+        # International
+        menu_item_dessert = meal_form.multiselect(
+            "Dessert:",
+            options=self.df[self.df.MenuItemName.isin(config.MENU_DESSERT)],
+            default=None,
+            key="menu_item_dessert_key",
+        )
+
+        menu_item_name = menu_item_breakfast + menu_item_salad_bar + menu_item_asian + menu_item_international + menu_item_dessert
 
         # Choose custom amount (g) for each dish
         custom_amount_in_grams = []
         for item in menu_item_name:
-            amount_in_grams_per_serving = int(
-                np.nansum(
+
+            amount_in_grams_total = np.nansum(
                     np.array(
                         np.nansum(
                             self.df.query("MenuItemName == @item")["AmountInGrams"]
                         )
                     )
                 )
-                / 1000
-            )  # each recipe serves 1000 people
+
+            try: # extract the number of servings the recipe was designed for
+                nServings = int(self.df.query("MenuItemName == @item")['AmountServings'].values[0].split('/')[1].split()[0])
+                # Assume 'AmountServings' field has format like: "50 盆/1000 人份量"
+            except IndexError:
+                print("No servings info provided.")
+                nServings = amount_in_grams_total / 100 # assume 100g per serving
+            
+            amount_in_grams_per_serving = int(
+                amount_in_grams_total
+                / nServings)
+
             amount = meal_form.slider(
                 f"{item} (grams)", 0, 250, amount_in_grams_per_serving
             )  # Default amount is serving size
@@ -102,6 +144,7 @@ class MealDesign:
         if meal_form.button("Submit"):
             st.session_state["df_selection"] = df_selection
             st.session_state["custom_amount_in_grams"] = custom_amount_in_grams
+            st.session_state["menu_item_name"] = menu_item_name
             st.session_state["meal_placeholder"] = meal_placeholder
             st.session_state["save"] = False
 
@@ -111,11 +154,19 @@ class MealDesign:
                 st.session_state["save"] = st.sidebar.button("Save")
             if st.button("New meal"):
                 # Clear the multiselect options by deleting corresponding session state
-                del st.session_state["menu_item_type_key"]
-                del st.session_state["menu_item_name_key"]
+                del st.session_state["menu_item_breakfast_key"]
+                del st.session_state["menu_item_salad_key"]
+                del st.session_state["menu_item_asian_key"]
+                del st.session_state["menu_item_international_key"]
+                del st.session_state["menu_item_dessert_key"]
+
                 # Then set them to be empty lists
-                st.session_state["menu_item_type_key"] = []
-                st.session_state["menu_item_name_key"] = []
+                st.session_state["menu_item_breakfast_key"] = []
+                st.session_state["menu_item_salad_key"] = []
+                st.session_state["menu_item_asian_key"] = []
+                st.session_state["menu_item_international_key"] = []
+                st.session_state["menu_item_dessert_key"] = []
+                st.session_state["menu_item_name"] = []
                 st.session_state["new_meal"] = True
                 st.session_state["df_selection"] = []
                 st.session_state["multi_dish_select"] = True
@@ -297,7 +348,7 @@ def meal_analysis(df_selection):
         calories, carb, fat, protein = get_nutrition_label_for_dish_per_100g(
             df_selection
         )
-        df_rdi = pd.read_csv("./data/nutrition_rdi.csv")
+        df_rdi = pd.read_csv(config.PATH_TO_NUTRITION_RDI)
 
         col1, col2 = st.columns(2)
         with col1:
@@ -346,17 +397,47 @@ def meal_analysis(df_selection):
             col2.plotly_chart(fig_protein_per_100g, use_container_width=True)
 
     else:  # multi-dish
-        dish_names = df_selection["MenuItemName"].values
-        col1, col2 = st.columns([1, 15])
-        with col1:
-            col1.title(f":egg:")
-        with col2:
-            col2.markdown(
-                "<h1 style='text-align: left; color: black; font-size: 2em; font-family:quando'> Your Meal Impact on ... </h1>",
+        # Display user chosen menu
+        st.markdown(
+            "<h1 style='text-align: left; color: black; font-size: 2em; font-family:quando'> Your Selections </h1>",
+            unsafe_allow_html=True,
+        )
+
+        user_selections = ""
+        for i in range(len(st.session_state["menu_item_name"])):
+            user_selections += f"""<div class='notice notice-success'> 
+                                        <strong>{str(i+1)}. {st.session_state['menu_item_name'][i]}</strong> 
+                                        ({str(st.session_state['custom_amount_in_grams'][i])}g) 
+                                    </div>"""
+
+        html_str = f"""
+            <div class="container">
+                {user_selections}
+            </div>
+        """
+        with st.container():
+            with open(f"{config.PATH_TO_HTML_CSS}design_your_meal.css") as f:
+                st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+            st.markdown(
+                html_str,
                 unsafe_allow_html=True,
             )
+            
+        # Meal analysis
+
+        st.markdown(
+            "<h1 style='text-align: left; color: black; font-size: 2em; font-family:quando'> Your Meal Impact on ... </h1>",
+            unsafe_allow_html=True,
+        )
         st.markdown("##")
         st.markdown("##")
+
+        # User budget
+        user_budget = DBTools.view_userbudget(st.session_state.username)
+        df_budget = pd.DataFrame(
+            user_budget,
+            columns=["Username", "co2", "calories", "carbs", "protein", "fat"],
+        )
 
         # ---------------------------------------------------------------------------- #
         # ENVIRONMENT
@@ -364,24 +445,24 @@ def meal_analysis(df_selection):
         st.subheader(f"... the Climate (GHG emissions) :factory: :deciduous_tree: ")
 
         st.markdown("Carbon Footprint per Serving (kg CO2e / serving):\n")
-        col1, _ = st.columns(2)
-        livelca_CO2_budget = 2.72  # (kg) based on LiveLCA threshold
-        st.session_state["max_CO2"] = 5.0
-        st.session_state["daily_food_CO2_budget"] = col1.number_input(
-            "CO2e Budget (kg)", 0.0, st.session_state["max_CO2"], livelca_CO2_budget
-        )  # Default amount is rdi value
 
-        _, col2, _ = st.columns([1, 3, 1])
+        # user carbon budget
+        st.session_state["daily_food_CO2_budget"] = df_budget["co2"].values[0]
+        st.session_state["max_CO2"] = df_budget["co2"].values[0] * 1.5
+
         kgCO2e_per_custom_amount = get_carbon_label_for_dishes_per_custom_amount(
             df_selection
         )
         fig_carbon_label_dish = plots.gauge_chart_carbon_multidish(
             kgCO2e_per_custom_amount
         )
+
+        # Display CO2 gauge chart
+        _, col2, _ = st.columns([1, 3, 1])
         with col2:
             col2.plotly_chart(
-                fig_carbon_label_dish, use_container_width=False
-            )  # bug if True, the gauge value moves after closing and opening sidebar
+                fig_carbon_label_dish, use_container_width=True
+            )  # bug if use_container_width=True, the gauge value moves after closing and opening sidebar
 
         # store value in session state
         st.session_state["kgCO2e_per_custom_amount"] = kgCO2e_per_custom_amount
@@ -401,16 +482,13 @@ def meal_analysis(df_selection):
         st.session_state["fat_per_custom_amount"] = fat
         st.session_state["protein_per_custom_amount"] = protein
 
-        df_rdi = pd.read_csv("./data/nutrition_rdi.csv")
+        # user nutrition budget
+        calories_budget = df_budget["calories"].values[0]
+        carbs_budget = df_budget["carbs"].values[0]
+        fat_budget = df_budget["fat"].values[0]
+        protein_budget = df_budget["protein"].values[0]
 
-        col1, _, col3, _ = st.columns(4)
-        calories_budget = col1.number_input(
-            "Calories Budget (kcal)", 0, 3000, int(df_rdi["Energ_Kcal"].values[0])
-        )  # Default amount is rdi value
-        carbs_budget = col3.number_input(
-            "Carbs Budget (g)", 0, 300, int(df_rdi["Carbohydrt_(g)"].values[0])
-        )  # Default amount is rdi value
-
+        # Display macro donut charts
         col1, col2 = st.columns(2)
         with col1:
             col1.metric("Energy", f"{calories:.1f} kcal", "")
@@ -433,14 +511,6 @@ def meal_analysis(df_selection):
                 marker_colors=["lightblue", "lightgray"],
             )
             col2.plotly_chart(fig_carb_per_serving, use_container_width=True)
-
-        col1, _, col3, _ = st.columns(4)
-        fat_budget = col1.number_input(
-            "Fat Budget (g)", 0, 100, int(df_rdi["Lipid_Tot_(g)"].values[0])
-        )  # Default amount is rdi value
-        protein_budget = col3.number_input(
-            "Protein Budget (g)", 0, 100, int(df_rdi["Protein_(g)"].values[0])
-        )  # Default amount is rdi value
 
         col1, col2 = st.columns(2)
         with col1:
@@ -468,9 +538,12 @@ def meal_analysis(df_selection):
 
 def results2df():
     results = {
-        "Datetime": pd.to_datetime(datetime.now().strftime("%Y-%m-%d %H:%M:%S")),
+        "Datetime": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "Username": st.session_state["username"],
-        "Dishes": ";".join(
+        "DishTypes": ";".join(
+            st.session_state["df_selection"]["MenuItemType"].values.astype(str)
+        ),
+        "DishNames": ";".join(
             st.session_state["df_selection"]["MenuItemName"].values.astype(str)
         ),
         "Amount": ";".join(
@@ -478,20 +551,32 @@ def results2df():
         ),
         "CO2e": st.session_state["kgCO2e_per_custom_amount"],
         "Calories": st.session_state["calories_per_custom_amount"],
-        "Carb": st.session_state["carb_per_custom_amount"],
+        "Carbs": st.session_state["carb_per_custom_amount"],
         "Fat": st.session_state["fat_per_custom_amount"],
         "Protein": st.session_state["protein_per_custom_amount"],
     }
+    # print(results.values())
+    # df = pd.DataFrame(results, index=[0])
 
-    df = pd.DataFrame(results, index=[0])
-
-    return df
+    return results
 
 
 def save_data():
     """
     Save user results to csv file.
     """
-    df = results2df()
-    df.to_csv("./output/staff_food_log.csv", mode="a", header=False, index=False)
-    # st.dataframe(df)
+    results = results2df()
+
+    DBTools.create_usersmeallogs()
+    DBTools.add_usermealdata(
+        st.session_state.username,
+        results["Datetime"],
+        results["DishTypes"],
+        results["DishNames"],
+        results["Amount"],
+        results["CO2e"],
+        results["Calories"],
+        results["Carbs"],
+        results["Protein"],
+        results["Fat"],
+    )
