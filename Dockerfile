@@ -11,9 +11,10 @@ EXPOSE 8501
 WORKDIR /usr/src/app
 COPY . .
 
-# install dependencies
-RUN pip install --upgrade pip \
-    && pip install --no-cache-dir -r requirements.txt
+# install dependencies (can use --no-cache-dir option)
+# RUN pip install --upgrade pip \
+#     && pip install --no-cache-dir -r requirements.txt 
+RUN pip install -r requirements.txt 
 
 # Run `streamlit run` command on container startup. Here we use the gunicorn 
 # webserver, with one worker process and 8 threads.

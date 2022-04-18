@@ -113,16 +113,26 @@ class MealDesign:
         # Choose custom amount (g) for each dish
         custom_amount_in_grams = []
         for item in menu_item_name:
-            amount_in_grams_per_serving = int(
-                np.nansum(
+
+            amount_in_grams_total = np.nansum(
                     np.array(
                         np.nansum(
                             self.df.query("MenuItemName == @item")["AmountInGrams"]
                         )
                     )
                 )
-                / 1000
-            )  # each recipe serves 1000 people
+
+            try: # extract the number of servings the recipe was designed for
+                nServings = int(self.df.query("MenuItemName == @item")['AmountServings'].values[0].split('/')[1].split()[0])
+                # Assume 'AmountServings' field has format like: "50 盆/1000 人份量"
+            except IndexError:
+                print("No servings info provided.")
+                nServings = amount_in_grams_total / 100 # assume 100g per serving
+            
+            amount_in_grams_per_serving = int(
+                amount_in_grams_total
+                / nServings)
+
             amount = meal_form.slider(
                 f"{item} (grams)", 0, 250, amount_in_grams_per_serving
             )  # Default amount is serving size
