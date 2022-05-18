@@ -45,7 +45,7 @@ def calc_CO2_daily_average(df_user):
 
 def calc_nTrees_offset_CO2(df_user):
     """
-    Calculate the number of trees needed to offset the user's CO2 emissions.
+    Calculate the number of trees needed to offset the user's CO2 emissions in 1 year.
     Assume 24 kgCO2 / tree / year. Source: https://www.encon.be/en/calculation-co2-offsetting-trees
     """
     CO2_daily_average = calc_CO2_daily_average(df_user)
