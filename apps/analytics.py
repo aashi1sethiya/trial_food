@@ -11,7 +11,8 @@ from datetime import datetime
 from time import sleep
 import streamlit as st
 from util import plots
-from util.utils import DBTools
+from util.utils import DBTools, Firebase
+
 
 def calc_CO2_today(df_user):
     current_day = datetime.now().day
@@ -52,6 +53,7 @@ def calc_nTrees_offset_CO2(df_user):
     nTrees = CO2_daily_average / (24 / 365)
     return nTrees
 
+
 def calc_calories_today(df_user):
     current_day = datetime.now().day
     current_month = datetime.now().month
@@ -60,6 +62,7 @@ def calc_calories_today(df_user):
         "Datetime.dt.day == @current_day & Datetime.dt.month == @current_month & Datetime.dt.year == @current_year"
     )["Calories"].sum()
     return calories_today
+
 
 def calc_carbs_today(df_user):
     current_day = datetime.now().day
@@ -70,6 +73,7 @@ def calc_carbs_today(df_user):
     )["Carbs"].sum()
     return carbs_today
 
+
 def calc_fat_today(df_user):
     current_day = datetime.now().day
     current_month = datetime.now().month
@@ -79,6 +83,7 @@ def calc_fat_today(df_user):
     )["Fat"].sum()
     return fat_today
 
+
 def calc_protein_today(df_user):
     current_day = datetime.now().day
     current_month = datetime.now().month
@@ -87,6 +92,7 @@ def calc_protein_today(df_user):
         "Datetime.dt.day == @current_day & Datetime.dt.month == @current_month & Datetime.dt.year == @current_year"
     )["Protein"].sum()
     return protein_today
+
 
 def environment_analytics(df_user):
     CO2_today = calc_CO2_today(df_user)
@@ -104,7 +110,7 @@ def environment_analytics(df_user):
         col3.metric(f"Total: ", f"{CO2_total:.1f} kgCO2e", "")
 
     st.caption(
-        f"You need {int(np.ceil(nTrees))} :deciduous_tree: to offset your food carbon emissions!"
+        f"You need {int(np.ceil(nTrees))} :deciduous_tree: to offset your food carbon emissions this year!"
     )
     fig_user_CO2e = plots.plot_user_CO2e(df_user)
     st.plotly_chart(fig_user_CO2e, use_container_width=True)
@@ -143,33 +149,92 @@ def nutrition_analytics(df_user):
 def delete_user_meal_log_form():
     delete_user_meal_log_form = st.form("delete_user_meal_log")
     delete_user_meal_log_form.subheader("Delete Meal Log")
-    Datetime = delete_user_meal_log_form.text_input("Datetime", key='Datetime_key')
-    Datetime_str = str(pd.to_datetime(Datetime)) # convert to datetime string
+    Datetime = delete_user_meal_log_form.text_input("Datetime", key="Datetime_key")
+    Datetime_str = str(pd.to_datetime(Datetime))  # convert to datetime string
     if delete_user_meal_log_form.form_submit_button("Delete"):
-        result = DBTools.delete_user_meal_log(st.session_state.username, datetime=Datetime_str)
-        with st.spinner(f'Deleting entry {Datetime}...'):
-            sleep(0.5)
+        ### Local: Delete usersmeallogs in sqlite3 database ###
+        # result = DBTools.delete_user_meal_log(st.session_state.username, datetime=Datetime_str)
+        
+        ### Firebase: Delete usersmeallogs in firestore db ###
+        firebase = Firebase()
+        success, message = firebase.delete_user_meal_log(
+            user_localid=st.session_state["firebase_user"]["localId"],
+            datetime=Datetime_str,
+        )
+        with st.spinner(f"Deleting entry {Datetime}..."):
+            sleep(0.3)
+        if success:
+            st.success(message)
+        else:
+            st.error(message)
+        sleep(0.5)
         del st.session_state.Datetime_key
-        st.session_state.Datetime_key = "" # clear input
+        st.session_state.Datetime_key = ""  # clear input
         st.experimental_rerun()
 
+
 def main():
-    user_meal_log = DBTools.view_usermeallog(st.session_state.username)
-    if user_meal_log: # found meal log for user
-        df_meal_log = pd.DataFrame(user_meal_log, columns=["Username", "Datetime", "DishTypes", "DishNames", "Amount", "CO2e", "Calories", "Carbs", "Protein", "Fat"])
-        df_meal_log['Datetime'] = pd.to_datetime(df_meal_log['Datetime'])
+    ### Local: Check for exisiting usersmeallogs info in sqlite3 database ###
+    # user_meal_log = DBTools.view_usermeallog(st.session_state.username)
+
+    # if user_meal_log: # found meal log for user
+    #     df_meal_log = pd.DataFrame(user_meal_log, columns=["Username", "Datetime", "DishTypes", "DishNames", "Amount", "CO2e", "Calories", "Carbs", "Protein", "Fat"])
+    #     df_meal_log['Datetime'] = pd.to_datetime(df_meal_log['Datetime'])
+
+    #     # Environment
+    #     environment_analytics(df_meal_log)
+
+    #     # Nutrition
+    #     nutrition_analytics(df_meal_log)
+
+    #     # view full meal log
+    #     st.dataframe(df_meal_log)
+
+    #     # delete a meal log
+    #     delete_user_meal_log_form()
+    # else:
+    #     st.error("No meal log available.")
+
+    ### Firebase: Check for exisiting usersmeallogs info in firebase db ###
+    firebase = Firebase()
+    firebase_db = firebase.db()
+    mealogs_ref = (
+        firebase_db.collection("usersmeallogs")
+        .document(st.session_state["firebase_user"]["localId"])
+        .collection("meallogs")
+    )
+    doc_dict = []
+    for doc in mealogs_ref.stream():
+        doc_dict.append(doc.to_dict())
+
+    if doc_dict is not None:
+        df_meal_log = pd.DataFrame.from_dict(doc_dict)
+        df_meal_log["Datetime"] = pd.to_datetime(df_meal_log["Datetime"])
 
         # Environment
         environment_analytics(df_meal_log)
 
         # Nutrition
         nutrition_analytics(df_meal_log)
-        
+
         # view full meal log
-        st.dataframe(df_meal_log)
+        st.dataframe(
+            df_meal_log.drop(columns=["email", "localID"])[
+                [
+                    "Datetime",
+                    "DishTypes",
+                    "DishNames",
+                    "Amount",
+                    "CO2e",
+                    "Calories",
+                    "Carbs",
+                    "Protein",
+                    "Fat",
+                ]
+            ]
+        )
 
-        # delete a meal log 
+        # delete a meal log
         delete_user_meal_log_form()
-
     else:
         st.error("No meal log available.")
