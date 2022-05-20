@@ -12,10 +12,12 @@ from datetime import datetime, timedelta
 import pandas as pd
 import jwt  # for encode and decode
 import streamlit as st
+import ast
+from requests.exceptions import HTTPError
 from streamlit_option_menu import option_menu
 import extra_streamlit_components as stx
 from apps import design_your_meal, analytics, profile
-from util.utils import DBTools, Security, read_html
+from util.utils import DBTools, Security, read_html, Firebase
 import config
 
 
@@ -43,13 +45,19 @@ class Authenticate:
 
     def token_encode(self):
         """
+        Encode the username, firebase_user, and exp_date for use later.
+
         Returns
         -------
         str
             The JWT cookie for passwordless reauthentication.
         """
         return jwt.encode(
-            {"username": st.session_state["username"], "exp_date": self.exp_date},
+            {
+                "username": st.session_state["username"],
+                "firebase_user": st.session_state["firebase_user"],
+                "exp_date": self.exp_date,
+            },
             self.key,
             algorithm="HS256",
         )
@@ -113,6 +121,7 @@ class Authenticate:
                 if st.session_state["logout"] != True:
                     if self.token["exp_date"] > datetime.utcnow().timestamp():
                         st.session_state["username"] = self.token["username"]
+                        st.session_state["firebase_user"] = self.token["firebase_user"]
                         st.session_state["authentication_status"] = True
                     else:
                         st.session_state["authentication_status"] = None
@@ -123,7 +132,7 @@ class Authenticate:
                 with st.container():
                     col1, col2 = st.columns(2)
                     with col1:
-                        contents = read_html(f'{config.PATH_TO_HTML}login.html')
+                        contents = read_html(f"{config.PATH_TO_HTML}login.html")
                         st.markdown(contents, unsafe_allow_html=True)
                     with col2:
                         if self.location == "main":
@@ -133,15 +142,33 @@ class Authenticate:
 
                         login_form.subheader(self.form_name)
                         self.username = login_form.text_input("Username")
-                        self.password = login_form.text_input("Password", type="password")
+                        self.password = login_form.text_input(
+                            "Password", type="password"
+                        )
 
                         if login_form.form_submit_button("Login"):
-                            result = DBTools.authenticate_user(
-                                self.username,
-                                Security.check_hashes(
-                                    self.password, Security.make_hashes(self.password)
-                                ),
-                            )
+                            ### Local: check with sqlite 3 database ###
+                            # result = DBTools.authenticate_user(
+                            #     self.username,
+                            #     Security.check_hashes(
+                            #         self.password, Security.make_hashes(self.password)
+                            #     ),
+                            # )
+
+                            ### Firebase: check with Firebase auth ###
+                            firebase = Firebase()
+                            try:
+                                st.session_state["firebase_user"] = firebase.signin(
+                                    self.username, self.password
+                                )
+                                result = True
+                            except HTTPError as e:
+                                st.error(
+                                    ast.literal_eval(e.strerror)["error"]["message"]
+                                )
+                                st.session_state["firebase_user"] = ""
+                                result = False
+
                             if result:  # correct username and password
                                 st.session_state["authentication_status"] = True
                                 st.session_state["username"] = self.username
@@ -166,7 +193,7 @@ class Authenticate:
             #         st.session_state['authentication_status'] = None
             # elif self.location == 'sidebar':
             st.sidebar.markdown(
-                f"<a style='color:#DAF2DA'> Welcome *{st.session_state['username']}* </a>",
+                f"<a style='color:#DAF2DA'> Welcome *{st.session_state['username'].split('@')[0]}* </a>",
                 unsafe_allow_html=True,
             )
             if st.sidebar.button("Logout"):
@@ -196,15 +223,14 @@ def reset_user_form():
         st.write(result)
 
 
-def sign_in_outcomes():   
-    
+def sign_in_outcomes():
+
     authenticator = Authenticate(
         "some_cookie_name", "some_signature_key", cookie_expiry_days=1
     )
     username, authentication_status = authenticator.login("Login", "main")
-    if st.session_state[
-        "authentication_status"
-    ]:  # use session state variables for multipage app
+    # use session state variables for multipage app
+    if st.session_state["authentication_status"]:  # Already authenticated
         logged_in_page(st.session_state["username"])
     elif st.session_state["authentication_status"] == False:
         st.error("Username/password is incorrect")
@@ -225,11 +251,21 @@ def logged_in_page(username):
         user_result = DBTools.view_all_users()
         st.dataframe(user_result)
     else:
-        if not DBTools.view_usercontact(username) and not DBTools.view_userbudget(
-            username
-        ):
+
+        ### Local: check for user in sqlite3 db ###
+        # if not DBTools.view_usercontact(username) and not DBTools.view_userbudget(
+        #     username
+        # ):
+        #     task = st.sidebar.selectbox("Please choose an option", ["Profile"])
+        #     st.warning("Please update your profile.")
+
+        ### Firebase: check for user in firestore db ###
+        firebase = Firebase()
+        doc_dict = firebase.check_user(st.session_state["firebase_user"]["localId"])
+        if doc_dict is None:
             task = st.sidebar.selectbox("Please choose an option", ["Profile"])
             st.warning("Please update your profile.")
+
         else:
             task = st.sidebar.selectbox(
                 "Please choose an option", ["Design Your Meal", "Analytics", "Profile"]
