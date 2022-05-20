@@ -4,6 +4,8 @@
 
 
 # Custom files
+secrets.toml
+firebase/
 *.db
 
 ### Python ###

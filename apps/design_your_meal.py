@@ -9,7 +9,7 @@ import os
 from datetime import datetime
 import streamlit as st  # pip install streamlit
 from util import utils, plots  # utility functions for graphics
-from util.utils import DBTools  # database management
+from util.utils import DBTools, Firebase  # database management
 import config
 
 
@@ -27,7 +27,9 @@ class MealDesign:
         """
         self.username = username
         self.df = utils.get_data_from_json("data/menu_edr_dishes_only.json")
-        self.df['MenuItemName'] = self.df['MenuItemName'].apply(lambda x: x.lower()) # Convert menu item names to lower case
+        self.df["MenuItemName"] = self.df["MenuItemName"].apply(
+            lambda x: x.lower()
+        )  # Convert menu item names to lower case
 
     def select_dishes(self, form_name, location="main"):
         """Select your dishes.
@@ -68,7 +70,7 @@ class MealDesign:
 
         meal_form.subheader(self.form_name)
 
-        # Breakfast 
+        # Breakfast
         menu_item_breakfast = meal_form.multiselect(
             "Breakfast:",
             options=self.df[self.df.MenuItemName.isin(config.MENU_BREAKFAST)],
@@ -76,7 +78,7 @@ class MealDesign:
             key="menu_item_breakfast_key",
         )
 
-        # Salad bar 
+        # Salad bar
         menu_item_salad_bar = meal_form.multiselect(
             "Salad:",
             options=self.df[self.df.MenuItemName.isin(config.MENU_SALAD_BAR)],
@@ -84,7 +86,7 @@ class MealDesign:
             key="menu_item_salad_key",
         )
 
-        # Asian  
+        # Asian
         menu_item_asian = meal_form.multiselect(
             "Asian:",
             options=self.df[self.df.MenuItemName.isin(config.MENU_ASIAN)],
@@ -108,30 +110,37 @@ class MealDesign:
             key="menu_item_dessert_key",
         )
 
-        menu_item_name = menu_item_breakfast + menu_item_salad_bar + menu_item_asian + menu_item_international + menu_item_dessert
+        menu_item_name = (
+            menu_item_breakfast
+            + menu_item_salad_bar
+            + menu_item_asian
+            + menu_item_international
+            + menu_item_dessert
+        )
 
         # Choose custom amount (g) for each dish
         custom_amount_in_grams = []
         for item in menu_item_name:
 
             amount_in_grams_total = np.nansum(
-                    np.array(
-                        np.nansum(
-                            self.df.query("MenuItemName == @item")["AmountInGrams"]
-                        )
-                    )
+                np.array(
+                    np.nansum(self.df.query("MenuItemName == @item")["AmountInGrams"])
                 )
+            )
 
-            try: # extract the number of servings the recipe was designed for
-                nServings = int(self.df.query("MenuItemName == @item")['AmountServings'].values[0].split('/')[1].split()[0])
+            try:  # extract the number of servings the recipe was designed for
+                nServings = int(
+                    self.df.query("MenuItemName == @item")["AmountServings"]
+                    .values[0]
+                    .split("/")[1]
+                    .split()[0]
+                )
                 # Assume 'AmountServings' field has format like: "50 盆/1000 人份量"
             except IndexError:
                 print("No servings info provided.")
-                nServings = amount_in_grams_total / 100 # assume 100g per serving
-            
-            amount_in_grams_per_serving = int(
-                amount_in_grams_total
-                / nServings)
+                nServings = amount_in_grams_total / 100  # assume 100g per serving
+
+            amount_in_grams_per_serving = int(amount_in_grams_total / nServings)
 
             amount = meal_form.slider(
                 f"{item} (grams)", 0, 250, amount_in_grams_per_serving
@@ -422,7 +431,7 @@ def meal_analysis(df_selection):
                 html_str,
                 unsafe_allow_html=True,
             )
-            
+
         # Meal analysis
 
         st.markdown(
@@ -433,11 +442,30 @@ def meal_analysis(df_selection):
         st.markdown("##")
 
         # User budget
-        user_budget = DBTools.view_userbudget(st.session_state.username)
-        df_budget = pd.DataFrame(
-            user_budget,
-            columns=["Username", "co2", "calories", "carbs", "protein", "fat"],
-        )
+        ### Local SQLite3 db: userbudget ###
+        # user_budget = DBTools.view_userbudget(st.session_state.username)
+        # df_budget = pd.DataFrame(
+        #     user_budget,
+        #     columns=["Username", "co2", "calories", "carbs", "protein", "fat"],
+        # )
+
+        ### Firebase: Check for exisiting user contact and budget info in local sqlite3 database ###
+        firebase = Firebase()
+        doc_dict = firebase.check_user(st.session_state["firebase_user"]["localId"])
+        if doc_dict is not None:
+            df_budget = pd.DataFrame.from_dict([doc_dict])
+            df_budget.rename(
+                columns={
+                    "co2_budget": "co2",
+                    "calories_budget": "calories",
+                    "carbs_budget": "carbs",
+                    "protein_budget": "protein",
+                    "fat_budget": "fat",
+                },
+                inplace=True,
+            )
+        else:
+            st.error("This user has no budget.")
 
         # ---------------------------------------------------------------------------- #
         # ENVIRONMENT
@@ -567,16 +595,42 @@ def save_data():
     """
     results = results2df()
 
-    DBTools.create_usersmeallogs()
-    DBTools.add_usermealdata(
-        st.session_state.username,
-        results["Datetime"],
-        results["DishTypes"],
-        results["DishNames"],
-        results["Amount"],
-        results["CO2e"],
-        results["Calories"],
-        results["Carbs"],
-        results["Protein"],
-        results["Fat"],
+    ### Local sqlite3 database auth: userscontacts ###
+    # DBTools.create_usersmeallogs()
+    # DBTools.add_usermealdata(
+    #     st.session_state.username,
+    #     results["Datetime"],
+    #     results["DishTypes"],
+    #     results["DishNames"],
+    #     results["Amount"],
+    #     results["CO2e"],
+    #     results["Calories"],
+    #     results["Carbs"],
+    #     results["Protein"],
+    #     results["Fat"],
+    # )
+
+    ### Firebase: Creating a new document under the collection 'userstable' ###
+    firebase = Firebase()
+    firebase_db = firebase.db()
+    doc_ref = (
+        firebase_db.collection("usersmeallogs")
+        .document(st.session_state["firebase_user"]["localId"])
+        .collection("meallogs")
+        .document(results["Datetime"])
+    )
+    doc_ref.set(
+        {
+            "localID": st.session_state["firebase_user"]["localId"],
+            "email": st.session_state["username"],
+            "Datetime": results["Datetime"],
+            "DishTypes": results["DishTypes"],
+            "DishNames": results["DishNames"],
+            "Amount": results["Amount"],
+            "CO2e": results["CO2e"],
+            "Calories": results["Calories"],
+            "Carbs": results["Carbs"],
+            "Protein": results["Protein"],
+            "Fat": results["Fat"],
+        }
     )
