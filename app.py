@@ -15,7 +15,7 @@ if __name__ == "__main__":
     # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
     st.set_page_config(
         page_title="Our Food Impact",
-        page_icon=f"{config.PATH_TO_IMAGES}page_icon.png",
+        page_icon=f"{config.PATH_TO_IMAGES}/page_icon.png",
         layout="wide",
         initial_sidebar_state="collapsed",  # auto, expanded
     )
@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
     # Load background image
     bg_image.set_png_as_page_bg(
-        f"{config.PATH_TO_IMAGES}bg/background_opacity_100_new_bgcolor_shift.png"
+        f"{config.PATH_TO_IMAGES}/bg/background_opacity_100_new_bgcolor_shift.png"
     )
 
     # Load homepage

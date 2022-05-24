@@ -18,7 +18,7 @@ def signup_form():
             with st.container():
                 col1, col2 = st.columns(2)
                 with col1:
-                    contents = read_html(f"{config.PATH_TO_HTML}signup.html")
+                    contents = read_html(f"{config.PATH_TO_HTML}/signup.html")
                     st.markdown(contents, unsafe_allow_html=True)
                 with col2:
                     create_account_form = st.form("create_new_account")

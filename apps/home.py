@@ -47,7 +47,7 @@ def title():
         # _, col2, col3 = st.columns([1,2,1])
         # with col2: # attempt to center (not so nice)
         lottie_welcome = lottie.load_lottiefile(
-            f"{config.PATH_TO_LOTTIE}walking-avocado.json"
+            f"{config.PATH_TO_LOTTIE}/walking-avocado.json"
         )  # replace link to local lottie file
         st_lottie(
             lottie_welcome,
@@ -69,10 +69,10 @@ def title():
 
 def main():
     # ---- MAINPAGE ----
-    with open(f"{config.PATH_TO_HTML_CSS}home.css") as f:
+    with open(f"{config.PATH_TO_HTML_CSS}/home.css") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
     with st.container():
-        contents = read_html(f"{config.PATH_TO_HTML}home.html")
+        contents = read_html(f"{config.PATH_TO_HTML}/home.html")
         st.markdown(contents, unsafe_allow_html=True)
     with st.container():
         _, col2, _ = st.columns([1, 5, 1])
