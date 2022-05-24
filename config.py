@@ -1,13 +1,15 @@
-## PATHS
-# change /usr/src/app/ to ./ if working locally, otherwise work in docker container
-PATH_TO_NUTRITION_RDI = "./data/nutrition_rdi.csv"
-PATH_TO_APP_USER_DATA = "./data/app_user_data.db"
-PATH_TO_CSS = "./styles/style.css"
-PATH_TO_LOTTIE = "./lottiefiles/"
-PATH_TO_IMAGES = "./images/"
-PATH_TO_HTML = "./apps/html/"
-PATH_TO_HTML_CSS = "./apps/css/"
-PATH_TO_FIREBASE_CONFIG = "./firebase/"
+## PATHS 
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).parent
+PATH_TO_NUTRITION_RDI = ROOT_DIR / "data/nutrition_rdi.csv"
+PATH_TO_APP_USER_DATA = ROOT_DIR / "data/app_user_data.db"
+PATH_TO_CSS = ROOT_DIR / "styles/style.css"
+PATH_TO_LOTTIE = ROOT_DIR / "lottiefiles"
+PATH_TO_IMAGES = ROOT_DIR / "images"
+PATH_TO_HTML = ROOT_DIR / "apps/html"
+PATH_TO_HTML_CSS = ROOT_DIR / "apps/css"
+PATH_TO_FIREBASE_CONFIG = ROOT_DIR / "firebase"
 
 # Firebase
 FIREBASE_APP_NAME = "streamlit-ourfood"

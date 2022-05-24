@@ -132,7 +132,7 @@ class Authenticate:
                 with st.container():
                     col1, col2 = st.columns(2)
                     with col1:
-                        contents = read_html(f"{config.PATH_TO_HTML}login.html")
+                        contents = read_html(f"{config.PATH_TO_HTML}/login.html")
                         st.markdown(contents, unsafe_allow_html=True)
                     with col2:
                         if self.location == "main":
