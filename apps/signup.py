@@ -54,6 +54,7 @@ def signup_form():
                         firebase = Firebase()
                         try:
                             firebase_user = firebase.create_user(new_user, new_password)
+                            st.success(f"Thank you! The account {new_user} has been created. You may now Sign in.")
                         except HTTPError as e:
                             st.error(ast.literal_eval(e.strerror)["error"]["message"])
                         except ValueError as e:

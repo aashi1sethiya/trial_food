@@ -60483,8 +60483,13 @@
             50.0
         ],
         "AmountServings": "1 盆/1 人份量",
-        "Method": [],
+        "MethodEng": [],
         "MethodChinese": [],
+        "CookingTime": {
+            "Method": [],
+            "MethodTimeHours": [],
+            "CarbonFootprint": 0
+        },
         "Region": [
             "Industrialized Asia"
         ],
@@ -60551,6 +60556,1114 @@
             "Carbohydrate": 80.0,
             "Fat": 0.7,
             "Protein": 7.1
+        }
+    },
+    {
+        "MenuItemName": "糙米",
+        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "RawIngredientsEng": [
+            "brown rice"
+        ],
+        "RawIngredientsEngSimple": [
+            "brown rice"
+        ],
+        "RawIngredientsType": [
+            "RICE"
+        ],
+        "RawIngredientsChinese": [
+            "糙米"
+        ],
+        "Amount": [
+            50
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            50.0
+        ],
+        "AmountServings": "1 盆/1 人份量",
+        "MethodEng": [],
+        "MethodChinese": [],
+        "CookingTime": {
+            "Method": [],
+            "MethodTimeHours": [],
+            "CarbonFootprint": 0
+        },
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.06
+            ],
+            "Processing": [
+                0.0239325
+            ],
+            "Distribution": [
+                0.0016750000000000003
+            ],
+            "Consumption": [
+                0.041
+            ],
+            "Management": [
+                0.018943460277777782
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.14555096027777775
+        ],
+        "CarbonLabelMenuItem": 0.14555096027777775,
+        "CarbonLabelMenuItemPerServing": 0.14555096027777775,
+        "CarbonLabelMenuItemPer100g": 0.2911019205555555,
+        "CarbonLabelMenuItemPerKg": 2.9110192055555553,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                183.5
+            ],
+            "Carbohydrate": [
+                38.15
+            ],
+            "Fat": [
+                1.6
+            ],
+            "Protein": [
+                3.75
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 183.5,
+            "Carbohydrate": 38.15,
+            "Fat": 1.6,
+            "Protein": 3.75
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 183.5,
+            "Carbohydrate": 38.15,
+            "Fat": 1.6,
+            "Protein": 3.75
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 9.175,
+            "Carbohydrate": 13.872727272727273,
+            "Fat": 2.051282051282051,
+            "Protein": 7.5
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 367.0,
+            "Carbohydrate": 76.3,
+            "Fat": 3.2,
+            "Protein": 7.5
+        }
+    },
+    {
+        "MenuItemName": "沙爹金錢肚",
+        "MenuItemType": "Beef-牛肉類",
+        "RawIngredientsEng": [
+            "money belly",
+            "shredded onion",
+            "satay sauce"
+        ],
+        "RawIngredientsEngSimple": [
+            "beef stomach",
+            "onion",
+            "satay sauce"
+        ],
+        "RawIngredientsType": [
+            "BEEF",
+            "VEGETABLE",
+            "SEASONING"
+        ],
+        "RawIngredientsChinese": [
+            "金錢肚",
+            "洋葱絲",
+            "沙爹酱"
+        ],
+        "Amount": [
+            150000,
+            50000,
+            50000
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            150000.0,
+            50000.0,
+            50000.0
+        ],
+        "AmountServings": "1 盆/1000 人份量",
+        "MethodEng": [],
+        "MethodChinese": [],
+        "CookingTime": {
+            "Method": [],
+            "MethodTimeHours": [],
+            "CarbonFootprint": 0
+        },
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                4425.1093407,
+                16.235124999999986,
+                16.39499999999999
+            ],
+            "Processing": [
+                73.02749999999999,
+                3.4325,
+                23.932499999999997
+            ],
+            "Distribution": [
+                107.25,
+                1.675,
+                10.938636363636364
+            ],
+            "Consumption": [
+                302.6919546,
+                0.1517,
+                0.0
+            ],
+            "Management": [
+                56.83038083333334,
+                18.94346027777778,
+                18.94346027777778
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            4964.909176133333,
+            40.43778527777777,
+            70.20959664141412
+        ],
+        "CarbonLabelMenuItem": 5075.404858052525,
+        "CarbonLabelMenuItemPerServing": 5.075404858052525,
+        "CarbonLabelMenuItemPer100g": 2.0301619432210103,
+        "CarbonLabelMenuItemPerKg": 20.3016194322101,
+        "CarbonLabelMenuItemTrafficLight": "red",
+        "Nutrition": {
+            "Calories": [
+                141000.0,
+                20000.0,
+                140500.0
+            ],
+            "Carbohydrate": [
+                3000.0,
+                4670.0,
+                12900.0
+            ],
+            "Fat": [
+                6150.0,
+                50.0,
+                8600.0
+            ],
+            "Protein": [
+                17550.0,
+                550.0000000000001,
+                2450.0000000000005
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 301500.0,
+            "Carbohydrate": 20570.0,
+            "Fat": 14800.0,
+            "Protein": 20550.0
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 301.5,
+            "Carbohydrate": 20.57,
+            "Fat": 14.8,
+            "Protein": 20.55
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 15.075,
+            "Carbohydrate": 7.48,
+            "Fat": 18.974358974358978,
+            "Protein": 41.1
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 120.6,
+            "Carbohydrate": 8.228,
+            "Fat": 5.92,
+            "Protein": 8.219999999999999
+        }
+    },
+    {
+        "MenuItemName": "咖喱牛肉",
+        "MenuItemType": "Beef-牛肉類",
+        "RawIngredientsEng": [
+            "beef jerky",
+            "onion wedges",
+            "potato corner"
+        ],
+        "RawIngredientsEngSimple": [
+            "beef",
+            "onion",
+            "potato"
+        ],
+        "RawIngredientsType": [
+            "BEEF",
+            "VEGETABLE",
+            "VEGETABLE"
+        ],
+        "RawIngredientsChinese": [
+            "牛肉片",
+            "洋葱角",
+            "薯仔角"
+        ],
+        "Amount": [
+            80000,
+            30000,
+            60000
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            80000.0,
+            30000.0,
+            60000.0
+        ],
+        "AmountServings": "1 盆/1000 人份量",
+        "MethodEng": [],
+        "MethodChinese": [],
+        "CookingTime": {
+            "Method": [],
+            "MethodTimeHours": [],
+            "CarbonFootprint": 0
+        },
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                2360.0583150400003,
+                9.741074999999991,
+                19.482149999999983
+            ],
+            "Processing": [
+                38.94799999999999,
+                2.0595,
+                4.119
+            ],
+            "Distribution": [
+                57.199999999999996,
+                1.0050000000000001,
+                2.0100000000000002
+            ],
+            "Consumption": [
+                161.43570911999998,
+                0.09101999999999999,
+                0.18203999999999998
+            ],
+            "Management": [
+                30.309536444444447,
+                11.366076166666668,
+                22.732152333333335
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            2647.9515606044442,
+            24.26267116666666,
+            48.52534233333332
+        ],
+        "CarbonLabelMenuItem": 2720.4665141044443,
+        "CarbonLabelMenuItemPerServing": 2.7204665141044444,
+        "CarbonLabelMenuItemPer100g": 1.6002744200614378,
+        "CarbonLabelMenuItemPerKg": 16.00274420061438,
+        "CarbonLabelMenuItemTrafficLight": "red",
+        "Nutrition": {
+            "Calories": [
+                265600.0,
+                12000.0,
+                46200.0
+            ],
+            "Carbohydrate": [
+                0.0,
+                2802.0,
+                10500.0
+            ],
+            "Fat": [
+                24000.0,
+                30.0,
+                60.0
+            ],
+            "Protein": [
+                11520.0,
+                330.0,
+                1260.0
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 323800.0,
+            "Carbohydrate": 13302.0,
+            "Fat": 24090.0,
+            "Protein": 13110.0
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 323.8,
+            "Carbohydrate": 13.302,
+            "Fat": 24.09,
+            "Protein": 13.11
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 16.19,
+            "Carbohydrate": 4.837090909090909,
+            "Fat": 30.884615384615383,
+            "Protein": 26.22
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 190.47058823529412,
+            "Carbohydrate": 7.824705882352941,
+            "Fat": 14.170588235294119,
+            "Protein": 7.711764705882353
+        }
+    },
+    {
+        "MenuItemName": "米粉",
+        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "RawIngredientsEng": [
+            "rice flour"
+        ],
+        "RawIngredientsEngSimple": [
+            "rice noodle"
+        ],
+        "RawIngredientsType": [
+            "RICE"
+        ],
+        "RawIngredientsChinese": [
+            "米粉"
+        ],
+        "Amount": [
+            50
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            50.0
+        ],
+        "AmountServings": "1 盆/1000 人份量",
+        "MethodEng": [],
+        "MethodChinese": [],
+        "CookingTime": {
+            "Method": [],
+            "MethodTimeHours": [],
+            "CarbonFootprint": 0
+        },
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.06
+            ],
+            "Processing": [
+                0.0239325
+            ],
+            "Distribution": [
+                0.0016750000000000003
+            ],
+            "Consumption": [
+                0.041
+            ],
+            "Management": [
+                0.018943460277777782
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.14555096027777775
+        ],
+        "CarbonLabelMenuItem": 0.14555096027777775,
+        "CarbonLabelMenuItemPerServing": 0.00014555096027777775,
+        "CarbonLabelMenuItemPer100g": 0.2911019205555555,
+        "CarbonLabelMenuItemPerKg": 2.9110192055555553,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                182.0
+            ],
+            "Carbohydrate": [
+                40.09
+            ],
+            "Fat": [
+                0.28
+            ],
+            "Protein": [
+                2.975
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 182.0,
+            "Carbohydrate": 40.09,
+            "Fat": 0.28,
+            "Protein": 2.975
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 0.182,
+            "Carbohydrate": 0.04009,
+            "Fat": 0.00028000000000000003,
+            "Protein": 0.002975
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 0.0091,
+            "Carbohydrate": 0.014578181818181818,
+            "Fat": 0.000358974358974359,
+            "Protein": 0.00595
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 364.0,
+            "Carbohydrate": 80.18,
+            "Fat": 0.56,
+            "Protein": 5.95
+        }
+    },
+    {
+        "MenuItemName": "伊麵",
+        "MenuItemType": "Rice-Nooldes-飯及粉類",
+        "RawIngredientsEng": [
+            "yimian"
+        ],
+        "RawIngredientsEngSimple": [
+            "egg noodle"
+        ],
+        "RawIngredientsType": [
+            "WHEAT"
+        ],
+        "RawIngredientsChinese": [
+            "伊麵"
+        ],
+        "Amount": [
+            50
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            50.0
+        ],
+        "AmountServings": "1 盆/1000 人份量",
+        "MethodEng": [],
+        "MethodChinese": [],
+        "CookingTime": {
+            "Method": [],
+            "MethodTimeHours": [],
+            "CarbonFootprint": 0
+        },
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                0.028335714285714287
+            ],
+            "Processing": [
+                0.0239325
+            ],
+            "Distribution": [
+                0.013750000000000002
+            ],
+            "Consumption": [
+                0.041
+            ],
+            "Management": [
+                0.018943460277777782
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            0.12596167456349205
+        ],
+        "CarbonLabelMenuItem": 0.12596167456349205,
+        "CarbonLabelMenuItemPerServing": 0.00012596167456349204,
+        "CarbonLabelMenuItemPer100g": 0.2519233491269841,
+        "CarbonLabelMenuItemPerKg": 2.519233491269841,
+        "CarbonLabelMenuItemTrafficLight": "green",
+        "Nutrition": {
+            "Calories": [
+                192.0
+            ],
+            "Carbohydrate": [
+                35.65
+            ],
+            "Fat": [
+                2.2
+            ],
+            "Protein": [
+                7.1
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 192.0,
+            "Carbohydrate": 35.65,
+            "Fat": 2.2,
+            "Protein": 7.1
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 0.192,
+            "Carbohydrate": 0.03565,
+            "Fat": 0.0022,
+            "Protein": 0.0070999999999999995
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 0.009600000000000001,
+            "Carbohydrate": 0.012963636363636365,
+            "Fat": 0.0028205128205128207,
+            "Protein": 0.014199999999999997
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 384.0,
+            "Carbohydrate": 71.3,
+            "Fat": 4.4,
+            "Protein": 14.2
+        }
+    },
+    {
+        "MenuItemName": "叉燒",
+        "MenuItemType": "Pork-猪肉類",
+        "RawIngredientsEng": [
+            "char siew"
+        ],
+        "RawIngredientsEngSimple": [
+            "pork char siew"
+        ],
+        "RawIngredientsType": [
+            "PORK"
+        ],
+        "RawIngredientsChinese": [
+            "叉燒"
+        ],
+        "Amount": [
+            80000
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            80000.0
+        ],
+        "AmountServings": "1 盆/1000 人份量",
+        "MethodEng": [],
+        "MethodChinese": [],
+        "CookingTime": {
+            "Method": [],
+            "MethodTimeHours": [],
+            "CarbonFootprint": 0
+        },
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                525.9171173333332
+            ],
+            "Processing": [
+                38.94799999999999
+            ],
+            "Distribution": [
+                28.939999999999998
+            ],
+            "Consumption": [
+                161.43570911999998
+            ],
+            "Management": [
+                30.309536444444447
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            785.5503628977775
+        ],
+        "CarbonLabelMenuItem": 785.5503628977775,
+        "CarbonLabelMenuItemPerServing": 0.7855503628977775,
+        "CarbonLabelMenuItemPer100g": 0.9819379536222219,
+        "CarbonLabelMenuItemPerKg": 9.819379536222218,
+        "CarbonLabelMenuItemTrafficLight": "orange",
+        "Nutrition": {
+            "Calories": [
+                215200.0
+            ],
+            "Carbohydrate": [
+                0.0
+            ],
+            "Fat": [
+                15088.0
+            ],
+            "Protein": [
+                18488.0
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 215200.0,
+            "Carbohydrate": 0.0,
+            "Fat": 15088.0,
+            "Protein": 18488.0
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 215.2,
+            "Carbohydrate": 0.0,
+            "Fat": 15.088,
+            "Protein": 18.488
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 10.76,
+            "Carbohydrate": 0.0,
+            "Fat": 19.343589743589742,
+            "Protein": 36.976
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 269.0,
+            "Carbohydrate": 0.0,
+            "Fat": 18.86,
+            "Protein": 23.11
+        }
+    },
+    {
+        "MenuItemName": "雪菜肉絲",
+        "MenuItemType": "Pork-猪肉類",
+        "RawIngredientsEng": [
+            "shredded pork"
+        ],
+        "RawIngredientsEngSimple": [
+            "pork"
+        ],
+        "RawIngredientsType": [
+            "PORK"
+        ],
+        "RawIngredientsChinese": [
+            "肉絲"
+        ],
+        "Amount": [
+            80000
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            80000.0
+        ],
+        "AmountServings": "1 盆/1000 人份量",
+        "MethodEng": [],
+        "MethodChinese": [],
+        "CookingTime": {
+            "Method": [],
+            "MethodTimeHours": [],
+            "CarbonFootprint": 0
+        },
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                525.9171173333332
+            ],
+            "Processing": [
+                38.94799999999999
+            ],
+            "Distribution": [
+                28.939999999999998
+            ],
+            "Consumption": [
+                161.43570911999998
+            ],
+            "Management": [
+                30.309536444444447
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            785.5503628977775
+        ],
+        "CarbonLabelMenuItem": 785.5503628977775,
+        "CarbonLabelMenuItemPerServing": 0.7855503628977775,
+        "CarbonLabelMenuItemPer100g": 0.9819379536222219,
+        "CarbonLabelMenuItemPerKg": 9.819379536222218,
+        "CarbonLabelMenuItemTrafficLight": "orange",
+        "Nutrition": {
+            "Calories": [
+                210400.0
+            ],
+            "Carbohydrate": [
+                0.0
+            ],
+            "Fat": [
+                16960.0
+            ],
+            "Protein": [
+                13520.0
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 210400.0,
+            "Carbohydrate": 0.0,
+            "Fat": 16960.0,
+            "Protein": 13520.0
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 210.4,
+            "Carbohydrate": 0.0,
+            "Fat": 16.96,
+            "Protein": 13.52
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 10.52,
+            "Carbohydrate": 0.0,
+            "Fat": 21.743589743589745,
+            "Protein": 27.04
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 263.0,
+            "Carbohydrate": 0.0,
+            "Fat": 21.2,
+            "Protein": 16.900000000000002
+        }
+    },
+    {
+        "MenuItemName": "胡椒雞腿湯",
+        "MenuItemType": "Poultry-家禽類",
+        "RawIngredientsEng": [
+            "drumstick"
+        ],
+        "RawIngredientsEngSimple": [
+            "chicken leg"
+        ],
+        "RawIngredientsType": [
+            "POULTRY"
+        ],
+        "RawIngredientsChinese": [
+            "雞腿"
+        ],
+        "Amount": [
+            140000
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            140000.0
+        ],
+        "AmountServings": "1 盆/1000 人份量",
+        "MethodEng": [],
+        "MethodChinese": [],
+        "CookingTime": {
+            "Method": [],
+            "MethodTimeHours": [],
+            "CarbonFootprint": 0
+        },
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                719.877331090909
+            ],
+            "Processing": [
+                68.15899999999999
+            ],
+            "Distribution": [
+                50.644999999999996
+            ],
+            "Consumption": [
+                282.51249096
+            ],
+            "Management": [
+                53.04168877777778
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            1174.2355108286868
+        ],
+        "CarbonLabelMenuItem": 1174.2355108286868,
+        "CarbonLabelMenuItemPerServing": 1.1742355108286868,
+        "CarbonLabelMenuItemPer100g": 0.838739650591919,
+        "CarbonLabelMenuItemPerKg": 8.38739650591919,
+        "CarbonLabelMenuItemTrafficLight": "orange",
+        "Nutrition": {
+            "Calories": [
+                242200.0
+            ],
+            "Carbohydrate": [
+                0.0
+            ],
+            "Fat": [
+                8400.0
+            ],
+            "Protein": [
+                38780.0
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 242200.0,
+            "Carbohydrate": 0.0,
+            "Fat": 8400.0,
+            "Protein": 38780.0
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 242.2,
+            "Carbohydrate": 0.0,
+            "Fat": 8.4,
+            "Protein": 38.78
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 12.11,
+            "Carbohydrate": 0.0,
+            "Fat": 10.76923076923077,
+            "Protein": 77.56
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 173.0,
+            "Carbohydrate": 0.0,
+            "Fat": 6.0,
+            "Protein": 27.700000000000003
+        }
+    },
+    {
+        "MenuItemName": "豉油雞",
+        "MenuItemType": "Poultry-家禽類",
+        "RawIngredientsEng": [
+            "soy sauce chicken"
+        ],
+        "RawIngredientsEngSimple": [
+            "chicken with soy sauce"
+        ],
+        "RawIngredientsType": [
+            "POULTRY"
+        ],
+        "RawIngredientsChinese": [
+            "豉油雞"
+        ],
+        "Amount": [
+            180000
+        ],
+        "AmountUnit": [
+            "gram"
+        ],
+        "AmountInGrams": [
+            180000.0
+        ],
+        "AmountServings": "1 盆/1000 人份量",
+        "MethodEng": [],
+        "MethodChinese": [],
+        "CookingTime": {
+            "Method": [],
+            "MethodTimeHours": [],
+            "CarbonFootprint": 0
+        },
+        "Region": [
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                925.5565685454544
+            ],
+            "Processing": [
+                87.633
+            ],
+            "Distribution": [
+                65.115
+            ],
+            "Consumption": [
+                363.23034551999996
+            ],
+            "Management": [
+                68.19645700000001
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            1509.7313710654544
+        ],
+        "CarbonLabelMenuItem": 1509.7313710654544,
+        "CarbonLabelMenuItemPerServing": 1.5097313710654543,
+        "CarbonLabelMenuItemPer100g": 0.838739650591919,
+        "CarbonLabelMenuItemPerKg": 8.38739650591919,
+        "CarbonLabelMenuItemTrafficLight": "orange",
+        "Nutrition": {
+            "Calories": [
+                205200.0
+            ],
+            "Carbohydrate": [
+                7020.0
+            ],
+            "Fat": [
+                3060.0
+            ],
+            "Protein": [
+                37800.0
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 205200.0,
+            "Carbohydrate": 7020.0,
+            "Fat": 3060.0,
+            "Protein": 37800.0
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 205.2,
+            "Carbohydrate": 7.02,
+            "Fat": 3.06,
+            "Protein": 37.8
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 10.26,
+            "Carbohydrate": 2.5527272727272723,
+            "Fat": 3.923076923076923,
+            "Protein": 75.6
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 113.99999999999999,
+            "Carbohydrate": 3.9,
+            "Fat": 1.7000000000000002,
+            "Protein": 21.0
+        }
+    },
+    {
+        "MenuItemName": "蕃茄雞絲",
+        "MenuItemType": "Poultry-家禽類",
+        "RawIngredientsEng": [
+            "chicken shreds",
+            "onion wedges",
+            "tomato wedges"
+        ],
+        "RawIngredientsEngSimple": [
+            "chicken shreds",
+            "onion",
+            "tomato"
+        ],
+        "RawIngredientsType": [
+            "POULTRY",
+            "VEGETABLE",
+            "VEGETABLE"
+        ],
+        "RawIngredientsChinese": [
+            "雞絲",
+            "洋葱角",
+            "蕃茄角"
+        ],
+        "Amount": [
+            100000,
+            30000,
+            60000
+        ],
+        "AmountUnit": [
+            "gram",
+            "gram",
+            "gram"
+        ],
+        "AmountInGrams": [
+            100000.0,
+            30000.0,
+            60000.0
+        ],
+        "AmountServings": "1 盆/1000 人份量",
+        "MethodEng": [],
+        "MethodChinese": [],
+        "CookingTime": {
+            "Method": [],
+            "MethodTimeHours": [],
+            "CarbonFootprint": 0
+        },
+        "Region": [
+            "Industrialized Asia",
+            "Industrialized Asia",
+            "Industrialized Asia"
+        ],
+        "Destination": "Incinerator",
+        "LCA": {
+            "Agricultural": [
+                514.1980936363635,
+                9.741074999999991,
+                19.482149999999983
+            ],
+            "Processing": [
+                48.684999999999995,
+                2.0595,
+                4.119
+            ],
+            "Distribution": [
+                36.175,
+                1.0050000000000001,
+                2.0100000000000002
+            ],
+            "Consumption": [
+                201.79463639999997,
+                0.09101999999999999,
+                0.18203999999999998
+            ],
+            "Management": [
+                37.88692055555556,
+                11.366076166666668,
+                22.732152333333335
+            ]
+        },
+        "CarbonFootprintIngredients": [
+            838.7396505919189,
+            24.26267116666666,
+            48.52534233333332
+        ],
+        "CarbonLabelMenuItem": 911.254604091919,
+        "CarbonLabelMenuItemPerServing": 0.9112546040919189,
+        "CarbonLabelMenuItemPer100g": 0.4796076863641679,
+        "CarbonLabelMenuItemPerKg": 4.796076863641678,
+        "CarbonLabelMenuItemTrafficLight": "orange",
+        "Nutrition": {
+            "Calories": [
+                128570.0,
+                12000.0,
+                10800.0
+            ],
+            "Carbohydrate": [
+                1430.0,
+                2802.0,
+                2340.0
+            ],
+            "Fat": [
+                2500.0,
+                30.0,
+                120.0
+            ],
+            "Protein": [
+                24290.0,
+                330.0,
+                540.0
+            ]
+        },
+        "NutritionLabelMenuItem": {
+            "Calories": 151370.0,
+            "Carbohydrate": 6572.0,
+            "Fat": 2650.0,
+            "Protein": 25160.0
+        },
+        "NutritionLabelMenuItemPerServing": {
+            "Calories": 151.37,
+            "Carbohydrate": 6.572,
+            "Fat": 2.65,
+            "Protein": 25.16
+        },
+        "NutritionLabelMenuItemPerServingPercentRDI": {
+            "Calories": 7.5685,
+            "Carbohydrate": 2.389818181818182,
+            "Fat": 3.3974358974358974,
+            "Protein": 50.32
+        },
+        "NutritionLabelMenuItemPer100g": {
+            "Calories": 79.66842105263157,
+            "Carbohydrate": 3.4589473684210525,
+            "Fat": 1.3947368421052633,
+            "Protein": 13.242105263157894
         }
     },
     {
