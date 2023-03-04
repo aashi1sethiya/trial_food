@@ -29,7 +29,7 @@ def update_profile_form():
     #         df_rdi["Lipid_Tot_(g)"].values[0],
     #     )
 
-    ### Firebase: Check for exisiting user contact and budget info in local sqlite3 database ###
+    ### Firebase: Check for exisiting user contact and budget info###
     firebase = Firebase()
     doc_dict = firebase.check_user(st.session_state["firebase_user"]["localId"])
     if doc_dict is not None:
@@ -47,7 +47,7 @@ def update_profile_form():
             doc_dict["fat_budget"],
         )
     else:
-        name_val, age_val, gender_val, email_val = "", "", "", ""
+        name_val, age_val, gender_val, email_val = "", "", "", st.session_state["username"]
         df_rdi = pd.read_csv(config.PATH_TO_NUTRITION_RDI)
         livelca_CO2_budget = 2.72  # (kg) based on LiveLCA threshold
         co2_val, calories_val, carbs_val, protein_val, fat_val = (
@@ -62,10 +62,10 @@ def update_profile_form():
     col1, col2 = st.columns([3, 2])
     profile_form = col1.form("Update Profile Info")
     profile_form.subheader("Your Profile Details")
-    name = profile_form.text_input("Name", value=name_val)
-    age = profile_form.text_input("Age", value=age_val)
-    gender = profile_form.text_input("Gender", value=gender_val)
-    email = profile_form.text_input("Email", value=email_val)
+    name = profile_form.text_input("Name *", value=name_val)
+    age = profile_form.text_input("Age *", value=age_val)
+    gender = profile_form.text_input("Gender *", value=gender_val)
+    email = profile_form.text_input("Email *", value=email_val)
 
     profile_form.subheader("Your Daily Carbon and Nutrition Budget")
     co2_budget = profile_form.text_input("Carbon (kgCO2e)", value=co2_val)
@@ -109,24 +109,29 @@ def update_profile_form():
         doc_ref = firebase_db.collection("userstable").document(
             st.session_state["firebase_user"]["localId"]
         )
-        doc_ref.set(
-            {
-                "localID": st.session_state["firebase_user"]["localId"],
-                "name": name,
-                "age": int(age),
-                "gender": gender,
-                "email": st.session_state["username"],
-                "co2_budget": float(co2_budget),
-                "calories_budget": float(calories_budget),
-                "carbs_budget": float(carbs_budget),
-                "protein_budget": float(protein_budget),
-                "fat_budget": float(fat_budget),
-            }
-        )
 
-        st.success(f"Your profile has been updated.")
-        time.sleep(1)
-        st.experimental_rerun()
+        try:
+            doc_ref.set(
+                {
+                    "localID": st.session_state["firebase_user"]["localId"],
+                    "name": name,
+                    "age": int(age),
+                    "gender": gender,
+                    "email": st.session_state["username"],
+                    "co2_budget": float(co2_budget),
+                    "calories_budget": float(calories_budget),
+                    "carbs_budget": float(carbs_budget),
+                    "protein_budget": float(protein_budget),
+                    "fat_budget": float(fat_budget),
+                }
+            )
+            
+            st.success(f"Your profile has been updated.")
+            time.sleep(1)
+            st.experimental_rerun()
+
+        except Exception as e:
+            st.error(e)
 
 
 def main():

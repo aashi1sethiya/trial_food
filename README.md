@@ -1,3 +1,4 @@
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/ikitcheng/ourfood/app.py)
 
 # Interactive Food Carbon and Nutrition Dashboard with Python – Streamlit
 
@@ -13,10 +14,18 @@ The good news? Simple changes to our daily lives can have huge impact – like e
 
 “The Climate Diet” app helps you plan your meal at Team Dining to create delicious, nutritious and low-carbon meals, giving you the power to manage your health and protect the environment! 
 
-
 [1] Poore, J., & Nemecek, T. (2018). Reducing food’s environmental impacts through producers and consumers. Science, 360(6392), 987-992.
 
-## Setup 
+## Quick Start (online)
+* Click on the streamlit button in this readme file. 
+* The website will open in a browser. 
+* Expand the sidebar using the '>' button on the top left.
+* Click on 'Sign in'
+* Enter demo credentials: demo@gmail.com, demo123456
+* Click 'Login'
+* You may now explore the different options in the 'Sign in' page.
+
+## Setup (local)
 To launch:
 * `cd` to directory of this `README.md`
 * Run `pip install -r requirements.txt`
